@@ -27,6 +27,16 @@ CACHE = REPO / "cache"
 OUT = REPO / "site" / "data" / "sectors.json"
 
 
+METRIC_KEYS = [
+    "pe", "pb", "peg", "roe_current", "roe_avg_5y", "current_roe", "current_roce",
+    "current_op_margin", "avg_roce_5y", "avg_roe_5y", "current_de_ratio", "avg_de_5y",
+    "net_debt_to_ebitda", "fcf_5y_total", "fcf_3y_total", "cfo_to_ebitda",
+    "sales_cagr_5y", "profit_cagr_5y", "sales_growth_yoy", "profit_growth_yoy",
+    "promoter_holding", "roa_current", "equity_to_assets", "gross_npa",
+    "revenue_cagr_5y", "deposits_cagr_5y",
+]
+
+
 def _norm(companies: list, is_bank: bool) -> list:
     out = []
     for c in companies:
@@ -41,6 +51,7 @@ def _norm(companies: list, is_bank: bool) -> list:
             "passed": sum(1 for x in checks if x.get("passed")),
             "failed": c.get("failed_criteria"),
             "market_cap_cr": c.get("market_cap_cr"),
+            "metrics": {k: c.get(k) for k in METRIC_KEYS if k in c},
             "hard": [{"code": x["code"], "criterion": x["criterion"], "value": x.get("value")}
                      for x in checks if (not x.get("soft")) and (not x.get("missing")) and (not x.get("passed"))],
             "soft": [{"code": x["code"], "criterion": x["criterion"], "value": x.get("value")}
