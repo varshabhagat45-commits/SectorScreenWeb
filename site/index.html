@@ -64,6 +64,31 @@ const FACTORS = [
   "Sector cycle","ESG / regulatory risk","Valuation (is the price fair)"
 ];
 const RATES = ["","Strong","Neutral","Weak"];
+
+// Provisional auto-suggestions from financial data only (heuristic - verify).
+function autoSuggest(m){
+  m = m || {};
+  const pe=m.pe, peg=m.peg;
+  const de=m.current_de_ratio, nd=m.net_debt_to_ebitda, fcf=m.fcf_5y_total;
+  const roce=(m.roe_current!=null?m.roe_current:m.current_roe);
+  const margin=m.current_op_margin, roe5=m.avg_roe_5y;
+  const sc=m.sales_cagr_5y, pc=m.profit_cagr_5y;
+  const promo=m.promoter_holding;
+  const res = {};
+  res["Valuation (is the price fair)"] = (pe!=null)
+    ? (pe<20 || (peg!=null&&peg<1.2) ? "Strong" : (pe>45 || (peg!=null&&peg>2.5) ? "Weak" : "Neutral")) : "";
+  res["Balance-sheet quality (beyond ratios)"] = (de!=null)
+    ? (de<40 && fcf!=null && fcf>0 && (nd==null||nd<1.5) ? "Strong" : (de>80 || (nd!=null&&nd>3) ? "Weak" : "Neutral")) : "";
+  res["Sector cycle"] = (sc!=null)
+    ? (sc>12 && pc!=null && pc>15 ? "Strong" : (sc<2 || (pc!=null&&pc<0) ? "Weak" : "Neutral")) : "";
+  res["Competitive moat"] = (roce!=null)
+    ? (roce>18 && margin!=null && margin>18 ? "Strong" : (roe5!=null&&roe5<10 ? "Weak" : "Neutral")) : "";
+  res["Management quality"] = (promo!=null)
+    ? (promo>=50 && roe5!=null&&roe5>14 ? "Strong" : (promo<35 ? "Weak" : "Neutral")) : "";
+  return res;
+}
+function isAutoFactor(f){ return ["Valuation (is the price fair)","Balance-sheet quality (beyond ratios)",
+  "Sector cycle","Competitive moat","Management quality"].indexOf(f)>=0; }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 function qKey(t){ return "qual:"+t; }
 function qLoad(t){ try{ return JSON.parse(localStorage.getItem(qKey(t))||"{}"); }catch(e){ return {}; } }
@@ -73,9 +98,14 @@ function renderQualitative(companies){
   const cards = companies.map(c=>{
     const q = qLoad(c.ticker);
     const rows = FACTORS.map(f=>{
-      const v = q[f]||"";
-      const opts = RATES.map(o=>`<option${o===v?" selected":""}>${o}</option>`).join("");
-      return `<tr><td>${esc(f)}</td><td><select data-t="${esc(c.ticker)}" data-f="${esc(f)}">${opts}</select></td></tr>`;
+      const manual = q[f]||"";
+      let val = manual, tag = "";
+      if(!manual){
+        const a = autoSuggest(c.metrics||{})[f];
+        if(a){ val = a; tag = ' <span class="mut">(auto)</span>'; }
+      }
+      const opts = RATES.map(o=>`<option${o===val?" selected":""}>${o}</option>`).join("");
+      return `<tr><td>${esc(f)}${tag}</td><td><select data-t="${esc(c.ticker)}" data-f="${esc(f)}">${opts}</select></td></tr>`;
     }).join("");
     const score = FACTORS.reduce((s,f)=> s + (q[f]==="Strong"?2 : q[f]==="Neutral"?1 : 0), 0);
     const strong = FACTORS.filter(f=>q[f]==="Strong").length;
@@ -86,8 +116,11 @@ function renderQualitative(companies){
         <tr><td>Notes</td><td><textarea data-n="${esc(c.ticker)}" rows="2" placeholder="e.g. dominant brand; order book growing; watch margin">${esc(q._notes||"")}</textarea></td></tr>
       </table></div>`;
   }).join("");
-  $("#qualitative").innerHTML = `<div class="card"><h2>Qualitative assessment (manual research — the screen can't measure these)</h2>
-    <p class="mut">Rate each factor for a company. Saved in <b>your browser only</b> (localStorage). Many <b>Strong</b> = worth deeper study; many <b>Weak</b> = caution. Combine with the quantitative screen above before deciding.</p>
+  $("#qualitative").innerHTML = `<div class="card"><h2>Qualitative assessment (manual research + auto-suggest)</h2>
+    <p class="mut">Fields marked <b>(auto)</b> are <b>heuristic estimates from financial data only</b> (valuation, balance-sheet,
+    growth/cycle trend, and profitability/moat &amp; promoter-quality proxies) — <b>verify before relying</b>. The harder subjective
+    factors (order book, guidance, ESG) and the accuracy of the proxies still need your research. Rate any field to override; saved
+    in <b>your browser only</b>. Many <b>Strong</b> + a clean screen = worth deeper study; not a recommendation.</p>
     ${cards || "<p class='mut'>Select a sector to begin.</p>"}
     <p class="mut"><a href="#" id="clearqual">Clear all my qualitative notes</a></p></div>`;
   document.querySelectorAll("#qualitative select").forEach(sel=>sel.addEventListener("change",e=>{
