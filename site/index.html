@@ -48,6 +48,7 @@ footer{margin-top:20px;font-size:12px;color:var(--mut)}
 <div id="table"></div>
 <div id="detail"></div>
 <div id="chart"></div>
+<div id="qualitative"></div>
 
 <footer id="foot"></footer>
 </div>
@@ -56,6 +57,48 @@ footer{margin-top:20px;font-size:12px;color:var(--mut)}
 const $ = (s)=>document.querySelector(s);
 let DATA = null;
 const CATS = ["PASSED","MARGINAL","ELIMINATED"];
+
+const FACTORS = [
+  "Competitive moat","Management quality","Order book / pipeline",
+  "Upcoming results / guidance","Balance-sheet quality (beyond ratios)",
+  "Sector cycle","ESG / regulatory risk","Valuation (is the price fair)"
+];
+const RATES = ["","Strong","Neutral","Weak"];
+function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function qKey(t){ return "qual:"+t; }
+function qLoad(t){ try{ return JSON.parse(localStorage.getItem(qKey(t))||"{}"); }catch(e){ return {}; } }
+function qSave(t,q){ localStorage.setItem(qKey(t), JSON.stringify(q)); }
+
+function renderQualitative(companies){
+  const cards = companies.map(c=>{
+    const q = qLoad(c.ticker);
+    const rows = FACTORS.map(f=>{
+      const v = q[f]||"";
+      const opts = RATES.map(o=>`<option${o===v?" selected":""}>${o}</option>`).join("");
+      return `<tr><td>${esc(f)}</td><td><select data-t="${esc(c.ticker)}" data-f="${esc(f)}">${opts}</select></td></tr>`;
+    }).join("");
+    const score = FACTORS.reduce((s,f)=> s + (q[f]==="Strong"?2 : q[f]==="Neutral"?1 : 0), 0);
+    const strong = FACTORS.filter(f=>q[f]==="Strong").length;
+    const weak = FACTORS.filter(f=>q[f]==="Weak").length;
+    return `<div class="card">
+      <h3>${esc(c.company||c.ticker)} <span class="mut">(${esc(c.ticker)})</span> <span class="mut">— score ${score}/16 · ${strong} Strong · ${weak} Weak</span></h3>
+      <table>${rows}
+        <tr><td>Notes</td><td><textarea data-n="${esc(c.ticker)}" rows="2" placeholder="e.g. dominant brand; order book growing; watch margin">${esc(q._notes||"")}</textarea></td></tr>
+      </table></div>`;
+  }).join("");
+  $("#qualitative").innerHTML = `<div class="card"><h2>Qualitative assessment (manual research — the screen can't measure these)</h2>
+    <p class="mut">Rate each factor for a company. Saved in <b>your browser only</b> (localStorage). Many <b>Strong</b> = worth deeper study; many <b>Weak</b> = caution. Combine with the quantitative screen above before deciding.</p>
+    ${cards || "<p class='mut'>Select a sector to begin.</p>"}
+    <p class="mut"><a href="#" id="clearqual">Clear all my qualitative notes</a></p></div>`;
+  document.querySelectorAll("#qualitative select").forEach(sel=>sel.addEventListener("change",e=>{
+    const q=qLoad(e.target.dataset.t); q[e.target.dataset.f]=e.target.value; qSave(e.target.dataset.t,q); renderQualitative(companies);
+  }));
+  document.querySelectorAll("#qualitative textarea").forEach(t=>t.addEventListener("change",e=>{
+    const q=qLoad(e.target.dataset.n); q._notes=e.target.value; qSave(e.target.dataset.n,q);
+  }));
+  const clr=document.querySelector("#clearqual");
+  if(clr) clr.addEventListener("click",e=>{ e.preventDefault(); if(confirm("Clear all qualitative notes for every ticker?")){ Object.keys(localStorage).filter(k=>k.startsWith("qual:")).forEach(k=>localStorage.removeItem(k)); renderQualitative(companies);} });
+}
 
 function badge(c){return `<span class="badge p-${c}">${c}</span>`}
 
@@ -106,6 +149,8 @@ function render(){
     : `<p class="mut">Ranked by fewest hard-gate failures, then points passed. This is a <b>ranking of a screen,
        not a recommendation</b> — always verify fundamentals and check with a financial advisor.</p>`;
   $("#chart").innerHTML = top.length ? `<div class="card"><h2>Top five by quality (fewest hard-gate failures)</h2>${strictNote}${bars}</div>` : "";
+
+  renderQualitative(modes);
 
   $("#foot").textContent = "Research and analysis only — not personalized investment advice. Data snapshot; regenerate locally with build_data.py.";
 }
