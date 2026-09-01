@@ -92,12 +92,20 @@ function render(){
     c.hard.map(x=>`<li><code>${x.code}</code> ${x.criterion}: <b>${fmt(x.value)}</b></li>`).join("") + "</ul>").join("");
   $("#detail").innerHTML = detail ? `<div class="card"><h2>Hard-gate failures</h2>${detail}</div>` : "";
 
-  const top = [...modes].sort((a,b)=>b.passed-a.passed).slice(0,5);
+  const top = [...modes].sort((a,b)=>(a.hard.length - b.hard.length) || (b.passed - a.passed)).slice(0,5);
   let bars = "";
-  const max = Math.max(1, ...top.map(c=>c.passed));
+  const max = Math.max(1, ...top.map(c=>c.hard.length ? c.hard.length : 1));
   top.forEach(c=>bars += `<div class="bar-wrap"><div class="name">${c.ticker.replace('.NS','')}</div>
-     <div class="bar" style="width:${(c.passed/max*60)}%"></div><span class="mut">${c.passed}</span></div>`);
-  $("#chart").innerHTML = top.length ? `<div class="card"><h2>Top five by points passed</h2>${bars}</div>` : "";
+     <div class="bar" style="width:${((c.hard.length/max)*60).toFixed(1)}%;background:#b23a48"></div>
+     <span class="mut">${c.hard.length} hard fails</span></div>`);
+  const strictNote = (mode==="strict" && counts.PASSED===0)
+    ? `<div class="warn"><b>Strict mode found no PASSED name.</b> Every company here is ELIMINATED because it
+       fails at least one hard quality/leverage/cash-flow/promoter criterion. The ranking below is a
+       <b>relative screen, not a signal</b> — a higher rank just means it failed fewer hard gates. Switch to
+       <b>quality_first</b> or <b>sector_adjusted</b> to treat growth &amp; valuation as soft flags (non-eliminating).</div>`
+    : `<p class="mut">Ranked by fewest hard-gate failures, then points passed. This is a <b>ranking of a screen,
+       not a recommendation</b> — always verify fundamentals and check with a financial advisor.</p>`;
+  $("#chart").innerHTML = top.length ? `<div class="card"><h2>Top five by quality (fewest hard-gate failures)</h2>${strictNote}${bars}</div>` : "";
 
   $("#foot").textContent = "Research and analysis only — not personalized investment advice. Data snapshot; regenerate locally with build_data.py.";
 }
