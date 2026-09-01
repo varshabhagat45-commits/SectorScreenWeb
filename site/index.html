@@ -113,10 +113,33 @@ function exportNotes(){
   const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="my-screening-notes.json";
   document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
 }
+function notesText(){
+  let txt = "Screening qualitative notes\n" + new Date().toISOString() + "\n\n";
+  allNotes().forEach(n=>{
+    txt += n.ticker + (n.company?(" ("+n.company+")"):"") + "\n";
+    Object.keys(n.ratings).forEach(f=> txt += "  "+f+": "+n.ratings[f]+"\n");
+    if(n.notes) txt += "  Notes: "+n.notes+"\n";
+    txt += "\n";
+  });
+  return txt;
+}
+function fallbackCopy(txt){
+  const ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.left="-9999px";
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{ document.execCommand("copy"); alert("Copied to clipboard using fallback."); }
+  catch(e){ alert("Could not copy. Use Download notes (.txt) instead."); }
+  ta.remove();
+}
 function copyNotes(){
-  let txt="";
-  allNotes().forEach(n=>{ txt += n.ticker + "\n" + Object.keys(n.ratings).map(f=>"  "+f+": "+n.ratings[f]).join("\n") + (n.notes?"\n  Notes: "+n.notes:"") + "\n\n"; });
-  navigator.clipboard.writeText(txt).then(()=>alert("Copied to clipboard!"));
+  const txt=notesText();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(()=>alert("Copied to clipboard!")).catch(()=>fallbackCopy(txt));
+  } else fallbackCopy(txt);
+}
+function downloadTxt(){
+  const blob=new Blob([notesText()], {type:"text/plain"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="my-screening-notes.txt";
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
 }
 
 function renderQualitative(companies){
@@ -155,7 +178,8 @@ function renderQualitative(companies){
     factors (order book, guidance, ESG) and the accuracy of the proxies still need your research. Rate any field to override; saved
     in <b>your browser only</b>. Many <b>Strong</b> + a clean screen = worth deeper study; not a recommendation.</p>
     ${cards || "<p class='mut'>Select a sector to begin.</p>"}
-    <p class="mut"><a href="#" id="exportqual">Export my notes (JSON)</a> ·
+    <p class="mut"><a href="#" id="downloadtxt">Download notes (.txt)</a> ·
+      <a href="#" id="exportqual">Export notes (JSON)</a> ·
       <a href="#" id="copyqual">Copy as text</a> ·
       <a href="#" id="clearqual">Clear all</a></p></div>`;
   document.querySelectorAll("#qualitative select").forEach(sel=>sel.addEventListener("change",e=>{
@@ -170,6 +194,8 @@ function renderQualitative(companies){
   if(ex) ex.addEventListener("click",e=>{ e.preventDefault(); exportNotes(); });
   const cp=document.querySelector("#copyqual");
   if(cp) cp.addEventListener("click",e=>{ e.preventDefault(); copyNotes(); });
+  const dl=document.querySelector("#downloadtxt");
+  if(dl) dl.addEventListener("click",e=>{ e.preventDefault(); downloadTxt(); });
 }
 
 function badge(c){return `<span class="badge p-${c}">${c}</span>`}
