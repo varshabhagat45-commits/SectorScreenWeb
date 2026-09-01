@@ -93,6 +93,24 @@ function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, c=>({"&":"&amp;"
 function qKey(t){ return "qual:"+t; }
 function qLoad(t){ try{ return JSON.parse(localStorage.getItem(qKey(t))||"{}"); }catch(e){ return {}; } }
 function qSave(t,q){ localStorage.setItem(qKey(t), JSON.stringify(q)); }
+function allNotes(){
+  const out = [];
+  Object.keys(localStorage).filter(k=>k.indexOf("qual:")===0).forEach(k=>{
+    const t=k.slice(5), q=qLoad(t);
+    out.push({ticker:t, ratings:Object.fromEntries(FACTORS.filter(f=>q[f]).map(f=>[f,q[f]])), notes:q._notes||""});
+  });
+  return out;
+}
+function exportNotes(){
+  const blob = new Blob([JSON.stringify({exported:new Date().toISOString(), notes:allNotes()}, null, 2)], {type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="my-screening-notes.json";
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
+}
+function copyNotes(){
+  let txt="";
+  allNotes().forEach(n=>{ txt += n.ticker + "\n" + Object.keys(n.ratings).map(f=>"  "+f+": "+n.ratings[f]).join("\n") + (n.notes?"\n  Notes: "+n.notes:"") + "\n\n"; });
+  navigator.clipboard.writeText(txt).then(()=>alert("Copied to clipboard!"));
+}
 
 function renderQualitative(companies){
   const cards = companies.map(c=>{
@@ -127,7 +145,9 @@ function renderQualitative(companies){
     factors (order book, guidance, ESG) and the accuracy of the proxies still need your research. Rate any field to override; saved
     in <b>your browser only</b>. Many <b>Strong</b> + a clean screen = worth deeper study; not a recommendation.</p>
     ${cards || "<p class='mut'>Select a sector to begin.</p>"}
-    <p class="mut"><a href="#" id="clearqual">Clear all my qualitative notes</a></p></div>`;
+    <p class="mut"><a href="#" id="exportqual">Export my notes (JSON)</a> ·
+      <a href="#" id="copyqual">Copy as text</a> ·
+      <a href="#" id="clearqual">Clear all</a></p></div>`;
   document.querySelectorAll("#qualitative select").forEach(sel=>sel.addEventListener("change",e=>{
     const q=qLoad(e.target.dataset.t); q[e.target.dataset.f]=e.target.value; qSave(e.target.dataset.t,q); renderQualitative(companies);
   }));
@@ -136,6 +156,10 @@ function renderQualitative(companies){
   }));
   const clr=document.querySelector("#clearqual");
   if(clr) clr.addEventListener("click",e=>{ e.preventDefault(); if(confirm("Clear all qualitative notes for every ticker?")){ Object.keys(localStorage).filter(k=>k.startsWith("qual:")).forEach(k=>localStorage.removeItem(k)); renderQualitative(companies);} });
+  const ex=document.querySelector("#exportqual");
+  if(ex) ex.addEventListener("click",e=>{ e.preventDefault(); exportNotes(); });
+  const cp=document.querySelector("#copyqual");
+  if(cp) cp.addEventListener("click",e=>{ e.preventDefault(); copyNotes(); });
 }
 
 function badge(c){return `<span class="badge p-${c}">${c}</span>`}
