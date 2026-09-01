@@ -56,6 +56,7 @@ footer{margin-top:20px;font-size:12px;color:var(--mut)}
 <script>
 const $ = (s)=>document.querySelector(s);
 let DATA = null;
+let CURRENT_QUAL = [];
 const CATS = ["PASSED","MARGINAL","ELIMINATED"];
 
 const FACTORS = [
@@ -94,10 +95,16 @@ function qKey(t){ return "qual:"+t; }
 function qLoad(t){ try{ return JSON.parse(localStorage.getItem(qKey(t))||"{}"); }catch(e){ return {}; } }
 function qSave(t,q){ localStorage.setItem(qKey(t), JSON.stringify(q)); }
 function allNotes(){
+  const seen = new Set();
   const out = [];
+  CURRENT_QUAL.forEach(c=>{ seen.add(c.ticker); out.push({ticker:c.ticker, company:c.company, ratings:c.ratings, notes:c.notes||""}); });
+  // also include manually-saved assessments from sectors not currently shown
   Object.keys(localStorage).filter(k=>k.indexOf("qual:")===0).forEach(k=>{
-    const t=k.slice(5), q=qLoad(t);
-    out.push({ticker:t, ratings:Object.fromEntries(FACTORS.filter(f=>q[f]).map(f=>[f,q[f]])), notes:q._notes||""});
+    const t=k.slice(5);
+    if(seen.has(t)) return;
+    const q=qLoad(t);
+    const ratings=Object.fromEntries(FACTORS.filter(f=>q[f]).map(f=>[f,q[f]]));
+    if(Object.keys(ratings).length || q._notes) out.push({ticker:t, ratings, notes:q._notes||""});
   });
   return out;
 }
@@ -113,6 +120,7 @@ function copyNotes(){
 }
 
 function renderQualitative(companies){
+  CURRENT_QUAL = [];
   const cards = companies.map(c=>{
     const q = qLoad(c.ticker);
     const auto = autoSuggest(c.metrics||{});
@@ -120,6 +128,8 @@ function renderQualitative(companies){
     const score = eff.reduce((s,v)=> s + (v==="Strong"?2 : v==="Neutral"?1 : 0), 0);
     const strong = eff.filter(v=>v==="Strong").length;
     const weak = eff.filter(v=>v==="Weak").length;
+    CURRENT_QUAL.push({ticker:c.ticker, company:c.company,
+      ratings:Object.fromEntries(FACTORS.map((f,i)=>[f,eff[i]]).filter(kv=>kv[1])), notes:q._notes||""});
     const rows = FACTORS.map((f,i)=>{
       const val = eff[i];
       let tag = "";
