@@ -97,19 +97,17 @@ function qSave(t,q){ localStorage.setItem(qKey(t), JSON.stringify(q)); }
 function renderQualitative(companies){
   const cards = companies.map(c=>{
     const q = qLoad(c.ticker);
-    const rows = FACTORS.map(f=>{
-      const manual = q[f]||"";
-      let val = manual, tag = "";
-      if(!manual){
-        const a = autoSuggest(c.metrics||{})[f];
-        if(a){ val = a; tag = ' <span class="mut">(auto)</span>'; }
-      }
+    const auto = autoSuggest(c.metrics||{});
+    const eff = FACTORS.map(f=> q[f] || auto[f] || "");   // effective = user-set, else auto, else blank
+    const score = eff.reduce((s,v)=> s + (v==="Strong"?2 : v==="Neutral"?1 : 0), 0);
+    const strong = eff.filter(v=>v==="Strong").length;
+    const weak = eff.filter(v=>v==="Weak").length;
+    const rows = FACTORS.map((f,i)=>{
+      const val = eff[i];
+      const tag = q[f] ? "" : (val ? ' <span class="mut">(auto)</span>' : '');
       const opts = RATES.map(o=>`<option${o===val?" selected":""}>${o}</option>`).join("");
       return `<tr><td>${esc(f)}${tag}</td><td><select data-t="${esc(c.ticker)}" data-f="${esc(f)}">${opts}</select></td></tr>`;
     }).join("");
-    const score = FACTORS.reduce((s,f)=> s + (q[f]==="Strong"?2 : q[f]==="Neutral"?1 : 0), 0);
-    const strong = FACTORS.filter(f=>q[f]==="Strong").length;
-    const weak = FACTORS.filter(f=>q[f]==="Weak").length;
     return `<div class="card">
       <h3>${esc(c.company||c.ticker)} <span class="mut">(${esc(c.ticker)})</span> <span class="mut">— score ${score}/16 · ${strong} Strong · ${weak} Weak</span></h3>
       <table>${rows}
