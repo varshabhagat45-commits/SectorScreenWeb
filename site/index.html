@@ -104,15 +104,22 @@ function renderQualitative(companies){
     const weak = eff.filter(v=>v==="Weak").length;
     const rows = FACTORS.map((f,i)=>{
       const val = eff[i];
-      const tag = q[f] ? "" : (val ? ' <span class="mut">(auto)</span>' : '');
+      let tag = "";
+      if(q[f]) tag="";
+      else if(val) tag=' <span class="mut">(auto)</span>';
+      else if(!isAutoFactor(f)) tag=' <span class="mut">(needs research)</span>';
       const opts = RATES.map(o=>`<option${o===val?" selected":""}>${o}</option>`).join("");
       return `<tr><td>${esc(f)}${tag}</td><td><select data-t="${esc(c.ticker)}" data-f="${esc(f)}">${opts}</select></td></tr>`;
     }).join("");
+    const slug = (c.ticker||"").split(".")[0];
+    const links = `<p class="mut">Order book / guidance / ESG need reading — quick sources:
+      <a href="https://www.screener.in/company/${slug}/consolidated/" target="_blank" rel="noopener">Screener page</a> ·
+      <a href="https://www.google.com/search?q=${encodeURIComponent((c.company||c.ticker))}+order+book+guidance+ESG+annual+report" target="_blank" rel="noopener">Search news</a></p>`;
     return `<div class="card">
       <h3>${esc(c.company||c.ticker)} <span class="mut">(${esc(c.ticker)})</span> <span class="mut">— score ${score}/16 · ${strong} Strong · ${weak} Weak</span></h3>
       <table>${rows}
         <tr><td>Notes</td><td><textarea data-n="${esc(c.ticker)}" rows="2" placeholder="e.g. dominant brand; order book growing; watch margin">${esc(q._notes||"")}</textarea></td></tr>
-      </table></div>`;
+      </table>${links}</div>`;
   }).join("");
   $("#qualitative").innerHTML = `<div class="card"><h2>Qualitative assessment (manual research + auto-suggest)</h2>
     <p class="mut">Fields marked <b>(auto)</b> are <b>heuristic estimates from financial data only</b> (valuation, balance-sheet,
