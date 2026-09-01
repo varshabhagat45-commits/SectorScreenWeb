@@ -1,0 +1,8 @@
+# Generated cache from the build pipeline - not committed
+cache/
+*.pyc
+__pycache__/
+
+# Misc
+.DS_Store
+node_modules/

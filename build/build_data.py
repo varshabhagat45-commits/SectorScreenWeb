@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""Regenerate site/data/sectors.json in this repo (vendored for GitHub Actions).
+
+This is a copy of the engine's build_data.py adjusted so it writes into THIS repo
+(site/data/sectors.json). It runs on any machine with Python + the requirements
+installed, or automatically via .github/workflows/refresh-data.yml.
+
+Run:  python build/build_data.py
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+import sector_map
+from bank_engine import BankEngine
+from cache import DiskCache
+from pharma_screening_engine import MODES
+from pharma_screening_engine_live import LiveScreeningEngine
+from screener_provider import ScreenerProvider
+
+REPO = Path(__file__).resolve().parents[1]
+CACHE = REPO / "cache"
+OUT = REPO / "site" / "data" / "sectors.json"
+
+
+def _norm(companies: list, is_bank: bool) -> list:
+    out = []
+    for c in companies:
+        if is_bank:
+            checks = c.get("checks") or []
+        else:
+            checks = (c.get("group1_checks") or []) + (c.get("group2_checks") or [])
+        out.append({
+            "ticker": c.get("ticker"), "company": c.get("company"),
+            "category": c.get("category"),
+            "g1": c.get("group1_score"), "g2": c.get("group2_score"),
+            "passed": sum(1 for x in checks if x.get("passed")),
+            "failed": c.get("failed_criteria"),
+            "market_cap_cr": c.get("market_cap_cr"),
+            "hard": [{"code": x["code"], "criterion": x["criterion"], "value": x.get("value")}
+                     for x in checks if (not x.get("soft")) and (not x.get("missing")) and (not x.get("passed"))],
+            "soft": [{"code": x["code"], "criterion": x["criterion"], "value": x.get("value")}
+                     for x in checks if x.get("soft") and (not x.get("missing")) and (not x.get("passed"))],
+            "missing": sum(1 for x in checks if x.get("missing")),
+        })
+    return out
+
+
+def build(only_sectors: list | None = None, modes: list | None = None, delay: float = 0.3) -> None:
+    modes = modes or list(MODES)
+    cache = DiskCache(CACHE, 1.0)
+    data = {"as_of": datetime.now(timezone.utc).isoformat(),
+            "source": "Screener.in (consolidated) + Yahoo Finance valuation (snapshot)",
+            "sectors": {}}
+    sectors = only_sectors or sector_map.sector_names()
+    for sector in sectors:
+        tickers = sector_map.get_tickers(sector)
+        if not tickers:
+            continue
+        fit = sector_map.get_fit(sector)
+        entry = {"fit": fit, "note": sector_map.get_fit_note(sector), "modes": {}}
+        is_bank = fit == "financial"
+        errors_total = 0
+        for mode in modes:
+            if is_bank:
+                report = BankEngine(mode=mode).run(tickers, delay, cache)
+            else:
+                report = LiveScreeningEngine(provider=ScreenerProvider(), mode=mode).run(tickers, delay, cache)
+            entry["modes"][mode] = _norm(report["companies"], is_bank)
+            errors_total += len(report.get("errors") or [])
+        data["sectors"][sector] = entry
+        print(f"built: {sector} ({len(tickers)} tickers, fit={fit}, errors={errors_total})")
+        time.sleep(0.3)
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(data, indent=2, default=str), encoding="utf-8")
+    print(f"\nWrote {OUT} ({len(data['sectors'])} sectors)")
+
+
+if __name__ == "__main__":
+    p = argparse.ArgumentParser()
+    p.add_argument("--sector", action="append", dest="only", help="Build only this sector (repeatable)")
+    p.add_argument("--modes", nargs="+", choices=MODES, default=list(MODES))
+    p.add_argument("--delay", type=float, default=0.3)
+    a = p.parse_args()
+    build(a.only, a.modes, a.delay)

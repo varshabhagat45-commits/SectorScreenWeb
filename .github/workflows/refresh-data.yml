@@ -1,0 +1,42 @@
+# Daily auto-refresh of the screening data snapshot.
+# Runs build_data.py every day, then commits/pushes the regenerated
+# site/data/sectors.json. The push triggers the GitHub Pages workflow (and any
+# repo-linked Vercel integration) to redeploy the refreshed dashboard.
+name: Auto-refresh data snapshot
+
+on:
+  schedule:
+    - cron: "0 8 * * *"   # 08:00 UTC daily (≈13:30 IST)
+  workflow_dispatch:      # allow manual run from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: python -m pip install -r build/requirements.txt
+
+      - name: Regenerate data snapshot
+        run: python build/build_data.py
+
+      - name: Commit and push if changed
+        run: |
+          git add site/data/sectors.json
+          if git diff --cached --quiet; then
+            echo "No data change - nothing to push."
+            exit 0
+          fi
+          git config user.name "refresh-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "Auto-refresh data snapshot"
+          git push
