@@ -79,6 +79,25 @@ def _norm(companies: list, is_bank: bool) -> list:
     return out
 
 
+def _score(c: dict) -> tuple:
+    """Composite research score (0-100): quality+fundamentals (60%) and
+    price momentum (40%). Transparent, heuristic ranking only — not advice."""
+    hard = len(c.get("hard") or [])
+    passed = c.get("passed") or 0
+    failed = c.get("failed") or 0
+    missing = c.get("missing") or 0
+    total = passed + failed + missing
+    pass_pct = (passed / total) if total else 0.0
+    quality = max(0.0, min(100.0, pass_pct * 100.0 - hard * 3.0))
+    m = c.get("metrics") or {}
+    rets = [(m.get("mom_1y"), 0.5), (m.get("mom_6m"), 0.3), (m.get("mom_3m"), 0.2)]
+    avail = [(r, w) for r, w in rets if isinstance(r, (int, float)) and not isinstance(r, bool)]
+    weighted = (sum(r * w for r, w in avail) / sum(w for _, w in avail)) if avail else 0.0
+    mom_score = max(0.0, min(100.0, 50.0 + 0.5 * weighted))
+    composite = round(0.6 * quality + 0.4 * mom_score, 1)
+    return round(quality, 1), round(mom_score, 1), composite
+
+
 def build(only_sectors: list | None = None, modes: list | None = None, delay: float = 0.3) -> None:
     modes = modes or list(MODES)
     cache = DiskCache(CACHE, 1.0)
@@ -104,6 +123,7 @@ def build(only_sectors: list | None = None, modes: list | None = None, delay: fl
             for c in companies:
                 m = mom.get(c["ticker"], (None, None, None))
                 c["metrics"]["mom_1y"], c["metrics"]["mom_6m"], c["metrics"]["mom_3m"] = m
+                c["q_score"], c["mom_score"], c["composite"] = _score(c)
             entry["modes"][mode] = companies
             errors_total += len(report.get("errors") or [])
         data["sectors"][sector] = entry

@@ -33,6 +33,15 @@ footer{margin-top:20px;font-size:12px;color:var(--mut)}
 <h1>Indian Sector Screen — 47-Criterion Quality &amp; Momentum</h1>
 
 <div class="card">
+  <h2>Read first — this is research, not advice</h2>
+  <p class="mut">This site ranks Indian stocks using a 47-criterion quality &amp; momentum screen and a heuristic
+  composite score (60% quality/fundamentals + 40% price momentum). It is <b>research and analysis only</b> —
+  <b>not personalized investment advice</b>, not a recommendation to buy or sell, and not a substitute for a licensed
+  adviser. Composite scores are algorithmic estimates that can be wrong or become stale; past or recent price momentum
+  does not guarantee future returns. <b>Consult a SEBI-registered investment adviser before investing.</b></p>
+</div>
+
+<div class="card">
   <label>Sector</label><select id="sector"></select>
   <label>Mode</label>
   <select id="mode">
@@ -45,6 +54,7 @@ footer{margin-top:20px;font-size:12px;color:var(--mut)}
 
 <div id="fit"></div>
 <div id="summary"></div>
+<div id="top"></div>
 <div id="table"></div>
 <div id="detail"></div>
 <div id="chart"></div>
@@ -216,6 +226,25 @@ function renderQualitative(companies){
 
 function badge(c){return `<span class="badge p-${c}">${c}</span>`}
 
+function renderTop(modes){
+  const ranked = [...modes].sort((a,b)=> (b.composite||0)-(a.composite||0)).slice(0,5);
+  if(!ranked.length){ $("#top").innerHTML=""; return; }
+  const rows = ranked.map((c,i)=>{
+    const m = c.metrics||{};
+    return `<tr><td>${i+1}</td><td><b>${esc(c.company||c.ticker)}</b><br><span class="mut">${c.ticker}</span></td>
+      <td>${badge(c.category)}</td>
+      <td><b>${c.composite!=null?c.composite:'—'}</b><br><span class="mut">Q ${c.q_score!=null?c.q_score:'—'} · M ${c.mom_score!=null?c.mom_score:'—'}</span></td>
+      <td><span class="mut">1Y ${fmtMom(m.mom_1y)}</span><br><span class="mut">6M ${fmtMom(m.mom_6m)}</span></td></tr>`;
+  }).join("");
+  $("#top").innerHTML = `<div class="card"><h2>Strongest candidates — ${esc($("#sector").value)} / ${esc($("#mode").value)}</h2>
+    <p class="mut"><b>Composite score (0–100)</b> = 60% quality/fundamentals (share of 47 criteria passed minus hard-gate
+    penalties) + 40% price momentum (1Y/6M/3M returns). Heuristic ranking from the same data shown below.
+    <b>This is a research shortlist, not investment advice.</b> Scores are estimates — always verify and consult a
+    SEBI-registered investment adviser before investing.</p>
+    <table><thead><tr><th>#</th><th>Company</th><th>Verdict</th><th>Composite</th><th>Momentum</th></tr></thead>
+    <tbody>${rows}</tbody></table></div>`;
+}
+
 function render(){
   const sector = $("#sector").value, mode = $("#mode").value;
   const sec = DATA.sectors[sector];
@@ -265,10 +294,11 @@ function render(){
        not a recommendation</b> — always verify fundamentals and check with a financial advisor.</p>`;
   $("#chart").innerHTML = top.length ? `<div class="card"><h2>Top five by quality (fewest hard-gate failures)</h2>${strictNote}${bars}</div>` : "";
 
+  renderTop(modes);
   renderFailures(modes);
   renderQualitative(modes);
 
-  $("#foot").textContent = "Research and analysis only — not personalized investment advice. Data snapshot; regenerate locally with build_data.py.";
+  $("#foot").textContent = "Research and analysis only — not personalized investment advice, not a recommendation to buy or sell any security. Composite scores are heuristic estimates from a periodic data snapshot and may be wrong or stale. Consult a SEBI-registered investment adviser before investing.";
 }
 
 function fmt(v){ if(v===null||v===undefined)return "missing"; if(typeof v==="boolean")return v?"true":"false";
