@@ -54,6 +54,7 @@ footer{margin-top:20px;font-size:12px;color:var(--mut)}
 
 <div id="fit"></div>
 <div id="summary"></div>
+<div id="dash"></div>
 <div id="top"></div>
 <div id="table"></div>
 <div id="detail"></div>
@@ -294,6 +295,7 @@ function render(){
        not a recommendation</b> — always verify fundamentals and check with a financial advisor.</p>`;
   $("#chart").innerHTML = top.length ? `<div class="card"><h2>Top five by quality (fewest hard-gate failures)</h2>${strictNote}${bars}</div>` : "";
 
+  renderDash(modes);
   renderTop(modes);
   renderFailures(modes);
   renderQualitative(modes);
@@ -306,6 +308,63 @@ function fmt(v){ if(v===null||v===undefined)return "missing"; if(typeof v==="boo
 function fmtMom(v){ if(v===null||v===undefined)return "—"; const s=v>0?"+":""; return s+Number(v).toFixed(1)+"%"; }
 function momCell(m){ m=m||{}; return `<span class="mut">1Y ${fmtMom(m.mom_1y)}</span><br>` +
   `<span class="mut">6M ${fmtMom(m.mom_6m)}</span><br><span class="mut">3M ${fmtMom(m.mom_3m)}</span>`; }
+function catColor(c){ return c==="PASSED"?"#16a34a":c==="MARGINAL"?"#eab308":"#dc2626"; }
+function shortTk(t){ return String(t||"").split(".")[0]; }
+function pearson(xs, ys){
+  const n=xs.length; if(n<2) return 0;
+  const mx=xs.reduce((a,b)=>a+b,0)/n, my=ys.reduce((a,b)=>a+b,0)/n;
+  let sxy=0,sxx=0,syy=0;
+  for(let i=0;i<n;i++){ sxy+=(xs[i]-mx)*(ys[i]-my); sxx+=(xs[i]-mx)**2; syy+=(ys[i]-my)**2; }
+  const d=Math.sqrt(sxx*syy); return d? sxy/d : 0;
+}
+function barRow(name, pct, color, label){
+  return `<div class="bar-wrap"><div class="name">${esc(name)}</div>
+    <div class="bar" style="width:${Math.max(0,Math.min(100,pct)).toFixed(1)}%;background:${color}"></div>
+    <span class="mut">${label}</span></div>`;
+}
+function scatterHtml(pts){
+  const data = pts.filter(p=>p.pe!=null && p.margin!=null);
+  if(data.length<3) return `<p class="mut">Not enough paired (P/E, margin) data (need 3+ companies) for this sector/mode.</p>`;
+  const W=640,H=340,padL=56,padR=18,padT=18,padB=44;
+  const xmin=0,xmax=60,ymin=-10,ymax=40;
+  const X=v=>padL+((Math.min(xmax,Math.max(xmin,v))-xmin)/(xmax-xmin))*(W-padL-padR);
+  const Y=v=>H-padB-((Math.min(ymax,Math.max(ymin,v))-ymin)/(ymax-ymin))*(H-padT-padB);
+  let grid="";
+  for(let g=0;g<=xmax;g+=15){ const gx=X(g); grid+=`<line x1="${gx}" y1="${padT}" x2="${gx}" y2="${H-padB}" stroke="#1e293b"/>`+
+    `<text x="${gx}" y="${H-padB+16}" fill="#94a3b8" font-size="11" text-anchor="middle">${g}x</text>`; }
+  for(let g=ymin;g<=ymax;g+=10){ const gy=Y(g); grid+=`<line x1="${padL}" y1="${gy}" x2="${W-padR}" y2="${gy}" stroke="#1e293b"/>`+
+    `<text x="${padL-6}" y="${gy+4}" fill="#94a3b8" font-size="11" text-anchor="end">${g}%</text>`; }
+  const dots=data.map(p=>{
+    const cx=X(p.pe), cy=Y(p.margin);
+    const clipped=(p.pe>xmax||p.pe<xmin||p.margin>ymax||p.margin<ymin);
+    const name=shortTk(p.ticker);
+    return `<circle cx="${cx}" cy="${cy}" r="6" fill="${catColor(p.cat)}" opacity="0.85" stroke="#0f172a" stroke-width="1"/>`+
+      `<text x="${cx+8}" y="${cy+4}" fill="#e2e8f0" font-size="11">${esc(name)}${clipped?" (off-scale)":""}</text>`;
+  }).join("");
+  const r=pearson(data.map(p=>p.pe), data.map(p=>p.margin));
+  return `<div style="overflow-x:auto"><svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Operating margin vs P/E scatter">${grid}${dots}
+    <text x="${(padL+W-padR)/2}" y="${H-6}" fill="#94a3b8" font-size="12" text-anchor="middle">Trailing P/E →</text>
+    <text x="16" y="${(padT+H-padB)/2}" fill="#94a3b8" font-size="12" text-anchor="middle" transform="rotate(-90 16 ${(padT+H-padB)/2})">Operating margin % →</text></svg></div>
+    <p class="mut">Pearson correlation (operating margin vs P/E) ≈ ${r.toFixed(2)} — near 0 means price and quality move independently across the sector. Points outside the axis range are drawn at the edge (off-scale).</p>`;
+}
+function renderDash(modes){
+  const pts = modes.map(c=>{ const m=c.metrics||{}; return {
+    ticker:c.ticker, cat:c.category, pe:m.pe, margin:m.current_op_margin, m1:m.mom_1y, m6:m.mom_6m
+  }; });
+  if(!pts.length){ $("#dash").innerHTML=""; return; }
+  const peBars = pts.filter(p=>p.pe!=null).sort((a,b)=>a.pe-b.pe).slice(0,14).map(p=>
+    barRow(shortTk(p.ticker), (p.pe/45)*100, catColor(p.cat), Number(p.pe).toFixed(1)+"x")).join("");
+  const momBars = pts.filter(p=>p.m1!=null).sort((a,b)=>b.m1-a.m1).slice(0,14).map(p=>
+    barRow(shortTk(p.ticker), ((p.m1+30)/70)*100, p.m1>=0?"#16a34a":"#dc2626", fmtMom(p.m1))).join("");
+  $("#dash").innerHTML = `<div class="card"><h2>Sector data dashboard — ${esc($("#sector").value)} / ${esc($("#mode").value)}</h2>
+    <p class="mut">Every number is from this data snapshot (${esc(DATA.as_of)}) on fundamentals + price momentum.
+    <b>Research, not investment advice.</b></p>
+    <h3>Valuation — trailing P/E (lower = cheaper)</h3>${peBars||"<p class='mut'>No P/E data for this sector/mode.</p>"}
+    <h3>Momentum — 1Y price return (relative strength)</h3>${momBars||"<p class='mut'>No momentum data for this sector/mode.</p>"}
+    <h3>Operating margin vs valuation (P/E)</h3>${scatterHtml(pts)}
+    <p class="mut">Bar/scatter colors: <span class="badge p-PASSED">PASSED</span>
+      <span class="badge p-MARGINAL">MARGINAL</span> <span class="badge p-ELIMINATED">ELIMINATED</span></p></div>`;
+}
 
 fetch("data/sectors.json").then(r=>r.json()).then(d=>{
   DATA=d;
