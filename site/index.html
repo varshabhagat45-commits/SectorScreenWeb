@@ -236,12 +236,13 @@ function render(){
       <td>${badge(c.category)}</td><td>${c.passed}</td><td>${c.g1===null?'—':c.g1}</td>
       <td>${c.g2===null?'—':c.g2}</td><td>${c.failed}</td>
       <td>${c.market_cap_cr? Math.round(c.market_cap_cr).toLocaleString('en-IN'):'—'}</td>
+      <td>${momCell(c.metrics)}</td>
       <td>${hf||'<span class="mut">none</span>'}</td><td>${sf||'<span class="mut">none</span>'}</td>
       <td>${c.missing}</td></tr>`;
   }).join("");
   $("#table").innerHTML = `<div class="card"><h2>Results (${modes.length} stocks | ${sector} | ${mode})</h2>
     <table><thead><tr><th>Company</th><th>Verdict</th><th>Passed</th><th>G1</th><th>G2</th>
-    <th>Failed</th><th>MCap (Cr)</th><th>Hard fails</th><th>Soft flags</th><th>Missing</th></tr></thead>
+    <th>Failed</th><th>MCap (Cr)</th><th>Momentum</th><th>Hard fails</th><th>Soft flags</th><th>Missing</th></tr></thead>
     <tbody>${rows}</tbody></table>
     <p class="mut">Hover a pill for the criterion. Hard fails eliminate; soft flags are informational.</p></div>`;
 
@@ -272,6 +273,9 @@ function render(){
 
 function fmt(v){ if(v===null||v===undefined)return "missing"; if(typeof v==="boolean")return v?"true":"false";
   if(typeof v==="number")return v.toFixed(2); return v; }
+function fmtMom(v){ if(v===null||v===undefined)return "—"; const s=v>0?"+":""; return s+Number(v).toFixed(1)+"%"; }
+function momCell(m){ m=m||{}; return `<span class="mut">1Y ${fmtMom(m.mom_1y)}</span><br>` +
+  `<span class="mut">6M ${fmtMom(m.mom_6m)}</span><br><span class="mut">3M ${fmtMom(m.mom_3m)}</span>`; }
 
 fetch("data/sectors.json").then(r=>r.json()).then(d=>{
   DATA=d;
