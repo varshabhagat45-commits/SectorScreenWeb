@@ -31,7 +31,7 @@ OUT = REPO / "site" / "data" / "sectors.json"
 def momentum(ticker_symbol: str):
     """Price momentum: 1Y / 6M / 3M returns (%). None if price data unavailable."""
     try:
-        hist = yf.Ticker(ticker_symbol).history(period="1y")
+        hist = yf.Ticker(ticker_symbol).history(period="2y")
         if hist is None or hist.empty or "Close" not in hist:
             return (None, None, None)
         close = hist["Close"].dropna()
