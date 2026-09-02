@@ -16,6 +16,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import sector_map
+import yfinance as yf
 from bank_engine import BankEngine
 from cache import DiskCache
 from pharma_screening_engine import MODES
@@ -25,6 +26,23 @@ from screener_provider import ScreenerProvider
 REPO = Path(__file__).resolve().parents[1]
 CACHE = REPO / "cache"
 OUT = REPO / "site" / "data" / "sectors.json"
+
+
+def momentum(ticker_symbol: str):
+    """Price momentum: 1Y / 6M / 3M returns (%). None if price data unavailable."""
+    try:
+        hist = yf.Ticker(ticker_symbol).history(period="1y")
+        if hist is None or hist.empty or "Close" not in hist:
+            return (None, None, None)
+        close = hist["Close"].dropna()
+        def ret(days):
+            if len(close) <= days:
+                return None
+            latest, past = close.iloc[-1], close.iloc[-1 - days]
+            return (latest / past - 1) * 100 if past else None
+        return (ret(252), ret(126), ret(63))
+    except Exception:
+        return (None, None, None)
 
 
 METRIC_KEYS = [
@@ -76,12 +94,17 @@ def build(only_sectors: list | None = None, modes: list | None = None, delay: fl
         entry = {"fit": fit, "note": sector_map.get_fit_note(sector), "modes": {}}
         is_bank = fit == "financial"
         errors_total = 0
+        mom = {t: momentum(t) for t in tickers}
         for mode in modes:
             if is_bank:
                 report = BankEngine(mode=mode).run(tickers, delay, cache)
             else:
                 report = LiveScreeningEngine(provider=ScreenerProvider(), mode=mode).run(tickers, delay, cache)
-            entry["modes"][mode] = _norm(report["companies"], is_bank)
+            companies = _norm(report["companies"], is_bank)
+            for c in companies:
+                m = mom.get(c["ticker"], (None, None, None))
+                c["metrics"]["mom_1y"], c["metrics"]["mom_6m"], c["metrics"]["mom_3m"] = m
+            entry["modes"][mode] = companies
             errors_total += len(report.get("errors") or [])
         data["sectors"][sector] = entry
         print(f"built: {sector} ({len(tickers)} tickers, fit={fit}, errors={errors_total})")
