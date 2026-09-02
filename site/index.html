@@ -48,6 +48,7 @@ footer{margin-top:20px;font-size:12px;color:var(--mut)}
 <div id="table"></div>
 <div id="detail"></div>
 <div id="chart"></div>
+<div id="failures"></div>
 <div id="qualitative"></div>
 
 <footer id="foot"></footer>
@@ -91,6 +92,21 @@ function autoSuggest(m){
 function isAutoFactor(f){ return ["Valuation (is the price fair)","Balance-sheet quality (beyond ratios)",
   "Sector cycle","Competitive moat","Management quality"].indexOf(f)>=0; }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+function renderFailures(modes){
+  const cnt = {};
+  modes.forEach(c=> (c.hard||[]).forEach(h=>{
+    const k = (h.code||"") + " — " + (h.criterion||"");
+    cnt[k] = (cnt[k]||0) + 1;
+  }));
+  const entries = Object.entries(cnt).sort((a,b)=>a[1]-b[1]).slice(-12);
+  if(!entries.length){ $("#failures").innerHTML=""; return; }
+  const max = Math.max(1, ...entries.map(e=>e[1]));
+  const bars = entries.map(([k,v])=>`<div class="bar-wrap"><div class="name" style="width:170px">${esc(k)}</div>
+    <div class="bar" style="width:${(v/max*60).toFixed(1)}%;background:#b23a48"></div><span class="mut">${v}</span></div>`).join("");
+  $("#failures").innerHTML = `<div class="card"><h2>Most common hard-gate failures (${modes.length} companies)</h2>${bars}
+    <p class="mut">How many companies fail each hard criterion in this sector/mode. These are the quality/leverage/cash-flow gates that eliminate names.</p></div>`;
+}
 function qKey(t){ return "qual:"+t; }
 function qLoad(t){ try{ return JSON.parse(localStorage.getItem(qKey(t))||"{}"); }catch(e){ return {}; } }
 function qSave(t,q){ localStorage.setItem(qKey(t), JSON.stringify(q)); }
@@ -248,6 +264,7 @@ function render(){
        not a recommendation</b> — always verify fundamentals and check with a financial advisor.</p>`;
   $("#chart").innerHTML = top.length ? `<div class="card"><h2>Top five by quality (fewest hard-gate failures)</h2>${strictNote}${bars}</div>` : "";
 
+  renderFailures(modes);
   renderQualitative(modes);
 
   $("#foot").textContent = "Research and analysis only — not personalized investment advice. Data snapshot; regenerate locally with build_data.py.";
