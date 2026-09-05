@@ -42,8 +42,21 @@ footer{margin-top:20px;font-size:12px;color:var(--mut)}
 </div>
 
 <div class="card">
-  <label>Sector</label><select id="sector"></select>
-  <label>Mode</label>
+  <div style="display:flex; gap:12px; flex-wrap:wrap">
+    <div style="flex:1; min-width:200px">
+      <label>Sector (broad)</label>
+      <select id="sector"></select>
+    </div>
+    <div style="flex:1; min-width:200px">
+      <label>Sub-industry</label>
+      <select id="subInd"><option value="">All sub-industries</option></select>
+    </div>
+    <div style="flex:2; min-width:240px">
+      <label>Search ticker or company</label>
+      <input id="search" type="text" placeholder="e.g. RELIANCE or Mahindra" style="padding:9px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--tx);font-size:14px;width:100%">
+    </div>
+  </div>
+  <label style="margin-top:12px">Mode</label>
   <select id="mode">
     <option value="strict">strict (all 47 hard)</option>
     <option value="quality_first" selected>quality_first (growth &amp; valuation soft)</option>
@@ -70,6 +83,7 @@ const $ = (s)=>document.querySelector(s);
 let DATA = null;
 let CURRENT_QUAL = [];
 const CATS = ["PASSED","MARGINAL","ELIMINATED"];
+const STATE = { subInd: "", search: "" };
 
 const FACTORS = [
   "Competitive moat","Management quality","Order book / pipeline",
@@ -246,13 +260,23 @@ function renderTop(modes){
     <tbody>${rows}</tbody></table></div>`;
 }
 
+function passesFilter(c){
+  if(STATE.subInd && (c.subIndustry||"") !== STATE.subInd) return false;
+  if(STATE.search){
+    const q = STATE.search.toLowerCase();
+    if(!((c.ticker||"").toLowerCase().includes(q) || (c.company||"").toLowerCase().includes(q))) return false;
+  }
+  return true;
+}
+
 function render(){
   const sector = $("#sector").value, mode = $("#mode").value;
   const sec = DATA.sectors[sector];
   $("#fit").innerHTML = sec.note ? `<div class="warn"><b>Note:</b> ${sec.note}</div>` : "";
   $("#meta").textContent = `${sec.fit} fit | snapshot ${DATA.as_of}`;
 
-  const modes = sec.modes[mode] || [];
+  const allModes = sec.modes[mode] || [];
+  const modes = allModes.filter(passesFilter);
   const counts = {PASSED:0, MARGINAL:0, ELIMINATED:0};
   modes.forEach(c=>counts[c.category]++);
   $("#summary").innerHTML = `<div class="card">` +
@@ -366,12 +390,32 @@ function renderDash(modes){
       <span class="badge p-MARGINAL">MARGINAL</span> <span class="badge p-ELIMINATED">ELIMINATED</span></p></div>`;
 }
 
+function populateSubIndustries(){
+  const sector = $("#sector").value;
+  const sec = DATA.sectors[sector];
+  const subs = new Set();
+  for(const mode of ["strict","quality_first","sector_adjusted"]){
+    for(const r of (sec.modes[mode] || [])){
+      if(r.subIndustry) subs.add(r.subIndustry);
+    }
+  }
+  const sel = $("#subInd");
+  const prev = STATE.subInd;
+  sel.innerHTML = '<option value="">All sub-industries</option>' +
+    [...subs].sort().map(s => `<option value="${esc(s)}"${s===prev?" selected":""}>${esc(s)}</option>`).join("");
+  if(prev && !subs.has(prev)) STATE.subInd = "";
+}
+
 fetch("data/sectors.json").then(r=>r.json()).then(d=>{
   DATA=d;
   const sel=$("#sector");
   sel.innerHTML = Object.keys(d.sectors).sort().map(s=>`<option>${s}</option>`).join("");
-  sel.addEventListener("change", render);
+  populateSubIndustries();
+  sel.addEventListener("change", () => { populateSubIndustries(); render(); });
   $("#mode").addEventListener("change", render);
+  $("#subInd").addEventListener("change", e => { STATE.subInd = e.target.value; render(); });
+  const searchEl = document.getElementById("search");
+  if(searchEl) searchEl.addEventListener("input", e => { STATE.search = e.target.value; render(); });
   render();
 });
 </script>
