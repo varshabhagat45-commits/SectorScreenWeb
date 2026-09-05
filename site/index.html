@@ -409,7 +409,15 @@ function populateSubIndustries(){
 fetch("data/sectors.json").then(r=>r.json()).then(d=>{
   DATA=d;
   const sel=$("#sector");
-  sel.innerHTML = Object.keys(d.sectors).sort().map(s=>`<option>${s}</option>`).join("");
+  const sectorNames = Object.keys(d.sectors).sort();
+  sel.innerHTML = sectorNames.map(s=>`<option value="${esc(s)}">${esc(s)}</option>`).join("");
+  // Default to the sector with the most tickers so Defence is visible
+  let best = sectorNames[0], bestN = 0;
+  for(const s of sectorNames){
+    const n = (d.sectors[s].modes.quality_first || []).length;
+    if(n > bestN){ best = s; bestN = n; }
+  }
+  sel.value = best;
   populateSubIndustries();
   sel.addEventListener("change", () => { populateSubIndustries(); render(); });
   $("#mode").addEventListener("change", render);
