@@ -92,7 +92,8 @@ const FACTORS = [
 ];
 const RATES = ["","Strong","Neutral","Weak"];
 
-// Provisional auto-suggestions from financial data only (heuristic - verify).
+// Auto-suggest from financial data + J-Curve score/momentum.
+// We may not have all 47 fields; fall back to "Neutral" rather than blank.
 function autoSuggest(m){
   m = m || {};
   const pe=m.pe, peg=m.peg;
@@ -101,17 +102,80 @@ function autoSuggest(m){
   const margin=m.current_op_margin, roe5=m.avg_roe_5y;
   const sc=m.sales_cagr_5y, pc=m.profit_cagr_5y;
   const promo=m.promoter_holding;
+  const rev=m.sales_growth_yoy, pat=m.profit_growth_yoy;
+  const mom1y=m.mom_1y, mom6m=m.mom_6m, mom3m=m.mom_3m;
+  const jscore=m.q_score != null ? m.q_score : null;
   const res = {};
-  res["Valuation (is the price fair)"] = (pe!=null)
-    ? (pe<20 || (peg!=null&&peg<1.2) ? "Strong" : (pe>45 || (peg!=null&&peg>2.5) ? "Weak" : "Neutral")) : "";
-  res["Balance-sheet quality (beyond ratios)"] = (de!=null)
-    ? (de<40 && fcf!=null && fcf>0 && (nd==null||nd<1.5) ? "Strong" : (de>80 || (nd!=null&&nd>3) ? "Weak" : "Neutral")) : "";
-  res["Sector cycle"] = (sc!=null)
-    ? (sc>12 && pc!=null && pc>15 ? "Strong" : (sc<2 || (pc!=null&&pc<0) ? "Weak" : "Neutral")) : "";
-  res["Competitive moat"] = (roce!=null)
-    ? (roce>18 && margin!=null && margin>18 ? "Strong" : (roe5!=null&&roe5<10 ? "Weak" : "Neutral")) : "";
-  res["Management quality"] = (promo!=null)
-    ? (promo>=50 && roe5!=null&&roe5>14 ? "Strong" : (promo<35 ? "Weak" : "Neutral")) : "";
+
+  // 1. Valuation (is the price fair)
+  if (pe != null || peg != null) {
+    if (pe != null && pe < 20) res["Valuation (is the price fair)"] = "Strong";
+    else if (pe != null && pe > 45) res["Valuation (is the price fair)"] = "Weak";
+    else if (peg != null && peg < 1.2) res["Valuation (is the price fair)"] = "Strong";
+    else if (peg != null && peg > 2.5) res["Valuation (is the price fair)"] = "Weak";
+    else res["Valuation (is the price fair)"] = "Neutral";
+  } else if (mom1y != null && mom1y > 20) {
+    res["Valuation (is the price fair)"] = "Strong";
+  } else {
+    res["Valuation (is the price fair)"] = "Neutral";
+  }
+
+  // 2. Balance-sheet quality
+  if (de != null || fcf != null || jscore != null) {
+    if (de != null && de > 80) res["Balance-sheet quality (beyond ratios)"] = "Weak";
+    else if (de != null && de < 40 && (fcf == null || fcf > 0)) res["Balance-sheet quality (beyond ratios)"] = "Strong";
+    else if (nd != null && nd > 3) res["Balance-sheet quality (beyond ratios)"] = "Weak";
+    else if (jscore != null && jscore >= 75) res["Balance-sheet quality (beyond ratios)"] = "Strong";
+    else if (jscore != null && jscore < 60) res["Balance-sheet quality (beyond ratios)"] = "Weak";
+    else res["Balance-sheet quality (beyond ratios)"] = "Neutral";
+  } else {
+    res["Balance-sheet quality (beyond ratios)"] = "Neutral";
+  }
+
+  // 3. Sector cycle
+  if (sc != null || rev != null) {
+    if (sc != null && sc > 12 && pc != null && pc > 15) res["Sector cycle"] = "Strong";
+    else if (sc != null && sc > 8) res["Sector cycle"] = "Strong";
+    else if (sc != null && sc < 2) res["Sector cycle"] = "Weak";
+    else if (rev != null && rev > 15) res["Sector cycle"] = "Strong";
+    else if (rev != null && rev < 0) res["Sector cycle"] = "Weak";
+    else res["Sector cycle"] = "Neutral";
+  } else if (mom6m != null) {
+    if (mom6m > 10) res["Sector cycle"] = "Strong";
+    else if (mom6m < -10) res["Sector cycle"] = "Weak";
+    else res["Sector cycle"] = "Neutral";
+  } else {
+    res["Sector cycle"] = "Neutral";
+  }
+
+  // 4. Competitive moat
+  if (roce != null || margin != null || jscore != null) {
+    if (roce != null && roce > 18 && margin != null && margin > 18) res["Competitive moat"] = "Strong";
+    else if (roce != null && roce > 18) res["Competitive moat"] = "Strong";
+    else if (roce != null && roce < 8) res["Competitive moat"] = "Weak";
+    else if (margin != null && margin > 20) res["Competitive moat"] = "Strong";
+    else if (margin != null && margin < 5) res["Competitive moat"] = "Weak";
+    else if (jscore != null && jscore >= 78) res["Competitive moat"] = "Strong";
+    else if (jscore != null && jscore < 60) res["Competitive moat"] = "Weak";
+    else res["Competitive moat"] = "Neutral";
+  } else {
+    res["Competitive moat"] = "Neutral";
+  }
+
+  // 5. Management quality
+  if (promo != null || roe5 != null || jscore != null) {
+    if (promo != null && promo >= 50 && roe5 != null && roe5 > 14) res["Management quality"] = "Strong";
+    else if (promo != null && promo >= 50) res["Management quality"] = "Strong";
+    else if (promo != null && promo < 35) res["Management quality"] = "Weak";
+    else if (roe5 != null && roe5 > 15) res["Management quality"] = "Strong";
+    else if (roe5 != null && roe5 < 8) res["Management quality"] = "Weak";
+    else if (jscore != null && jscore >= 78) res["Management quality"] = "Strong";
+    else if (jscore != null && jscore < 60) res["Management quality"] = "Weak";
+    else res["Management quality"] = "Neutral";
+  } else {
+    res["Management quality"] = "Neutral";
+  }
+
   return res;
 }
 function isAutoFactor(f){ return ["Valuation (is the price fair)","Balance-sheet quality (beyond ratios)",
@@ -187,7 +251,13 @@ function renderQualitative(companies){
   CURRENT_QUAL = [];
   const cards = companies.map(c=>{
     const q = qLoad(c.ticker);
-    const auto = autoSuggest(c.metrics||{});
+    const m = c.metrics || {};
+    // Make q_score / mom_x accessible as m.* for autoSuggest
+    m.q_score = c.q_score;
+    m.mom_1y = c.metrics?.mom_1y;
+    m.mom_6m = c.metrics?.mom_6m;
+    m.mom_3m = c.metrics?.mom_3m;
+    const auto = autoSuggest(m);
     const eff = FACTORS.map(f=> q[f] || auto[f] || "");   // effective = user-set, else auto, else blank
     const score = eff.reduce((s,v)=> s + (v==="Strong"?2 : v==="Neutral"?1 : 0), 0);
     const strong = eff.filter(v=>v==="Strong").length;
