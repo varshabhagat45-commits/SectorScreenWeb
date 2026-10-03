@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-02T14:37:58.709743+00:00",
+  "as_of": "2026-10-03T13:14:08.796100+00:00",
   "source": "Screener.in (consolidated) + Yahoo Finance valuation (snapshot)",
   "sectors": {
     "Pharmaceuticals": {
@@ -84,7 +84,7 @@
             "failed": 14,
             "market_cap_cr": 114284.0098816,
             "metrics": {
-              "pe": 25.54515,
+              "pe": 25.51102,
               "pb": 4.2522473,
               "peg": null,
               "current_roe": 18.899380348185304,
@@ -586,7 +586,7 @@
             "metrics": {
               "pe": 30.398184,
               "pb": 2.6204307,
-              "peg": 1.71,
+              "peg": 1.68,
               "current_roe": 10.97329251557057,
               "current_roce": 13.0,
               "current_op_margin": 15.468881666064766,
@@ -838,7 +838,7 @@
             "failed": 22,
             "market_cap_cr": 96479.3729024,
             "metrics": {
-              "pe": 25.78899,
+              "pe": 26.179546,
               "pb": 2.5702379,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -1480,7 +1480,7 @@
             "failed": 4,
             "market_cap_cr": 114284.0098816,
             "metrics": {
-              "pe": 25.54515,
+              "pe": 25.51102,
               "pb": 4.2522473,
               "peg": null,
               "current_roe": 18.899380348185304,
@@ -1982,7 +1982,7 @@
             "metrics": {
               "pe": 30.398184,
               "pb": 2.6204307,
-              "peg": 1.71,
+              "peg": 1.68,
               "current_roe": 10.97329251557057,
               "current_roce": 13.0,
               "current_op_margin": 15.468881666064766,
@@ -2234,7 +2234,7 @@
             "failed": 11,
             "market_cap_cr": 96479.3729024,
             "metrics": {
-              "pe": 25.78899,
+              "pe": 26.179546,
               "pb": 2.5702379,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -3117,7 +3117,7 @@
             "failed": 4,
             "market_cap_cr": 114284.0098816,
             "metrics": {
-              "pe": 25.54515,
+              "pe": 25.51102,
               "pb": 4.2522473,
               "peg": null,
               "current_roe": 18.899380348185304,
@@ -3308,7 +3308,7 @@
             "metrics": {
               "pe": 30.398184,
               "pb": 2.6204307,
-              "peg": 1.71,
+              "peg": 1.68,
               "current_roe": 10.97329251557057,
               "current_roce": 13.0,
               "current_op_margin": 15.468881666064766,
@@ -3535,7 +3535,7 @@
             "failed": 11,
             "market_cap_cr": 96479.3729024,
             "metrics": {
-              "pe": 25.78899,
+              "pe": 26.179546,
               "pb": 2.5702379,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -4066,7 +4066,7 @@
             "failed": 10,
             "market_cap_cr": 90760.3017728,
             "metrics": {
-              "pe": 26.637354,
+              "pe": 26.666666,
               "pb": 13.09733,
               "peg": null,
               "current_roe": 33.71662194966143,
@@ -4129,18 +4129,110 @@
             "composite": 65.6
           },
           {
+            "ticker": "COFORGE.NS",
+            "company": "Coforge Limited",
+            "category": "ELIMINATED",
+            "g1": 18,
+            "g2": 15,
+            "passed": 33,
+            "failed": 14,
+            "market_cap_cr": 80898.850816,
+            "metrics": {
+              "pe": 37.45641,
+              "pb": 6.430415,
+              "peg": null,
+              "current_roe": 18.29715843556674,
+              "current_roce": 24.0,
+              "current_op_margin": 18.63149216817807,
+              "avg_roce_5y": 27.2,
+              "avg_roe_5y": 21.270799800634823,
+              "current_de_ratio": 7.633427702631855,
+              "avg_de_5y": 10.087073007367716,
+              "net_debt_to_ebitda": 0.17525276841598458,
+              "fcf_5y_total": 6116.0,
+              "fcf_3y_total": 2521.0,
+              "cfo_to_ebitda": 18.32625727666652,
+              "sales_cagr_5y": 23.11790159691771,
+              "profit_cagr_5y": 21.84256620486913,
+              "sales_growth_yoy": 10.924830823629824,
+              "profit_growth_yoy": 10.028653295128938,
+              "promoter_holding": 0.0,
+              "mom_1y": 15.568539869606957,
+              "mom_6m": 48.72858892201792,
+              "mom_3m": 23.507242284405507
+            },
+            "hard": [
+              {
+                "code": "G1-23",
+                "criterion": "Promoter holding > 40%",
+                "value": 0.0
+              },
+              {
+                "code": "G2-04",
+                "criterion": "Tight ROE > 20%",
+                "value": 18.29715843556674
+              },
+              {
+                "code": "G2-09",
+                "criterion": "Promoter holding > 50%",
+                "value": 0.0
+              },
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 18.32625727666652
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-20",
+                "criterion": "P/E < 35x",
+                "value": 37.45641
+              },
+              {
+                "code": "G1-22",
+                "criterion": "P/B < 6.0x",
+                "value": 6.430415
+              },
+              {
+                "code": "G2-12",
+                "criterion": "P/E < 30x",
+                "value": 37.45641
+              },
+              {
+                "code": "G2-14",
+                "criterion": "P/B < 5.0x",
+                "value": 6.430415
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": 10.028653295128938
+              }
+            ],
+            "missing": 4,
+            "q_score": 49.7,
+            "mom_score": 63.6,
+            "composite": 55.2
+          },
+          {
             "ticker": "INFY.NS",
             "company": "Infosys Limited",
             "category": "ELIMINATED",
             "g1": 17,
-            "g2": 17,
-            "passed": 34,
-            "failed": 13,
+            "g2": 16,
+            "passed": 33,
+            "failed": 14,
             "market_cap_cr": 419210.5660416,
             "metrics": {
               "pe": 13.298214,
               "pb": 4.5422335,
-              "peg": 1.75,
+              "peg": 1.83,
               "current_roe": 31.74298884245897,
               "current_roce": 40.0,
               "current_op_margin": 23.699493991830188,
@@ -4205,6 +4297,11 @@
                 "value": 2.887290493316143
               },
               {
+                "code": "G2-13",
+                "criterion": "PEG < 1.8x",
+                "value": 1.83
+              },
+              {
                 "code": "G2-15",
                 "criterion": "Revenue 5Y CAGR > 12%",
                 "value": 8.698080043164103
@@ -4221,101 +4318,9 @@
               }
             ],
             "missing": 2,
-            "q_score": 57.4,
+            "q_score": 55.3,
             "mom_score": 40.4,
-            "composite": 50.6
-          },
-          {
-            "ticker": "COFORGE.NS",
-            "company": "Coforge Limited",
-            "category": "ELIMINATED",
-            "g1": 18,
-            "g2": 15,
-            "passed": 33,
-            "failed": 14,
-            "market_cap_cr": 80898.850816,
-            "metrics": {
-              "pe": 37.45641,
-              "pb": 6.430415,
-              "peg": null,
-              "current_roe": 18.29715843556674,
-              "current_roce": 24.0,
-              "current_op_margin": 18.63149216817807,
-              "avg_roce_5y": 27.2,
-              "avg_roe_5y": 21.270799800634823,
-              "current_de_ratio": 7.633427702631855,
-              "avg_de_5y": 10.087073007367716,
-              "net_debt_to_ebitda": 0.17525276841598458,
-              "fcf_5y_total": 6116.0,
-              "fcf_3y_total": 2521.0,
-              "cfo_to_ebitda": 18.32625727666652,
-              "sales_cagr_5y": 23.11790159691771,
-              "profit_cagr_5y": 21.84256620486913,
-              "sales_growth_yoy": 10.924830823629824,
-              "profit_growth_yoy": 10.028653295128938,
-              "promoter_holding": 0.0,
-              "mom_1y": 15.568548798313909,
-              "mom_6m": 48.72858892201792,
-              "mom_3m": 23.507242284405507
-            },
-            "hard": [
-              {
-                "code": "G1-23",
-                "criterion": "Promoter holding > 40%",
-                "value": 0.0
-              },
-              {
-                "code": "G2-04",
-                "criterion": "Tight ROE > 20%",
-                "value": 18.29715843556674
-              },
-              {
-                "code": "G2-09",
-                "criterion": "Promoter holding > 50%",
-                "value": 0.0
-              },
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 18.32625727666652
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-20",
-                "criterion": "P/E < 35x",
-                "value": 37.45641
-              },
-              {
-                "code": "G1-22",
-                "criterion": "P/B < 6.0x",
-                "value": 6.430415
-              },
-              {
-                "code": "G2-12",
-                "criterion": "P/E < 30x",
-                "value": 37.45641
-              },
-              {
-                "code": "G2-14",
-                "criterion": "P/B < 5.0x",
-                "value": 6.430415
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": 10.028653295128938
-              }
-            ],
-            "missing": 4,
-            "q_score": 49.7,
-            "mom_score": 63.6,
-            "composite": 55.2
+            "composite": 49.4
           },
           {
             "ticker": "KPITTECH.NS",
@@ -4421,7 +4426,7 @@
             "metrics": {
               "pe": 12.656871,
               "pb": 2.0346017,
-              "peg": 1.31,
+              "peg": 1.32,
               "current_roe": 15.071745873050139,
               "current_roce": 18.0,
               "current_op_margin": 19.175932945834386,
@@ -4438,7 +4443,7 @@
               "sales_growth_yoy": 2.5306615995854207,
               "profit_growth_yoy": 0.14322327755163575,
               "promoter_holding": 72.59,
-              "mom_1y": -30.930815020274327,
+              "mom_1y": -30.930810452163037,
               "mom_6m": -21.273003994788407,
               "mom_3m": -7.54365822900912
             },
@@ -4540,7 +4545,7 @@
               "sales_growth_yoy": 6.577163005153242,
               "profit_growth_yoy": 3.1099195710455763,
               "promoter_holding": 30.29,
-              "mom_1y": 12.077953184406788,
+              "mom_1y": 12.077964612634329,
               "mom_6m": -0.010388657696280834,
               "mom_3m": 14.204184516023123
             },
@@ -4849,7 +4854,7 @@
             "metrics": {
               "pe": 15.08323,
               "pb": 6.8478684,
-              "peg": 2.68,
+              "peg": 2.71,
               "current_roe": 46.115255501678476,
               "current_roce": 63.0,
               "current_op_margin": 26.853936250040782,
@@ -4906,7 +4911,7 @@
               {
                 "code": "G1-21",
                 "criterion": "PEG < 2.0x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G1-22",
@@ -4921,7 +4926,7 @@
               {
                 "code": "G2-13",
                 "criterion": "PEG < 1.8x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G2-14",
@@ -5088,7 +5093,7 @@
             "failed": 2,
             "market_cap_cr": 90760.3017728,
             "metrics": {
-              "pe": 26.637354,
+              "pe": 26.666666,
               "pb": 13.09733,
               "peg": null,
               "current_roe": 33.71662194966143,
@@ -5151,18 +5156,110 @@
             "composite": 73.7
           },
           {
+            "ticker": "COFORGE.NS",
+            "company": "Coforge Limited",
+            "category": "ELIMINATED",
+            "g1": 18,
+            "g2": 15,
+            "passed": 33,
+            "failed": 5,
+            "market_cap_cr": 80898.850816,
+            "metrics": {
+              "pe": 37.45641,
+              "pb": 6.430415,
+              "peg": null,
+              "current_roe": 18.29715843556674,
+              "current_roce": 24.0,
+              "current_op_margin": 18.63149216817807,
+              "avg_roce_5y": 27.2,
+              "avg_roe_5y": 21.270799800634823,
+              "current_de_ratio": 7.633427702631855,
+              "avg_de_5y": 10.087073007367716,
+              "net_debt_to_ebitda": 0.17525276841598458,
+              "fcf_5y_total": 6116.0,
+              "fcf_3y_total": 2521.0,
+              "cfo_to_ebitda": 18.32625727666652,
+              "sales_cagr_5y": 23.11790159691771,
+              "profit_cagr_5y": 21.84256620486913,
+              "sales_growth_yoy": 10.924830823629824,
+              "profit_growth_yoy": 10.028653295128938,
+              "promoter_holding": 0.0,
+              "mom_1y": 15.568539869606957,
+              "mom_6m": 48.72858892201792,
+              "mom_3m": 23.507242284405507
+            },
+            "hard": [
+              {
+                "code": "G1-23",
+                "criterion": "Promoter holding > 40%",
+                "value": 0.0
+              },
+              {
+                "code": "G2-04",
+                "criterion": "Tight ROE > 20%",
+                "value": 18.29715843556674
+              },
+              {
+                "code": "G2-09",
+                "criterion": "Promoter holding > 50%",
+                "value": 0.0
+              },
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 18.32625727666652
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-20",
+                "criterion": "P/E < 35x",
+                "value": 37.45641
+              },
+              {
+                "code": "G1-22",
+                "criterion": "P/B < 6.0x",
+                "value": 6.430415
+              },
+              {
+                "code": "G2-12",
+                "criterion": "P/E < 30x",
+                "value": 37.45641
+              },
+              {
+                "code": "G2-14",
+                "criterion": "P/B < 5.0x",
+                "value": 6.430415
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": 10.028653295128938
+              }
+            ],
+            "missing": 4,
+            "q_score": 63.6,
+            "mom_score": 63.6,
+            "composite": 63.6
+          },
+          {
             "ticker": "INFY.NS",
             "company": "Infosys Limited",
             "category": "ELIMINATED",
             "g1": 17,
-            "g2": 17,
-            "passed": 34,
+            "g2": 16,
+            "passed": 33,
             "failed": 4,
             "market_cap_cr": 419210.5660416,
             "metrics": {
               "pe": 13.298214,
               "pb": 4.5422335,
-              "peg": 1.75,
+              "peg": 1.83,
               "current_roe": 31.74298884245897,
               "current_roce": 40.0,
               "current_op_margin": 23.699493991830188,
@@ -5227,6 +5324,11 @@
                 "value": 2.887290493316143
               },
               {
+                "code": "G2-13",
+                "criterion": "PEG < 1.8x",
+                "value": 1.83
+              },
+              {
                 "code": "G2-15",
                 "criterion": "Revenue 5Y CAGR > 12%",
                 "value": 8.698080043164103
@@ -5243,101 +5345,9 @@
               }
             ],
             "missing": 2,
-            "q_score": 73.0,
+            "q_score": 72.6,
             "mom_score": 40.4,
-            "composite": 60.0
-          },
-          {
-            "ticker": "COFORGE.NS",
-            "company": "Coforge Limited",
-            "category": "ELIMINATED",
-            "g1": 18,
-            "g2": 15,
-            "passed": 33,
-            "failed": 5,
-            "market_cap_cr": 80898.850816,
-            "metrics": {
-              "pe": 37.45641,
-              "pb": 6.430415,
-              "peg": null,
-              "current_roe": 18.29715843556674,
-              "current_roce": 24.0,
-              "current_op_margin": 18.63149216817807,
-              "avg_roce_5y": 27.2,
-              "avg_roe_5y": 21.270799800634823,
-              "current_de_ratio": 7.633427702631855,
-              "avg_de_5y": 10.087073007367716,
-              "net_debt_to_ebitda": 0.17525276841598458,
-              "fcf_5y_total": 6116.0,
-              "fcf_3y_total": 2521.0,
-              "cfo_to_ebitda": 18.32625727666652,
-              "sales_cagr_5y": 23.11790159691771,
-              "profit_cagr_5y": 21.84256620486913,
-              "sales_growth_yoy": 10.924830823629824,
-              "profit_growth_yoy": 10.028653295128938,
-              "promoter_holding": 0.0,
-              "mom_1y": 15.568548798313909,
-              "mom_6m": 48.72858892201792,
-              "mom_3m": 23.507242284405507
-            },
-            "hard": [
-              {
-                "code": "G1-23",
-                "criterion": "Promoter holding > 40%",
-                "value": 0.0
-              },
-              {
-                "code": "G2-04",
-                "criterion": "Tight ROE > 20%",
-                "value": 18.29715843556674
-              },
-              {
-                "code": "G2-09",
-                "criterion": "Promoter holding > 50%",
-                "value": 0.0
-              },
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 18.32625727666652
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-20",
-                "criterion": "P/E < 35x",
-                "value": 37.45641
-              },
-              {
-                "code": "G1-22",
-                "criterion": "P/B < 6.0x",
-                "value": 6.430415
-              },
-              {
-                "code": "G2-12",
-                "criterion": "P/E < 30x",
-                "value": 37.45641
-              },
-              {
-                "code": "G2-14",
-                "criterion": "P/B < 5.0x",
-                "value": 6.430415
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": 10.028653295128938
-              }
-            ],
-            "missing": 4,
-            "q_score": 63.6,
-            "mom_score": 63.6,
-            "composite": 63.6
+            "composite": 59.7
           },
           {
             "ticker": "KPITTECH.NS",
@@ -5443,7 +5453,7 @@
             "metrics": {
               "pe": 12.656871,
               "pb": 2.0346017,
-              "peg": 1.31,
+              "peg": 1.32,
               "current_roe": 15.071745873050139,
               "current_roce": 18.0,
               "current_op_margin": 19.175932945834386,
@@ -5460,7 +5470,7 @@
               "sales_growth_yoy": 2.5306615995854207,
               "profit_growth_yoy": 0.14322327755163575,
               "promoter_holding": 72.59,
-              "mom_1y": -30.930815020274327,
+              "mom_1y": -30.930810452163037,
               "mom_6m": -21.273003994788407,
               "mom_3m": -7.54365822900912
             },
@@ -5562,7 +5572,7 @@
               "sales_growth_yoy": 6.577163005153242,
               "profit_growth_yoy": 3.1099195710455763,
               "promoter_holding": 30.29,
-              "mom_1y": 12.077953184406788,
+              "mom_1y": 12.077964612634329,
               "mom_6m": -0.010388657696280834,
               "mom_3m": 14.204184516023123
             },
@@ -5871,7 +5881,7 @@
             "metrics": {
               "pe": 15.08323,
               "pb": 6.8478684,
-              "peg": 2.68,
+              "peg": 2.71,
               "current_roe": 46.115255501678476,
               "current_roce": 63.0,
               "current_op_margin": 26.853936250040782,
@@ -5928,7 +5938,7 @@
               {
                 "code": "G1-21",
                 "criterion": "PEG < 2.0x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G1-22",
@@ -5943,7 +5953,7 @@
               {
                 "code": "G2-13",
                 "criterion": "PEG < 1.8x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G2-14",
@@ -6110,7 +6120,7 @@
             "failed": 2,
             "market_cap_cr": 90760.3017728,
             "metrics": {
-              "pe": 26.637354,
+              "pe": 26.666666,
               "pb": 13.09733,
               "peg": null,
               "current_roe": 33.71662194966143,
@@ -6191,7 +6201,7 @@
               "sales_growth_yoy": 10.924830823629824,
               "profit_growth_yoy": 10.028653295128938,
               "promoter_holding": 0.0,
-              "mom_1y": 15.568548798313909,
+              "mom_1y": 15.568539869606957,
               "mom_6m": 48.72858892201792,
               "mom_3m": 23.507242284405507
             },
@@ -6240,7 +6250,7 @@
             "metrics": {
               "pe": 13.298214,
               "pb": 4.5422335,
-              "peg": 1.75,
+              "peg": 1.83,
               "current_roe": 31.74298884245897,
               "current_roce": 40.0,
               "current_op_margin": 23.699493991830188,
@@ -6630,7 +6640,7 @@
               "sales_growth_yoy": 6.577163005153242,
               "profit_growth_yoy": 3.1099195710455763,
               "promoter_holding": 30.29,
-              "mom_1y": 12.077953184406788,
+              "mom_1y": 12.077964612634329,
               "mom_6m": -0.010388657696280834,
               "mom_3m": 14.204184516023123
             },
@@ -6715,7 +6725,7 @@
             "metrics": {
               "pe": 12.656871,
               "pb": 2.0346017,
-              "peg": 1.31,
+              "peg": 1.32,
               "current_roe": 15.071745873050139,
               "current_roce": 18.0,
               "current_op_margin": 19.175932945834386,
@@ -6732,7 +6742,7 @@
               "sales_growth_yoy": 2.5306615995854207,
               "profit_growth_yoy": 0.14322327755163575,
               "promoter_holding": 72.59,
-              "mom_1y": -30.930815020274327,
+              "mom_1y": -30.930810452163037,
               "mom_6m": -21.273003994788407,
               "mom_3m": -7.54365822900912
             },
@@ -6817,7 +6827,7 @@
             "metrics": {
               "pe": 15.08323,
               "pb": 6.8478684,
-              "peg": 2.68,
+              "peg": 2.71,
               "current_roe": 46.115255501678476,
               "current_roce": 63.0,
               "current_op_margin": 26.853936250040782,
@@ -6874,7 +6884,7 @@
               {
                 "code": "G1-21",
                 "criterion": "PEG < 2.0x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G2-02",
@@ -6884,7 +6894,7 @@
               {
                 "code": "G2-13",
                 "criterion": "PEG < 1.8x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G2-15",
@@ -7332,7 +7342,7 @@
             "failed": 17,
             "market_cap_cr": 66390.3404032,
             "metrics": {
-              "pe": 33.716213,
+              "pe": 33.655575,
               "pb": 5.8128695,
               "peg": 3.16,
               "current_roe": 16.36745774586216,
@@ -7351,7 +7361,7 @@
               "sales_growth_yoy": 2.7211399984840448,
               "profit_growth_yoy": 4.173354735152488,
               "promoter_holding": 66.24,
-              "mom_1y": -22.42896784123606,
+              "mom_1y": -22.428972747911924,
               "mom_6m": -8.483952484940826,
               "mom_3m": -15.707564920905115
             },
@@ -7406,7 +7416,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 33.716213
+                "value": 33.655575
               },
               {
                 "code": "G2-13",
@@ -7743,9 +7753,9 @@
             "g2": 12,
             "passed": 25,
             "failed": 22,
-            "market_cap_cr": 85957.6139776,
+            "market_cap_cr": 85970.812928,
             "metrics": {
-              "pe": 45.454548,
+              "pe": 44.84784,
               "pb": 6.7956214,
               "peg": 1.5,
               "current_roe": 14.713788741302972,
@@ -7764,7 +7774,7 @@
               "sales_growth_yoy": 5.079720648306759,
               "profit_growth_yoy": 2.8479312197743147,
               "promoter_holding": 53.06,
-              "mom_1y": -26.620539334685123,
+              "mom_1y": -26.620547159602403,
               "mom_6m": -17.520346091209603,
               "mom_3m": -23.256324376216742
             },
@@ -7839,7 +7849,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 45.454548
+                "value": 44.84784
               },
               {
                 "code": "G1-22",
@@ -7849,7 +7859,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 45.454548
+                "value": 44.84784
               },
               {
                 "code": "G2-14",
@@ -7887,7 +7897,7 @@
             "failed": 26,
             "market_cap_cr": 94713.3284352,
             "metrics": {
-              "pe": 59.330444,
+              "pe": 57.789856,
               "pb": 4.3465624,
               "peg": 0.55,
               "current_roe": 7.100238663484487,
@@ -8011,12 +8021,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 59.330444
+                "value": 57.789856
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 59.330444
+                "value": 57.789856
               },
               {
                 "code": "G2-15",
@@ -8341,7 +8351,7 @@
             "failed": 4,
             "market_cap_cr": 66390.3404032,
             "metrics": {
-              "pe": 33.716213,
+              "pe": 33.655575,
               "pb": 5.8128695,
               "peg": 3.16,
               "current_roe": 16.36745774586216,
@@ -8360,7 +8370,7 @@
               "sales_growth_yoy": 2.7211399984840448,
               "profit_growth_yoy": 4.173354735152488,
               "promoter_holding": 66.24,
-              "mom_1y": -22.42896784123606,
+              "mom_1y": -22.428972747911924,
               "mom_6m": -8.483952484940826,
               "mom_3m": -15.707564920905115
             },
@@ -8415,7 +8425,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 33.716213
+                "value": 33.655575
               },
               {
                 "code": "G2-13",
@@ -8752,9 +8762,9 @@
             "g2": 12,
             "passed": 25,
             "failed": 9,
-            "market_cap_cr": 85957.6139776,
+            "market_cap_cr": 85970.812928,
             "metrics": {
-              "pe": 45.454548,
+              "pe": 44.84784,
               "pb": 6.7956214,
               "peg": 1.5,
               "current_roe": 14.713788741302972,
@@ -8773,7 +8783,7 @@
               "sales_growth_yoy": 5.079720648306759,
               "profit_growth_yoy": 2.8479312197743147,
               "promoter_holding": 53.06,
-              "mom_1y": -26.620539334685123,
+              "mom_1y": -26.620547159602403,
               "mom_6m": -17.520346091209603,
               "mom_3m": -23.256324376216742
             },
@@ -8848,7 +8858,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 45.454548
+                "value": 44.84784
               },
               {
                 "code": "G1-22",
@@ -8858,7 +8868,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 45.454548
+                "value": 44.84784
               },
               {
                 "code": "G2-14",
@@ -8896,7 +8906,7 @@
             "failed": 16,
             "market_cap_cr": 94713.3284352,
             "metrics": {
-              "pe": 59.330444,
+              "pe": 57.789856,
               "pb": 4.3465624,
               "peg": 0.55,
               "current_roe": 7.100238663484487,
@@ -9020,12 +9030,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 59.330444
+                "value": 57.789856
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 59.330444
+                "value": 57.789856
               },
               {
                 "code": "G2-15",
@@ -9320,7 +9330,7 @@
             "failed": 4,
             "market_cap_cr": 66390.3404032,
             "metrics": {
-              "pe": 33.716213,
+              "pe": 33.655575,
               "pb": 5.8128695,
               "peg": 3.16,
               "current_roe": 16.36745774586216,
@@ -9339,7 +9349,7 @@
               "sales_growth_yoy": 2.7211399984840448,
               "profit_growth_yoy": 4.173354735152488,
               "promoter_holding": 66.24,
-              "mom_1y": -22.42896784123606,
+              "mom_1y": -22.428972747911924,
               "mom_6m": -8.483952484940826,
               "mom_3m": -15.707564920905115
             },
@@ -9625,13 +9635,13 @@
             "ticker": "GODREJCP.NS",
             "company": "Godrej Consumer Products Limited",
             "category": "ELIMINATED",
-            "g1": 14,
+            "g1": 15,
             "g2": 13,
-            "passed": 27,
+            "passed": 28,
             "failed": 9,
-            "market_cap_cr": 85957.6139776,
+            "market_cap_cr": 85970.812928,
             "metrics": {
-              "pe": 45.454548,
+              "pe": 44.84784,
               "pb": 6.7956214,
               "peg": 1.5,
               "current_roe": 14.713788741302972,
@@ -9650,7 +9660,7 @@
               "sales_growth_yoy": 5.079720648306759,
               "profit_growth_yoy": 2.8479312197743147,
               "promoter_holding": 53.06,
-              "mom_1y": -26.620539334685123,
+              "mom_1y": -26.620547159602403,
               "mom_6m": -17.520346091209603,
               "mom_3m": -23.256324376216742
             },
@@ -9723,14 +9733,9 @@
                 "value": 2.8479312197743147
               },
               {
-                "code": "G1-20",
-                "criterion": "P/E < 35x",
-                "value": 45.454548
-              },
-              {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 45.454548
+                "value": 44.84784
               },
               {
                 "code": "G2-15",
@@ -9749,9 +9754,9 @@
               }
             ],
             "missing": 2,
-            "q_score": 44.1,
+            "q_score": 44.8,
             "mom_score": 38.4,
-            "composite": 41.8
+            "composite": 42.2
           },
           {
             "ticker": "COLPAL.NS",
@@ -9820,7 +9825,7 @@
             "failed": 16,
             "market_cap_cr": 94713.3284352,
             "metrics": {
-              "pe": 59.330444,
+              "pe": 57.789856,
               "pb": 4.3465624,
               "peg": 0.55,
               "current_roe": 7.100238663484487,
@@ -9939,12 +9944,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 59.330444
+                "value": 57.789856
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 59.330444
+                "value": 57.789856
               },
               {
                 "code": "G2-21",
@@ -10184,7 +10189,7 @@
             "failed": 15,
             "market_cap_cr": 103432.9718784,
             "metrics": {
-              "pe": 18.979763,
+              "pe": 19.011183,
               "pb": 4.784853,
               "peg": null,
               "current_roe": 26.727129702466335,
@@ -10203,7 +10208,7 @@
               "sales_growth_yoy": 7.169222332370125,
               "profit_growth_yoy": -4.986149584487535,
               "promoter_holding": 34.73,
-              "mom_1y": -2.3073292781520816,
+              "mom_1y": -2.3073382953472055,
               "mom_6m": 3.8213765195212135,
               "mom_3m": 6.059738207188414
             },
@@ -10993,7 +10998,7 @@
             "failed": 6,
             "market_cap_cr": 103432.9718784,
             "metrics": {
-              "pe": 18.979763,
+              "pe": 19.011183,
               "pb": 4.784853,
               "peg": null,
               "current_roe": 26.727129702466335,
@@ -11012,7 +11017,7 @@
               "sales_growth_yoy": 7.169222332370125,
               "profit_growth_yoy": -4.986149584487535,
               "promoter_holding": 34.73,
-              "mom_1y": -2.3073292781520816,
+              "mom_1y": -2.3073382953472055,
               "mom_6m": 3.8213765195212135,
               "mom_3m": 6.059738207188414
             },
@@ -11690,7 +11695,7 @@
             "failed": 6,
             "market_cap_cr": 103432.9718784,
             "metrics": {
-              "pe": 18.979763,
+              "pe": 19.011183,
               "pb": 4.784853,
               "peg": null,
               "current_roe": 26.727129702466335,
@@ -11709,7 +11714,7 @@
               "sales_growth_yoy": 7.169222332370125,
               "profit_growth_yoy": -4.986149584487535,
               "promoter_holding": 34.73,
-              "mom_1y": -2.3073292781520816,
+              "mom_1y": -2.3073382953472055,
               "mom_6m": 3.8213765195212135,
               "mom_3m": 6.059738207188414
             },
@@ -12460,7 +12465,7 @@
             "failed": 18,
             "market_cap_cr": 20349.8422272,
             "metrics": {
-              "pe": 26.652376,
+              "pe": 25.96137,
               "pb": 3.4864538,
               "peg": null,
               "current_roe": 9.43978070926846,
@@ -12591,7 +12596,7 @@
               "sales_growth_yoy": -3.226892372799846,
               "profit_growth_yoy": -1.2800819252432156,
               "promoter_holding": 61.34,
-              "mom_1y": -19.913983317542716,
+              "mom_1y": -19.913988219439116,
               "mom_6m": -9.841340059955272,
               "mom_3m": -14.992719237111963
             },
@@ -12689,7 +12694,7 @@
             "failed": 19,
             "market_cap_cr": 73692.4598272,
             "metrics": {
-              "pe": 34.08555,
+              "pe": 34.12766,
               "pb": 5.2480483,
               "peg": null,
               "current_roe": 13.067939040022788,
@@ -12773,7 +12778,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 34.08555
+                "value": 34.12766
               },
               {
                 "code": "G2-14",
@@ -12947,7 +12952,7 @@
               "sales_growth_yoy": -2.949061662198391,
               "profit_growth_yoy": -11.809235427706282,
               "promoter_holding": 46.09,
-              "mom_1y": -36.026384467161975,
+              "mom_1y": -36.02637999857645,
               "mom_6m": -20.565455733678295,
               "mom_3m": -16.15820046897879
             },
@@ -13187,7 +13192,7 @@
             "failed": 29,
             "market_cap_cr": 43684.2856448,
             "metrics": {
-              "pe": 21.180328,
+              "pe": 21.189013,
               "pb": 1.2573965,
               "peg": null,
               "current_roe": 6.398432095918838,
@@ -13797,7 +13802,7 @@
             "failed": 9,
             "market_cap_cr": 20349.8422272,
             "metrics": {
-              "pe": 26.652376,
+              "pe": 25.96137,
               "pb": 3.4864538,
               "peg": null,
               "current_roe": 9.43978070926846,
@@ -13928,7 +13933,7 @@
               "sales_growth_yoy": -3.226892372799846,
               "profit_growth_yoy": -1.2800819252432156,
               "promoter_holding": 61.34,
-              "mom_1y": -19.913983317542716,
+              "mom_1y": -19.913988219439116,
               "mom_6m": -9.841340059955272,
               "mom_3m": -14.992719237111963
             },
@@ -14026,7 +14031,7 @@
             "failed": 8,
             "market_cap_cr": 73692.4598272,
             "metrics": {
-              "pe": 34.08555,
+              "pe": 34.12766,
               "pb": 5.2480483,
               "peg": null,
               "current_roe": 13.067939040022788,
@@ -14110,7 +14115,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 34.08555
+                "value": 34.12766
               },
               {
                 "code": "G2-14",
@@ -14284,7 +14289,7 @@
               "sales_growth_yoy": -2.949061662198391,
               "profit_growth_yoy": -11.809235427706282,
               "promoter_holding": 46.09,
-              "mom_1y": -36.026384467161975,
+              "mom_1y": -36.02637999857645,
               "mom_6m": -20.565455733678295,
               "mom_3m": -16.15820046897879
             },
@@ -14524,7 +14529,7 @@
             "failed": 17,
             "market_cap_cr": 43684.2856448,
             "metrics": {
-              "pe": 21.180328,
+              "pe": 21.189013,
               "pb": 1.2573965,
               "peg": null,
               "current_roe": 6.398432095918838,
@@ -15124,7 +15129,7 @@
             "failed": 8,
             "market_cap_cr": 73692.4598272,
             "metrics": {
-              "pe": 34.08555,
+              "pe": 34.12766,
               "pb": 5.2480483,
               "peg": null,
               "current_roe": 13.067939040022788,
@@ -15226,7 +15231,7 @@
             "failed": 9,
             "market_cap_cr": 20349.8422272,
             "metrics": {
-              "pe": 26.652376,
+              "pe": 25.96137,
               "pb": 3.4864538,
               "peg": null,
               "current_roe": 9.43978070926846,
@@ -15352,7 +15357,7 @@
               "sales_growth_yoy": -3.226892372799846,
               "profit_growth_yoy": -1.2800819252432156,
               "promoter_holding": 61.34,
-              "mom_1y": -19.913983317542716,
+              "mom_1y": -19.913988219439116,
               "mom_6m": -9.841340059955272,
               "mom_3m": -14.992719237111963
             },
@@ -15586,7 +15591,7 @@
               "sales_growth_yoy": -2.949061662198391,
               "profit_growth_yoy": -11.809235427706282,
               "promoter_holding": 46.09,
-              "mom_1y": -36.026384467161975,
+              "mom_1y": -36.02637999857645,
               "mom_6m": -20.565455733678295,
               "mom_3m": -16.15820046897879
             },
@@ -16135,7 +16140,7 @@
             "failed": 17,
             "market_cap_cr": 43684.2856448,
             "metrics": {
-              "pe": 21.180328,
+              "pe": 21.189013,
               "pb": 1.2573965,
               "peg": null,
               "current_roe": 6.398432095918838,
@@ -16310,7 +16315,7 @@
             "failed": 22,
             "market_cap_cr": 315055.669248,
             "metrics": {
-              "pe": 37.320972,
+              "pe": 36.900497,
               "pb": 4.111163,
               "peg": 1.22,
               "current_roe": 10.68594696178743,
@@ -16414,12 +16419,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 37.320972
+                "value": 36.900497
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 37.320972
+                "value": 36.900497
               },
               {
                 "code": "G2-15",
@@ -17157,7 +17162,7 @@
             "failed": 12,
             "market_cap_cr": 315055.669248,
             "metrics": {
-              "pe": 37.320972,
+              "pe": 36.900497,
               "pb": 4.111163,
               "peg": 1.22,
               "current_roe": 10.68594696178743,
@@ -17261,12 +17266,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 37.320972
+                "value": 36.900497
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 37.320972
+                "value": 36.900497
               },
               {
                 "code": "G2-15",
@@ -18004,7 +18009,7 @@
             "failed": 12,
             "market_cap_cr": 315055.669248,
             "metrics": {
-              "pe": 37.320972,
+              "pe": 36.900497,
               "pb": 4.111163,
               "peg": 1.22,
               "current_roe": 10.68594696178743,
@@ -18976,7 +18981,7 @@
             "failed": 18,
             "market_cap_cr": 65266.4111104,
             "metrics": {
-              "pe": 39.98462,
+              "pe": 40.0,
               "pb": 6.8991594,
               "peg": 0.2,
               "current_roe": 17.861675126903553,
@@ -19045,7 +19050,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 39.98462
+                "value": 40.0
               },
               {
                 "code": "G1-22",
@@ -19060,7 +19065,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 39.98462
+                "value": 40.0
               },
               {
                 "code": "G2-14",
@@ -19569,7 +19574,7 @@
             "failed": 33,
             "market_cap_cr": 146594.8700672,
             "metrics": {
-              "pe": 60.315186,
+              "pe": 60.2289,
               "pb": 5.6066804,
               "peg": null,
               "current_roe": 6.119482903694638,
@@ -19718,7 +19723,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 60.315186
+                "value": 60.2289
               },
               {
                 "code": "G2-02",
@@ -19728,7 +19733,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 60.315186
+                "value": 60.2289
               },
               {
                 "code": "G2-14",
@@ -20129,7 +20134,7 @@
             "failed": 5,
             "market_cap_cr": 65266.4111104,
             "metrics": {
-              "pe": 39.98462,
+              "pe": 40.0,
               "pb": 6.8991594,
               "peg": 0.2,
               "current_roe": 17.861675126903553,
@@ -20198,7 +20203,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 39.98462
+                "value": 40.0
               },
               {
                 "code": "G1-22",
@@ -20213,7 +20218,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 39.98462
+                "value": 40.0
               },
               {
                 "code": "G2-14",
@@ -20722,7 +20727,7 @@
             "failed": 23,
             "market_cap_cr": 146594.8700672,
             "metrics": {
-              "pe": 60.315186,
+              "pe": 60.2289,
               "pb": 5.6066804,
               "peg": null,
               "current_roe": 6.119482903694638,
@@ -20871,7 +20876,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 60.315186
+                "value": 60.2289
               },
               {
                 "code": "G2-02",
@@ -20881,7 +20886,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 60.315186
+                "value": 60.2289
               },
               {
                 "code": "G2-14",
@@ -21176,103 +21181,6 @@
             "composite": 65.9
           },
           {
-            "ticker": "HAVELLS.NS",
-            "company": "Havells India Limited",
-            "category": "ELIMINATED",
-            "g1": 18,
-            "g2": 16,
-            "passed": 34,
-            "failed": 5,
-            "market_cap_cr": 65266.4111104,
-            "metrics": {
-              "pe": 39.98462,
-              "pb": 6.8991594,
-              "peg": 0.2,
-              "current_roe": 17.861675126903553,
-              "current_roce": 25.0,
-              "current_op_margin": 9.113645034123182,
-              "avg_roce_5y": 24.6,
-              "avg_roe_5y": 17.73815822976261,
-              "current_de_ratio": 2.802453468697123,
-              "avg_de_5y": 4.660906846823438,
-              "net_debt_to_ebitda": 0.10204081632653061,
-              "fcf_5y_total": 4885.0,
-              "fcf_3y_total": 2116.0,
-              "cfo_to_ebitda": 40.98785311723317,
-              "sales_cagr_5y": 11.098751399909546,
-              "profit_cagr_5y": 6.40071742597903,
-              "sales_growth_yoy": 4.718572443181818,
-              "profit_growth_yoy": -3.433984606275903,
-              "promoter_holding": 59.35,
-              "mom_1y": -30.201016334312992,
-              "mom_6m": -15.307998207484108,
-              "mom_3m": -11.976301311891667
-            },
-            "hard": [
-              {
-                "code": "G1-06",
-                "criterion": "Operating margin > 15%",
-                "value": 9.113645034123182
-              },
-              {
-                "code": "G2-04",
-                "criterion": "Tight ROE > 20%",
-                "value": 17.861675126903553
-              },
-              {
-                "code": "G2-08",
-                "criterion": "Operating margin > 15%",
-                "value": 9.113645034123182
-              },
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 40.98785311723317
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-03",
-                "criterion": "Profit 5Y CAGR > 12%",
-                "value": 6.40071742597903
-              },
-              {
-                "code": "G1-04",
-                "criterion": "Revenue YoY growth > 10%",
-                "value": 4.718572443181818
-              },
-              {
-                "code": "G1-05",
-                "criterion": "Profit YoY growth > 10%",
-                "value": -3.433984606275903
-              },
-              {
-                "code": "G2-02",
-                "criterion": "Quarterly profit growth > 10%",
-                "value": -16.666666666666664
-              },
-              {
-                "code": "G2-16",
-                "criterion": "Profit 5Y CAGR > 15%",
-                "value": 6.40071742597903
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": -3.433984606275903
-              }
-            ],
-            "missing": 2,
-            "q_score": 67.9,
-            "mom_score": 39.0,
-            "composite": 56.3
-          },
-          {
             "ticker": "CUMMINSIND.NS",
             "company": "Cummins India Limited",
             "category": "MARGINAL",
@@ -21363,6 +21271,108 @@
             "q_score": 78.6,
             "mom_score": 56.0,
             "composite": 69.6
+          },
+          {
+            "ticker": "HAVELLS.NS",
+            "company": "Havells India Limited",
+            "category": "ELIMINATED",
+            "g1": 18,
+            "g2": 15,
+            "passed": 33,
+            "failed": 5,
+            "market_cap_cr": 65266.4111104,
+            "metrics": {
+              "pe": 40.0,
+              "pb": 6.8991594,
+              "peg": 0.2,
+              "current_roe": 17.861675126903553,
+              "current_roce": 25.0,
+              "current_op_margin": 9.113645034123182,
+              "avg_roce_5y": 24.6,
+              "avg_roe_5y": 17.73815822976261,
+              "current_de_ratio": 2.802453468697123,
+              "avg_de_5y": 4.660906846823438,
+              "net_debt_to_ebitda": 0.10204081632653061,
+              "fcf_5y_total": 4885.0,
+              "fcf_3y_total": 2116.0,
+              "cfo_to_ebitda": 40.98785311723317,
+              "sales_cagr_5y": 11.098751399909546,
+              "profit_cagr_5y": 6.40071742597903,
+              "sales_growth_yoy": 4.718572443181818,
+              "profit_growth_yoy": -3.433984606275903,
+              "promoter_holding": 59.35,
+              "mom_1y": -30.201016334312992,
+              "mom_6m": -15.307998207484108,
+              "mom_3m": -11.976301311891667
+            },
+            "hard": [
+              {
+                "code": "G1-06",
+                "criterion": "Operating margin > 15%",
+                "value": 9.113645034123182
+              },
+              {
+                "code": "G2-04",
+                "criterion": "Tight ROE > 20%",
+                "value": 17.861675126903553
+              },
+              {
+                "code": "G2-08",
+                "criterion": "Operating margin > 15%",
+                "value": 9.113645034123182
+              },
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 40.98785311723317
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-03",
+                "criterion": "Profit 5Y CAGR > 12%",
+                "value": 6.40071742597903
+              },
+              {
+                "code": "G1-04",
+                "criterion": "Revenue YoY growth > 10%",
+                "value": 4.718572443181818
+              },
+              {
+                "code": "G1-05",
+                "criterion": "Profit YoY growth > 10%",
+                "value": -3.433984606275903
+              },
+              {
+                "code": "G2-02",
+                "criterion": "Quarterly profit growth > 10%",
+                "value": -16.666666666666664
+              },
+              {
+                "code": "G2-12",
+                "criterion": "P/E < 30x",
+                "value": 40.0
+              },
+              {
+                "code": "G2-16",
+                "criterion": "Profit 5Y CAGR > 15%",
+                "value": 6.40071742597903
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": -3.433984606275903
+              }
+            ],
+            "missing": 2,
+            "q_score": 67.5,
+            "mom_score": 39.0,
+            "composite": 56.1
           },
           {
             "ticker": "LT.NS",
@@ -21987,7 +21997,7 @@
             "failed": 23,
             "market_cap_cr": 146594.8700672,
             "metrics": {
-              "pe": 60.315186,
+              "pe": 60.2289,
               "pb": 5.6066804,
               "peg": null,
               "current_roe": 6.119482903694638,
@@ -22136,7 +22146,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 60.315186
+                "value": 60.2289
               },
               {
                 "code": "G2-02",
@@ -22146,7 +22156,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 60.315186
+                "value": 60.2289
               }
             ],
             "missing": 4,
@@ -22172,7 +22182,7 @@
             "failed": 9,
             "market_cap_cr": 61508.7996928,
             "metrics": {
-              "pe": 9.112925,
+              "pe": 9.107968,
               "pb": 2.846603,
               "peg": null,
               "current_roe": 26.834235985742723,
@@ -23287,7 +23297,7 @@
             "failed": 2,
             "market_cap_cr": 61508.7996928,
             "metrics": {
-              "pe": 9.112925,
+              "pe": 9.107968,
               "pb": 2.846603,
               "peg": null,
               "current_roe": 26.834235985742723,
@@ -24402,7 +24412,7 @@
             "failed": 2,
             "market_cap_cr": 61508.7996928,
             "metrics": {
-              "pe": 9.112925,
+              "pe": 9.107968,
               "pb": 2.846603,
               "peg": null,
               "current_roe": 26.834235985742723,
@@ -25804,7 +25814,7 @@
             "failed": 23,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 5.520807,
+              "pe": 5.3739767,
               "pb": 0.82385117,
               "peg": null,
               "current_roe": 19.896773840869542,
@@ -26568,7 +26578,7 @@
             "failed": 10,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 5.520807,
+              "pe": 5.3739767,
               "pb": 0.82385117,
               "peg": null,
               "current_roe": 19.896773840869542,
@@ -27312,7 +27322,7 @@
             "failed": 10,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 5.520807,
+              "pe": 5.3739767,
               "pb": 0.82385117,
               "peg": null,
               "current_roe": 19.896773840869542,
@@ -27882,7 +27892,7 @@
               "sales_growth_yoy": 0.6419446643699314,
               "profit_growth_yoy": -0.20090406830738325,
               "promoter_holding": 51.34,
-              "mom_1y": -6.170298809509078,
+              "mom_1y": -6.170288254522783,
               "mom_6m": -13.427083097641646,
               "mom_3m": -10.3936928445324
             },
@@ -28005,7 +28015,7 @@
             "failed": 26,
             "market_cap_cr": 111884.8155648,
             "metrics": {
-              "pe": 29.749361,
+              "pe": 28.985928,
               "pb": 2.834236,
               "peg": null,
               "current_roe": 12.967467315293401,
@@ -28157,7 +28167,7 @@
             "failed": 27,
             "market_cap_cr": 305541.9654144,
             "metrics": {
-              "pe": 9.618438,
+              "pe": 9.633141,
               "pb": 1.5044595,
               "peg": null,
               "current_roe": 13.5577036657873,
@@ -28801,7 +28811,7 @@
               "sales_growth_yoy": 0.6419446643699314,
               "profit_growth_yoy": -0.20090406830738325,
               "promoter_holding": 51.34,
-              "mom_1y": -6.170298809509078,
+              "mom_1y": -6.170288254522783,
               "mom_6m": -13.427083097641646,
               "mom_3m": -10.3936928445324
             },
@@ -28924,7 +28934,7 @@
             "failed": 16,
             "market_cap_cr": 111884.8155648,
             "metrics": {
-              "pe": 29.749361,
+              "pe": 28.985928,
               "pb": 2.834236,
               "peg": null,
               "current_roe": 12.967467315293401,
@@ -29076,7 +29086,7 @@
             "failed": 15,
             "market_cap_cr": 305541.9654144,
             "metrics": {
-              "pe": 9.618438,
+              "pe": 9.633141,
               "pb": 1.5044595,
               "peg": null,
               "current_roe": 13.5577036657873,
@@ -29701,7 +29711,7 @@
             "failed": 15,
             "market_cap_cr": 305541.9654144,
             "metrics": {
-              "pe": 9.618438,
+              "pe": 9.633141,
               "pb": 1.5044595,
               "peg": null,
               "current_roe": 13.5577036657873,
@@ -29862,7 +29872,7 @@
               "sales_growth_yoy": 0.6419446643699314,
               "profit_growth_yoy": -0.20090406830738325,
               "promoter_holding": 51.34,
-              "mom_1y": -6.170298809509078,
+              "mom_1y": -6.170288254522783,
               "mom_6m": -13.427083097641646,
               "mom_3m": -10.3936928445324
             },
@@ -29985,7 +29995,7 @@
             "failed": 16,
             "market_cap_cr": 111884.8155648,
             "metrics": {
-              "pe": 29.749361,
+              "pe": 28.985928,
               "pb": 2.834236,
               "peg": null,
               "current_roe": 12.967467315293401,
@@ -31614,7 +31624,7 @@
             "failed": 2,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 13.793064,
+              "pe": 13.698368,
               "pb": 1.6961955,
               "roe_current": 13.0,
               "roe_avg_5y": 13.8,
@@ -31695,7 +31705,7 @@
             "failed": 3,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 16.943762,
+              "pe": 16.948143,
               "pb": 2.4710724,
               "roe_current": 16.0,
               "roe_avg_5y": 17.0,
@@ -31720,7 +31730,7 @@
               {
                 "code": "B-10",
                 "criterion": "P/E < 15x",
-                "value": 16.943762
+                "value": 16.948143
               }
             ],
             "missing": 1,
@@ -31890,7 +31900,7 @@
             "failed": 6,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 52.259872,
+              "pe": 52.352417,
               "pb": 1.0505311,
               "roe_current": 1.0,
               "roe_avg_5y": 8.8,
@@ -31931,7 +31941,7 @@
               {
                 "code": "B-10",
                 "criterion": "P/E < 15x",
-                "value": 52.259872
+                "value": 52.352417
               }
             ],
             "missing": 1,
@@ -31994,7 +32004,7 @@
             "failed": 0,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 13.793064,
+              "pe": 13.698368,
               "pb": 1.6961955,
               "roe_current": 13.0,
               "roe_avg_5y": 13.8,
@@ -32075,7 +32085,7 @@
             "failed": 0,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 16.943762,
+              "pe": 16.948143,
               "pb": 2.4710724,
               "roe_current": 16.0,
               "roe_avg_5y": 17.0,
@@ -32100,7 +32110,7 @@
               {
                 "code": "B-10",
                 "criterion": "P/E < 15x",
-                "value": 16.943762
+                "value": 16.948143
               }
             ],
             "missing": 1,
@@ -32313,7 +32323,7 @@
             "failed": 3,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 52.259872,
+              "pe": 52.352417,
               "pb": 1.0505311,
               "roe_current": 1.0,
               "roe_avg_5y": 8.8,
@@ -32354,7 +32364,7 @@
               {
                 "code": "B-10",
                 "criterion": "P/E < 15x",
-                "value": 52.259872
+                "value": 52.352417
               }
             ],
             "missing": 1,
@@ -32374,7 +32384,7 @@
             "failed": 0,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 13.793064,
+              "pe": 13.698368,
               "pb": 1.6961955,
               "roe_current": 13.0,
               "roe_avg_5y": 13.8,
@@ -32455,7 +32465,7 @@
             "failed": 0,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 16.943762,
+              "pe": 16.948143,
               "pb": 2.4710724,
               "roe_current": 16.0,
               "roe_avg_5y": 17.0,
@@ -32480,7 +32490,7 @@
               {
                 "code": "B-10",
                 "criterion": "P/E < 15x",
-                "value": 16.943762
+                "value": 16.948143
               }
             ],
             "missing": 1,
@@ -32693,7 +32703,7 @@
             "failed": 3,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 52.259872,
+              "pe": 52.352417,
               "pb": 1.0505311,
               "roe_current": 1.0,
               "roe_avg_5y": 8.8,
@@ -32734,7 +32744,7 @@
               {
                 "code": "B-10",
                 "criterion": "P/E < 15x",
-                "value": 52.259872
+                "value": 52.352417
               }
             ],
             "missing": 1,
@@ -33048,7 +33058,7 @@
               "gross_npa": null,
               "revenue_cagr_5y": 10.228374719327693,
               "deposits_cagr_5y": 7.236457427920362,
-              "mom_1y": -18.438792847837803,
+              "mom_1y": -18.43880130658545,
               "mom_6m": -9.842496756800633,
               "mom_3m": -8.031879269388387
             },
@@ -33381,7 +33391,7 @@
               "gross_npa": null,
               "revenue_cagr_5y": 10.228374719327693,
               "deposits_cagr_5y": 7.236457427920362,
-              "mom_1y": -18.438792847837803,
+              "mom_1y": -18.43880130658545,
               "mom_6m": -9.842496756800633,
               "mom_3m": -8.031879269388387
             },
@@ -33714,7 +33724,7 @@
               "gross_npa": null,
               "revenue_cagr_5y": 10.228374719327693,
               "deposits_cagr_5y": 7.236457427920362,
-              "mom_1y": -18.438792847837803,
+              "mom_1y": -18.43880130658545,
               "mom_6m": -9.842496756800633,
               "mom_3m": -8.031879269388387
             },
@@ -33943,7 +33953,7 @@
               "gross_npa": null,
               "revenue_cagr_5y": 26.338327260761794,
               "deposits_cagr_5y": null,
-              "mom_1y": -1.8001788229474514,
+              "mom_1y": -1.8001862732572205,
               "mom_6m": 11.704633649974895,
               "mom_3m": -14.584134036685237
             },
@@ -34257,7 +34267,7 @@
               "gross_npa": null,
               "revenue_cagr_5y": 26.338327260761794,
               "deposits_cagr_5y": null,
-              "mom_1y": -1.8001788229474514,
+              "mom_1y": -1.8001862732572205,
               "mom_6m": 11.704633649974895,
               "mom_3m": -14.584134036685237
             },
@@ -34571,7 +34581,7 @@
               "gross_npa": null,
               "revenue_cagr_5y": 26.338327260761794,
               "deposits_cagr_5y": null,
-              "mom_1y": -1.8001788229474514,
+              "mom_1y": -1.8001862732572205,
               "mom_6m": 11.704633649974895,
               "mom_3m": -14.584134036685237
             },
@@ -34780,7 +34790,7 @@
             "failed": 14,
             "market_cap_cr": 114284.0098816,
             "metrics": {
-              "pe": 25.54515,
+              "pe": 25.51102,
               "pb": 4.2522473,
               "peg": null,
               "current_roe": 18.899380348185304,
@@ -35506,7 +35516,7 @@
             "metrics": {
               "pe": 30.398184,
               "pb": 2.6204307,
-              "peg": 1.71,
+              "peg": 1.68,
               "current_roe": 10.97329251557057,
               "current_roce": 13.0,
               "current_op_margin": 15.468881666064766,
@@ -35636,7 +35646,7 @@
             "failed": 20,
             "market_cap_cr": 104706.932736,
             "metrics": {
-              "pe": 50.558437,
+              "pe": 51.284645,
               "pb": 6.420241,
               "peg": null,
               "current_roe": 11.889570552147239,
@@ -35715,7 +35725,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 50.558437
+                "value": 51.284645
               },
               {
                 "code": "G1-22",
@@ -35725,7 +35735,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 50.558437
+                "value": 51.284645
               },
               {
                 "code": "G2-14",
@@ -35885,7 +35895,7 @@
             "failed": 22,
             "market_cap_cr": 96479.3729024,
             "metrics": {
-              "pe": 25.78899,
+              "pe": 26.179546,
               "pb": 2.5702379,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -36836,7 +36846,7 @@
             "failed": 4,
             "market_cap_cr": 114284.0098816,
             "metrics": {
-              "pe": 25.54515,
+              "pe": 25.51102,
               "pb": 4.2522473,
               "peg": null,
               "current_roe": 18.899380348185304,
@@ -37562,7 +37572,7 @@
             "metrics": {
               "pe": 30.398184,
               "pb": 2.6204307,
-              "peg": 1.71,
+              "peg": 1.68,
               "current_roe": 10.97329251557057,
               "current_roce": 13.0,
               "current_op_margin": 15.468881666064766,
@@ -37692,7 +37702,7 @@
             "failed": 7,
             "market_cap_cr": 104706.932736,
             "metrics": {
-              "pe": 50.558437,
+              "pe": 51.284645,
               "pb": 6.420241,
               "peg": null,
               "current_roe": 11.889570552147239,
@@ -37771,7 +37781,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 50.558437
+                "value": 51.284645
               },
               {
                 "code": "G1-22",
@@ -37781,7 +37791,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 50.558437
+                "value": 51.284645
               },
               {
                 "code": "G2-14",
@@ -37941,7 +37951,7 @@
             "failed": 11,
             "market_cap_cr": 96479.3729024,
             "metrics": {
-              "pe": 25.78899,
+              "pe": 26.179546,
               "pb": 2.5702379,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -39041,7 +39051,7 @@
             "failed": 4,
             "market_cap_cr": 114284.0098816,
             "metrics": {
-              "pe": 25.54515,
+              "pe": 25.51102,
               "pb": 4.2522473,
               "peg": null,
               "current_roe": 18.899380348185304,
@@ -39436,7 +39446,7 @@
             "metrics": {
               "pe": 30.398184,
               "pb": 2.6204307,
-              "peg": 1.71,
+              "peg": 1.68,
               "current_roe": 10.97329251557057,
               "current_roce": 13.0,
               "current_op_margin": 15.468881666064766,
@@ -39658,7 +39668,7 @@
             "failed": 7,
             "market_cap_cr": 104706.932736,
             "metrics": {
-              "pe": 50.558437,
+              "pe": 51.284645,
               "pb": 6.420241,
               "peg": null,
               "current_roe": 11.889570552147239,
@@ -39737,12 +39747,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 50.558437
+                "value": 51.284645
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 50.558437
+                "value": 51.284645
               },
               {
                 "code": "G2-16",
@@ -39882,7 +39892,7 @@
             "failed": 11,
             "market_cap_cr": 96479.3729024,
             "metrics": {
-              "pe": 25.78899,
+              "pe": 26.179546,
               "pb": 2.5702379,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -40838,7 +40848,7 @@
               "sales_growth_yoy": 5.208853386586786,
               "profit_growth_yoy": 4.9062624650977265,
               "promoter_holding": 67.71,
-              "mom_1y": 10.1401432818931,
+              "mom_1y": 10.140134842267567,
               "mom_6m": 15.709603545393392,
               "mom_3m": -10.079995786040719
             },
@@ -41504,7 +41514,7 @@
             "failed": 29,
             "market_cap_cr": 41074.8977152,
             "metrics": {
-              "pe": 45.60185,
+              "pe": 45.707657,
               "pb": 4.1819687,
               "peg": null,
               "current_roe": 8.867847688861739,
@@ -41633,12 +41643,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-15",
@@ -42557,7 +42567,7 @@
               "sales_growth_yoy": 5.208853386586786,
               "profit_growth_yoy": 4.9062624650977265,
               "promoter_holding": 67.71,
-              "mom_1y": 10.1401432818931,
+              "mom_1y": 10.140134842267567,
               "mom_6m": 15.709603545393392,
               "mom_3m": -10.079995786040719
             },
@@ -43223,7 +43233,7 @@
             "failed": 16,
             "market_cap_cr": 41074.8977152,
             "metrics": {
-              "pe": 45.60185,
+              "pe": 45.707657,
               "pb": 4.1819687,
               "peg": null,
               "current_roe": 8.867847688861739,
@@ -43352,12 +43362,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-15",
@@ -44270,7 +44280,7 @@
               "sales_growth_yoy": 5.208853386586786,
               "profit_growth_yoy": 4.9062624650977265,
               "promoter_holding": 67.71,
-              "mom_1y": 10.1401432818931,
+              "mom_1y": 10.140134842267567,
               "mom_6m": 15.709603545393392,
               "mom_3m": -10.079995786040719
             },
@@ -44906,7 +44916,7 @@
             "failed": 16,
             "market_cap_cr": 41074.8977152,
             "metrics": {
-              "pe": 45.60185,
+              "pe": 45.707657,
               "pb": 4.1819687,
               "peg": null,
               "current_roe": 8.867847688861739,
@@ -45035,12 +45045,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-15",
@@ -46038,7 +46048,7 @@
             "failed": 15,
             "market_cap_cr": 103432.9718784,
             "metrics": {
-              "pe": 18.979763,
+              "pe": 19.011183,
               "pb": 4.784853,
               "peg": null,
               "current_roe": 26.727129702466335,
@@ -46057,7 +46067,7 @@
               "sales_growth_yoy": 7.169222332370125,
               "profit_growth_yoy": -4.986149584487535,
               "promoter_holding": 34.73,
-              "mom_1y": -2.3073292781520816,
+              "mom_1y": -2.3073382953472055,
               "mom_6m": 3.8213765195212135,
               "mom_3m": 6.059738207188414
             },
@@ -46135,7 +46145,7 @@
             "failed": 19,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 56.8003,
+              "pe": 56.81804,
               "pb": 9.035721,
               "peg": null,
               "current_roe": 18.678431900848715,
@@ -46199,7 +46209,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 56.8003
+                "value": 56.81804
               },
               {
                 "code": "G1-22",
@@ -46214,7 +46224,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 56.8003
+                "value": 56.81804
               },
               {
                 "code": "G2-14",
@@ -46379,7 +46389,7 @@
             "failed": 22,
             "market_cap_cr": 45295.9240192,
             "metrics": {
-              "pe": 75.75267,
+              "pe": 74.61735,
               "pb": 5.8429885,
               "peg": null,
               "current_roe": 14.423945297380984,
@@ -46468,7 +46478,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 75.75267
+                "value": 74.61735
               },
               {
                 "code": "G2-02",
@@ -46478,7 +46488,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 75.75267
+                "value": 74.61735
               },
               {
                 "code": "G2-14",
@@ -47300,7 +47310,7 @@
               "sales_growth_yoy": 2.414747524928143,
               "profit_growth_yoy": 0.26874496103198064,
               "promoter_holding": 51.51,
-              "mom_1y": 8.000982558168834,
+              "mom_1y": 8.000970730567847,
               "mom_6m": 0.07653500014968007,
               "mom_3m": -9.41488071837191
             },
@@ -47659,7 +47669,7 @@
             "failed": 6,
             "market_cap_cr": 103432.9718784,
             "metrics": {
-              "pe": 18.979763,
+              "pe": 19.011183,
               "pb": 4.784853,
               "peg": null,
               "current_roe": 26.727129702466335,
@@ -47678,7 +47688,7 @@
               "sales_growth_yoy": 7.169222332370125,
               "profit_growth_yoy": -4.986149584487535,
               "promoter_holding": 34.73,
-              "mom_1y": -2.3073292781520816,
+              "mom_1y": -2.3073382953472055,
               "mom_6m": 3.8213765195212135,
               "mom_3m": 6.059738207188414
             },
@@ -47756,7 +47766,7 @@
             "failed": 5,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 56.8003,
+              "pe": 56.81804,
               "pb": 9.035721,
               "peg": null,
               "current_roe": 18.678431900848715,
@@ -47820,7 +47830,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 56.8003
+                "value": 56.81804
               },
               {
                 "code": "G1-22",
@@ -47835,7 +47845,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 56.8003
+                "value": 56.81804
               },
               {
                 "code": "G2-14",
@@ -48000,7 +48010,7 @@
             "failed": 9,
             "market_cap_cr": 45295.9240192,
             "metrics": {
-              "pe": 75.75267,
+              "pe": 74.61735,
               "pb": 5.8429885,
               "peg": null,
               "current_roe": 14.423945297380984,
@@ -48089,7 +48099,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 75.75267
+                "value": 74.61735
               },
               {
                 "code": "G2-02",
@@ -48099,7 +48109,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 75.75267
+                "value": 74.61735
               },
               {
                 "code": "G2-14",
@@ -48921,7 +48931,7 @@
               "sales_growth_yoy": 2.414747524928143,
               "profit_growth_yoy": 0.26874496103198064,
               "promoter_holding": 51.51,
-              "mom_1y": 8.000982558168834,
+              "mom_1y": 8.000970730567847,
               "mom_6m": 0.07653500014968007,
               "mom_3m": -9.41488071837191
             },
@@ -49168,7 +49178,7 @@
             "failed": 6,
             "market_cap_cr": 103432.9718784,
             "metrics": {
-              "pe": 18.979763,
+              "pe": 19.011183,
               "pb": 4.784853,
               "peg": null,
               "current_roe": 26.727129702466335,
@@ -49187,7 +49197,7 @@
               "sales_growth_yoy": 7.169222332370125,
               "profit_growth_yoy": -4.986149584487535,
               "promoter_holding": 34.73,
-              "mom_1y": -2.3073292781520816,
+              "mom_1y": -2.3073382953472055,
               "mom_6m": 3.8213765195212135,
               "mom_3m": 6.059738207188414
             },
@@ -49352,7 +49362,7 @@
             "failed": 5,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 56.8003,
+              "pe": 56.81804,
               "pb": 9.035721,
               "peg": null,
               "current_roe": 18.678431900848715,
@@ -49416,7 +49426,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 56.8003
+                "value": 56.81804
               },
               {
                 "code": "G1-22",
@@ -49431,7 +49441,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 56.8003
+                "value": 56.81804
               },
               {
                 "code": "G2-14",
@@ -49581,7 +49591,7 @@
             "failed": 9,
             "market_cap_cr": 45295.9240192,
             "metrics": {
-              "pe": 75.75267,
+              "pe": 74.61735,
               "pb": 5.8429885,
               "peg": null,
               "current_roe": 14.423945297380984,
@@ -49670,7 +49680,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 75.75267
+                "value": 74.61735
               },
               {
                 "code": "G2-02",
@@ -49680,7 +49690,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 75.75267
+                "value": 74.61735
               },
               {
                 "code": "G2-16",
@@ -50452,7 +50462,7 @@
               "sales_growth_yoy": 2.414747524928143,
               "profit_growth_yoy": 0.26874496103198064,
               "promoter_holding": 51.51,
-              "mom_1y": 8.000982558168834,
+              "mom_1y": 8.000970730567847,
               "mom_6m": 0.07653500014968007,
               "mom_3m": -9.41488071837191
             },
@@ -50598,7 +50608,7 @@
             "failed": 10,
             "market_cap_cr": 90760.3017728,
             "metrics": {
-              "pe": 26.637354,
+              "pe": 26.666666,
               "pb": 13.09733,
               "peg": null,
               "current_roe": 33.71662194966143,
@@ -50661,18 +50671,110 @@
             "composite": 65.6
           },
           {
+            "ticker": "COFORGE.NS",
+            "company": "Coforge Limited",
+            "category": "ELIMINATED",
+            "g1": 18,
+            "g2": 15,
+            "passed": 33,
+            "failed": 14,
+            "market_cap_cr": 80898.850816,
+            "metrics": {
+              "pe": 37.45641,
+              "pb": 6.430415,
+              "peg": null,
+              "current_roe": 18.29715843556674,
+              "current_roce": 24.0,
+              "current_op_margin": 18.63149216817807,
+              "avg_roce_5y": 27.2,
+              "avg_roe_5y": 21.270799800634823,
+              "current_de_ratio": 7.633427702631855,
+              "avg_de_5y": 10.087073007367716,
+              "net_debt_to_ebitda": 0.17525276841598458,
+              "fcf_5y_total": 6116.0,
+              "fcf_3y_total": 2521.0,
+              "cfo_to_ebitda": 18.32625727666652,
+              "sales_cagr_5y": 23.11790159691771,
+              "profit_cagr_5y": 21.84256620486913,
+              "sales_growth_yoy": 10.924830823629824,
+              "profit_growth_yoy": 10.028653295128938,
+              "promoter_holding": 0.0,
+              "mom_1y": 15.568539869606957,
+              "mom_6m": 48.72858892201792,
+              "mom_3m": 23.507242284405507
+            },
+            "hard": [
+              {
+                "code": "G1-23",
+                "criterion": "Promoter holding > 40%",
+                "value": 0.0
+              },
+              {
+                "code": "G2-04",
+                "criterion": "Tight ROE > 20%",
+                "value": 18.29715843556674
+              },
+              {
+                "code": "G2-09",
+                "criterion": "Promoter holding > 50%",
+                "value": 0.0
+              },
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 18.32625727666652
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-20",
+                "criterion": "P/E < 35x",
+                "value": 37.45641
+              },
+              {
+                "code": "G1-22",
+                "criterion": "P/B < 6.0x",
+                "value": 6.430415
+              },
+              {
+                "code": "G2-12",
+                "criterion": "P/E < 30x",
+                "value": 37.45641
+              },
+              {
+                "code": "G2-14",
+                "criterion": "P/B < 5.0x",
+                "value": 6.430415
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": 10.028653295128938
+              }
+            ],
+            "missing": 4,
+            "q_score": 49.7,
+            "mom_score": 63.6,
+            "composite": 55.2
+          },
+          {
             "ticker": "INFY.NS",
             "company": "Infosys Limited",
             "category": "ELIMINATED",
             "g1": 17,
-            "g2": 17,
-            "passed": 34,
-            "failed": 13,
+            "g2": 16,
+            "passed": 33,
+            "failed": 14,
             "market_cap_cr": 419210.5660416,
             "metrics": {
               "pe": 13.298214,
               "pb": 4.5422335,
-              "peg": 1.75,
+              "peg": 1.83,
               "current_roe": 31.74298884245897,
               "current_roce": 40.0,
               "current_op_margin": 23.699493991830188,
@@ -50737,6 +50839,11 @@
                 "value": 2.887290493316143
               },
               {
+                "code": "G2-13",
+                "criterion": "PEG < 1.8x",
+                "value": 1.83
+              },
+              {
                 "code": "G2-15",
                 "criterion": "Revenue 5Y CAGR > 12%",
                 "value": 8.698080043164103
@@ -50753,101 +50860,9 @@
               }
             ],
             "missing": 2,
-            "q_score": 57.4,
+            "q_score": 55.3,
             "mom_score": 40.4,
-            "composite": 50.6
-          },
-          {
-            "ticker": "COFORGE.NS",
-            "company": "Coforge Limited",
-            "category": "ELIMINATED",
-            "g1": 18,
-            "g2": 15,
-            "passed": 33,
-            "failed": 14,
-            "market_cap_cr": 80898.850816,
-            "metrics": {
-              "pe": 37.45641,
-              "pb": 6.430415,
-              "peg": null,
-              "current_roe": 18.29715843556674,
-              "current_roce": 24.0,
-              "current_op_margin": 18.63149216817807,
-              "avg_roce_5y": 27.2,
-              "avg_roe_5y": 21.270799800634823,
-              "current_de_ratio": 7.633427702631855,
-              "avg_de_5y": 10.087073007367716,
-              "net_debt_to_ebitda": 0.17525276841598458,
-              "fcf_5y_total": 6116.0,
-              "fcf_3y_total": 2521.0,
-              "cfo_to_ebitda": 18.32625727666652,
-              "sales_cagr_5y": 23.11790159691771,
-              "profit_cagr_5y": 21.84256620486913,
-              "sales_growth_yoy": 10.924830823629824,
-              "profit_growth_yoy": 10.028653295128938,
-              "promoter_holding": 0.0,
-              "mom_1y": 15.568548798313909,
-              "mom_6m": 48.72858892201792,
-              "mom_3m": 23.507242284405507
-            },
-            "hard": [
-              {
-                "code": "G1-23",
-                "criterion": "Promoter holding > 40%",
-                "value": 0.0
-              },
-              {
-                "code": "G2-04",
-                "criterion": "Tight ROE > 20%",
-                "value": 18.29715843556674
-              },
-              {
-                "code": "G2-09",
-                "criterion": "Promoter holding > 50%",
-                "value": 0.0
-              },
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 18.32625727666652
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-20",
-                "criterion": "P/E < 35x",
-                "value": 37.45641
-              },
-              {
-                "code": "G1-22",
-                "criterion": "P/B < 6.0x",
-                "value": 6.430415
-              },
-              {
-                "code": "G2-12",
-                "criterion": "P/E < 30x",
-                "value": 37.45641
-              },
-              {
-                "code": "G2-14",
-                "criterion": "P/B < 5.0x",
-                "value": 6.430415
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": 10.028653295128938
-              }
-            ],
-            "missing": 4,
-            "q_score": 49.7,
-            "mom_score": 63.6,
-            "composite": 55.2
+            "composite": 49.4
           },
           {
             "ticker": "KPITTECH.NS",
@@ -50953,7 +50968,7 @@
             "metrics": {
               "pe": 12.656871,
               "pb": 2.0346017,
-              "peg": 1.31,
+              "peg": 1.32,
               "current_roe": 15.071745873050139,
               "current_roce": 18.0,
               "current_op_margin": 19.175932945834386,
@@ -51072,7 +51087,7 @@
               "sales_growth_yoy": 6.577163005153242,
               "profit_growth_yoy": 3.1099195710455763,
               "promoter_holding": 30.29,
-              "mom_1y": 12.077953184406788,
+              "mom_1y": 12.077964612634329,
               "mom_6m": -0.010388657696280834,
               "mom_3m": 14.204184516023123
             },
@@ -51267,7 +51282,7 @@
             "failed": 15,
             "market_cap_cr": 9865.7763328,
             "metrics": {
-              "pe": 13.118215,
+              "pe": 12.888889,
               "pb": 2.097012,
               "peg": null,
               "current_roe": 16.422970968425513,
@@ -51478,7 +51493,7 @@
             "metrics": {
               "pe": 15.08323,
               "pb": 6.8478684,
-              "peg": 2.68,
+              "peg": 2.71,
               "current_roe": 46.115255501678476,
               "current_roce": 63.0,
               "current_op_margin": 26.853936250040782,
@@ -51495,7 +51510,7 @@
               "sales_growth_yoy": 3.3098520341096767,
               "profit_growth_yoy": 1.2152707566627574,
               "promoter_holding": 71.77,
-              "mom_1y": -25.178672541192583,
+              "mom_1y": -25.1786659544179,
               "mom_6m": -16.73886576297301,
               "mom_3m": 1.3985730326944612
             },
@@ -51535,7 +51550,7 @@
               {
                 "code": "G1-21",
                 "criterion": "PEG < 2.0x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G1-22",
@@ -51550,7 +51565,7 @@
               {
                 "code": "G2-13",
                 "criterion": "PEG < 1.8x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G2-14",
@@ -51596,7 +51611,7 @@
               "current_op_margin": 20.346320346320347,
               "avg_roce_5y": null,
               "avg_roe_5y": null,
-              "current_de_ratio": 0.0,
+              "current_de_ratio": -0.0,
               "avg_de_5y": 11.660777385159012,
               "net_debt_to_ebitda": 0.0,
               "fcf_5y_total": 367.0,
@@ -51799,7 +51814,7 @@
             "failed": 2,
             "market_cap_cr": 90760.3017728,
             "metrics": {
-              "pe": 26.637354,
+              "pe": 26.666666,
               "pb": 13.09733,
               "peg": null,
               "current_roe": 33.71662194966143,
@@ -51862,18 +51877,110 @@
             "composite": 73.7
           },
           {
+            "ticker": "COFORGE.NS",
+            "company": "Coforge Limited",
+            "category": "ELIMINATED",
+            "g1": 18,
+            "g2": 15,
+            "passed": 33,
+            "failed": 5,
+            "market_cap_cr": 80898.850816,
+            "metrics": {
+              "pe": 37.45641,
+              "pb": 6.430415,
+              "peg": null,
+              "current_roe": 18.29715843556674,
+              "current_roce": 24.0,
+              "current_op_margin": 18.63149216817807,
+              "avg_roce_5y": 27.2,
+              "avg_roe_5y": 21.270799800634823,
+              "current_de_ratio": 7.633427702631855,
+              "avg_de_5y": 10.087073007367716,
+              "net_debt_to_ebitda": 0.17525276841598458,
+              "fcf_5y_total": 6116.0,
+              "fcf_3y_total": 2521.0,
+              "cfo_to_ebitda": 18.32625727666652,
+              "sales_cagr_5y": 23.11790159691771,
+              "profit_cagr_5y": 21.84256620486913,
+              "sales_growth_yoy": 10.924830823629824,
+              "profit_growth_yoy": 10.028653295128938,
+              "promoter_holding": 0.0,
+              "mom_1y": 15.568539869606957,
+              "mom_6m": 48.72858892201792,
+              "mom_3m": 23.507242284405507
+            },
+            "hard": [
+              {
+                "code": "G1-23",
+                "criterion": "Promoter holding > 40%",
+                "value": 0.0
+              },
+              {
+                "code": "G2-04",
+                "criterion": "Tight ROE > 20%",
+                "value": 18.29715843556674
+              },
+              {
+                "code": "G2-09",
+                "criterion": "Promoter holding > 50%",
+                "value": 0.0
+              },
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 18.32625727666652
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-20",
+                "criterion": "P/E < 35x",
+                "value": 37.45641
+              },
+              {
+                "code": "G1-22",
+                "criterion": "P/B < 6.0x",
+                "value": 6.430415
+              },
+              {
+                "code": "G2-12",
+                "criterion": "P/E < 30x",
+                "value": 37.45641
+              },
+              {
+                "code": "G2-14",
+                "criterion": "P/B < 5.0x",
+                "value": 6.430415
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": 10.028653295128938
+              }
+            ],
+            "missing": 4,
+            "q_score": 63.6,
+            "mom_score": 63.6,
+            "composite": 63.6
+          },
+          {
             "ticker": "INFY.NS",
             "company": "Infosys Limited",
             "category": "ELIMINATED",
             "g1": 17,
-            "g2": 17,
-            "passed": 34,
+            "g2": 16,
+            "passed": 33,
             "failed": 4,
             "market_cap_cr": 419210.5660416,
             "metrics": {
               "pe": 13.298214,
               "pb": 4.5422335,
-              "peg": 1.75,
+              "peg": 1.83,
               "current_roe": 31.74298884245897,
               "current_roce": 40.0,
               "current_op_margin": 23.699493991830188,
@@ -51938,6 +52045,11 @@
                 "value": 2.887290493316143
               },
               {
+                "code": "G2-13",
+                "criterion": "PEG < 1.8x",
+                "value": 1.83
+              },
+              {
                 "code": "G2-15",
                 "criterion": "Revenue 5Y CAGR > 12%",
                 "value": 8.698080043164103
@@ -51954,101 +52066,9 @@
               }
             ],
             "missing": 2,
-            "q_score": 73.0,
+            "q_score": 72.6,
             "mom_score": 40.4,
-            "composite": 60.0
-          },
-          {
-            "ticker": "COFORGE.NS",
-            "company": "Coforge Limited",
-            "category": "ELIMINATED",
-            "g1": 18,
-            "g2": 15,
-            "passed": 33,
-            "failed": 5,
-            "market_cap_cr": 80898.850816,
-            "metrics": {
-              "pe": 37.45641,
-              "pb": 6.430415,
-              "peg": null,
-              "current_roe": 18.29715843556674,
-              "current_roce": 24.0,
-              "current_op_margin": 18.63149216817807,
-              "avg_roce_5y": 27.2,
-              "avg_roe_5y": 21.270799800634823,
-              "current_de_ratio": 7.633427702631855,
-              "avg_de_5y": 10.087073007367716,
-              "net_debt_to_ebitda": 0.17525276841598458,
-              "fcf_5y_total": 6116.0,
-              "fcf_3y_total": 2521.0,
-              "cfo_to_ebitda": 18.32625727666652,
-              "sales_cagr_5y": 23.11790159691771,
-              "profit_cagr_5y": 21.84256620486913,
-              "sales_growth_yoy": 10.924830823629824,
-              "profit_growth_yoy": 10.028653295128938,
-              "promoter_holding": 0.0,
-              "mom_1y": 15.568548798313909,
-              "mom_6m": 48.72858892201792,
-              "mom_3m": 23.507242284405507
-            },
-            "hard": [
-              {
-                "code": "G1-23",
-                "criterion": "Promoter holding > 40%",
-                "value": 0.0
-              },
-              {
-                "code": "G2-04",
-                "criterion": "Tight ROE > 20%",
-                "value": 18.29715843556674
-              },
-              {
-                "code": "G2-09",
-                "criterion": "Promoter holding > 50%",
-                "value": 0.0
-              },
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 18.32625727666652
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-20",
-                "criterion": "P/E < 35x",
-                "value": 37.45641
-              },
-              {
-                "code": "G1-22",
-                "criterion": "P/B < 6.0x",
-                "value": 6.430415
-              },
-              {
-                "code": "G2-12",
-                "criterion": "P/E < 30x",
-                "value": 37.45641
-              },
-              {
-                "code": "G2-14",
-                "criterion": "P/B < 5.0x",
-                "value": 6.430415
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": 10.028653295128938
-              }
-            ],
-            "missing": 4,
-            "q_score": 63.6,
-            "mom_score": 63.6,
-            "composite": 63.6
+            "composite": 59.7
           },
           {
             "ticker": "KPITTECH.NS",
@@ -52154,7 +52174,7 @@
             "metrics": {
               "pe": 12.656871,
               "pb": 2.0346017,
-              "peg": 1.31,
+              "peg": 1.32,
               "current_roe": 15.071745873050139,
               "current_roce": 18.0,
               "current_op_margin": 19.175932945834386,
@@ -52273,7 +52293,7 @@
               "sales_growth_yoy": 6.577163005153242,
               "profit_growth_yoy": 3.1099195710455763,
               "promoter_holding": 30.29,
-              "mom_1y": 12.077953184406788,
+              "mom_1y": 12.077964612634329,
               "mom_6m": -0.010388657696280834,
               "mom_3m": 14.204184516023123
             },
@@ -52468,7 +52488,7 @@
             "failed": 3,
             "market_cap_cr": 9865.7763328,
             "metrics": {
-              "pe": 13.118215,
+              "pe": 12.888889,
               "pb": 2.097012,
               "peg": null,
               "current_roe": 16.422970968425513,
@@ -52679,7 +52699,7 @@
             "metrics": {
               "pe": 15.08323,
               "pb": 6.8478684,
-              "peg": 2.68,
+              "peg": 2.71,
               "current_roe": 46.115255501678476,
               "current_roce": 63.0,
               "current_op_margin": 26.853936250040782,
@@ -52696,7 +52716,7 @@
               "sales_growth_yoy": 3.3098520341096767,
               "profit_growth_yoy": 1.2152707566627574,
               "promoter_holding": 71.77,
-              "mom_1y": -25.178672541192583,
+              "mom_1y": -25.1786659544179,
               "mom_6m": -16.73886576297301,
               "mom_3m": 1.3985730326944612
             },
@@ -52736,7 +52756,7 @@
               {
                 "code": "G1-21",
                 "criterion": "PEG < 2.0x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G1-22",
@@ -52751,7 +52771,7 @@
               {
                 "code": "G2-13",
                 "criterion": "PEG < 1.8x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G2-14",
@@ -52797,7 +52817,7 @@
               "current_op_margin": 20.346320346320347,
               "avg_roce_5y": null,
               "avg_roe_5y": null,
-              "current_de_ratio": 0.0,
+              "current_de_ratio": -0.0,
               "avg_de_5y": 11.660777385159012,
               "net_debt_to_ebitda": 0.0,
               "fcf_5y_total": 367.0,
@@ -53000,7 +53020,7 @@
             "failed": 2,
             "market_cap_cr": 90760.3017728,
             "metrics": {
-              "pe": 26.637354,
+              "pe": 26.666666,
               "pb": 13.09733,
               "peg": null,
               "current_roe": 33.71662194966143,
@@ -53081,7 +53101,7 @@
               "sales_growth_yoy": 10.924830823629824,
               "profit_growth_yoy": 10.028653295128938,
               "promoter_holding": 0.0,
-              "mom_1y": 15.568548798313909,
+              "mom_1y": 15.568539869606957,
               "mom_6m": 48.72858892201792,
               "mom_3m": 23.507242284405507
             },
@@ -53130,7 +53150,7 @@
             "metrics": {
               "pe": 13.298214,
               "pb": 4.5422335,
-              "peg": 1.75,
+              "peg": 1.83,
               "current_roe": 31.74298884245897,
               "current_roce": 40.0,
               "current_op_margin": 23.699493991830188,
@@ -53399,7 +53419,7 @@
             "failed": 3,
             "market_cap_cr": 9865.7763328,
             "metrics": {
-              "pe": 13.118215,
+              "pe": 12.888889,
               "pb": 2.097012,
               "peg": null,
               "current_roe": 16.422970968425513,
@@ -53607,7 +53627,7 @@
               "sales_growth_yoy": 6.577163005153242,
               "profit_growth_yoy": 3.1099195710455763,
               "promoter_holding": 30.29,
-              "mom_1y": 12.077953184406788,
+              "mom_1y": 12.077964612634329,
               "mom_6m": -0.010388657696280834,
               "mom_3m": 14.204184516023123
             },
@@ -53692,7 +53712,7 @@
             "metrics": {
               "pe": 12.656871,
               "pb": 2.0346017,
-              "peg": 1.31,
+              "peg": 1.32,
               "current_roe": 15.071745873050139,
               "current_roce": 18.0,
               "current_op_margin": 19.175932945834386,
@@ -53794,7 +53814,7 @@
             "metrics": {
               "pe": 15.08323,
               "pb": 6.8478684,
-              "peg": 2.68,
+              "peg": 2.71,
               "current_roe": 46.115255501678476,
               "current_roce": 63.0,
               "current_op_margin": 26.853936250040782,
@@ -53811,7 +53831,7 @@
               "sales_growth_yoy": 3.3098520341096767,
               "profit_growth_yoy": 1.2152707566627574,
               "promoter_holding": 71.77,
-              "mom_1y": -25.178672541192583,
+              "mom_1y": -25.1786659544179,
               "mom_6m": -16.73886576297301,
               "mom_3m": 1.3985730326944612
             },
@@ -53851,7 +53871,7 @@
               {
                 "code": "G1-21",
                 "criterion": "PEG < 2.0x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G2-02",
@@ -53861,7 +53881,7 @@
               {
                 "code": "G2-13",
                 "criterion": "PEG < 1.8x",
-                "value": 2.68
+                "value": 2.71
               },
               {
                 "code": "G2-15",
@@ -53902,7 +53922,7 @@
               "current_op_margin": 20.346320346320347,
               "avg_roce_5y": null,
               "avg_roe_5y": null,
-              "current_de_ratio": 0.0,
+              "current_de_ratio": -0.0,
               "avg_de_5y": 11.660777385159012,
               "net_debt_to_ebitda": 0.0,
               "fcf_5y_total": 367.0,
@@ -54356,7 +54376,7 @@
             "failed": 18,
             "market_cap_cr": 65266.4111104,
             "metrics": {
-              "pe": 39.98462,
+              "pe": 40.0,
               "pb": 6.8991594,
               "peg": 0.2,
               "current_roe": 17.861675126903553,
@@ -54425,7 +54445,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 39.98462
+                "value": 40.0
               },
               {
                 "code": "G1-22",
@@ -54440,7 +54460,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 39.98462
+                "value": 40.0
               },
               {
                 "code": "G2-14",
@@ -54600,7 +54620,7 @@
             "failed": 24,
             "market_cap_cr": 11557.363712,
             "metrics": {
-              "pe": 32.64334,
+              "pe": 32.633743,
               "pb": 2.158595,
               "peg": 93.13,
               "current_roe": 8.148539246744106,
@@ -54714,7 +54734,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 32.64334
+                "value": 32.633743
               },
               {
                 "code": "G2-13",
@@ -55086,7 +55106,7 @@
             "failed": 33,
             "market_cap_cr": 146594.8700672,
             "metrics": {
-              "pe": 60.315186,
+              "pe": 60.2289,
               "pb": 5.6066804,
               "peg": null,
               "current_roe": 6.119482903694638,
@@ -55235,7 +55255,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 60.315186
+                "value": 60.2289
               },
               {
                 "code": "G2-02",
@@ -55245,7 +55265,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 60.315186
+                "value": 60.2289
               },
               {
                 "code": "G2-14",
@@ -55738,7 +55758,7 @@
             "failed": 5,
             "market_cap_cr": 65266.4111104,
             "metrics": {
-              "pe": 39.98462,
+              "pe": 40.0,
               "pb": 6.8991594,
               "peg": 0.2,
               "current_roe": 17.861675126903553,
@@ -55807,7 +55827,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 39.98462
+                "value": 40.0
               },
               {
                 "code": "G1-22",
@@ -55822,7 +55842,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 39.98462
+                "value": 40.0
               },
               {
                 "code": "G2-14",
@@ -55982,7 +56002,7 @@
             "failed": 12,
             "market_cap_cr": 11557.363712,
             "metrics": {
-              "pe": 32.64334,
+              "pe": 32.633743,
               "pb": 2.158595,
               "peg": 93.13,
               "current_roe": 8.148539246744106,
@@ -56096,7 +56116,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 32.64334
+                "value": 32.633743
               },
               {
                 "code": "G2-13",
@@ -56468,7 +56488,7 @@
             "failed": 23,
             "market_cap_cr": 146594.8700672,
             "metrics": {
-              "pe": 60.315186,
+              "pe": 60.2289,
               "pb": 5.6066804,
               "peg": null,
               "current_roe": 6.119482903694638,
@@ -56617,7 +56637,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 60.315186
+                "value": 60.2289
               },
               {
                 "code": "G2-02",
@@ -56627,7 +56647,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 60.315186
+                "value": 60.2289
               },
               {
                 "code": "G2-14",
@@ -56999,103 +57019,6 @@
             "composite": 65.9
           },
           {
-            "ticker": "HAVELLS.NS",
-            "company": "Havells India Limited",
-            "category": "ELIMINATED",
-            "g1": 18,
-            "g2": 16,
-            "passed": 34,
-            "failed": 5,
-            "market_cap_cr": 65266.4111104,
-            "metrics": {
-              "pe": 39.98462,
-              "pb": 6.8991594,
-              "peg": 0.2,
-              "current_roe": 17.861675126903553,
-              "current_roce": 25.0,
-              "current_op_margin": 9.113645034123182,
-              "avg_roce_5y": 24.6,
-              "avg_roe_5y": 17.73815822976261,
-              "current_de_ratio": 2.802453468697123,
-              "avg_de_5y": 4.660906846823438,
-              "net_debt_to_ebitda": 0.10204081632653061,
-              "fcf_5y_total": 4885.0,
-              "fcf_3y_total": 2116.0,
-              "cfo_to_ebitda": 40.98785311723317,
-              "sales_cagr_5y": 11.098751399909546,
-              "profit_cagr_5y": 6.40071742597903,
-              "sales_growth_yoy": 4.718572443181818,
-              "profit_growth_yoy": -3.433984606275903,
-              "promoter_holding": 59.35,
-              "mom_1y": -30.201016334312992,
-              "mom_6m": -15.307998207484108,
-              "mom_3m": -11.976301311891667
-            },
-            "hard": [
-              {
-                "code": "G1-06",
-                "criterion": "Operating margin > 15%",
-                "value": 9.113645034123182
-              },
-              {
-                "code": "G2-04",
-                "criterion": "Tight ROE > 20%",
-                "value": 17.861675126903553
-              },
-              {
-                "code": "G2-08",
-                "criterion": "Operating margin > 15%",
-                "value": 9.113645034123182
-              },
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 40.98785311723317
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-03",
-                "criterion": "Profit 5Y CAGR > 12%",
-                "value": 6.40071742597903
-              },
-              {
-                "code": "G1-04",
-                "criterion": "Revenue YoY growth > 10%",
-                "value": 4.718572443181818
-              },
-              {
-                "code": "G1-05",
-                "criterion": "Profit YoY growth > 10%",
-                "value": -3.433984606275903
-              },
-              {
-                "code": "G2-02",
-                "criterion": "Quarterly profit growth > 10%",
-                "value": -16.666666666666664
-              },
-              {
-                "code": "G2-16",
-                "criterion": "Profit 5Y CAGR > 15%",
-                "value": 6.40071742597903
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": -3.433984606275903
-              }
-            ],
-            "missing": 2,
-            "q_score": 67.9,
-            "mom_score": 39.0,
-            "composite": 56.3
-          },
-          {
             "ticker": "CUMMINSIND.NS",
             "company": "Cummins India Limited",
             "category": "MARGINAL",
@@ -57186,6 +57109,108 @@
             "q_score": 78.6,
             "mom_score": 56.0,
             "composite": 69.6
+          },
+          {
+            "ticker": "HAVELLS.NS",
+            "company": "Havells India Limited",
+            "category": "ELIMINATED",
+            "g1": 18,
+            "g2": 15,
+            "passed": 33,
+            "failed": 5,
+            "market_cap_cr": 65266.4111104,
+            "metrics": {
+              "pe": 40.0,
+              "pb": 6.8991594,
+              "peg": 0.2,
+              "current_roe": 17.861675126903553,
+              "current_roce": 25.0,
+              "current_op_margin": 9.113645034123182,
+              "avg_roce_5y": 24.6,
+              "avg_roe_5y": 17.73815822976261,
+              "current_de_ratio": 2.802453468697123,
+              "avg_de_5y": 4.660906846823438,
+              "net_debt_to_ebitda": 0.10204081632653061,
+              "fcf_5y_total": 4885.0,
+              "fcf_3y_total": 2116.0,
+              "cfo_to_ebitda": 40.98785311723317,
+              "sales_cagr_5y": 11.098751399909546,
+              "profit_cagr_5y": 6.40071742597903,
+              "sales_growth_yoy": 4.718572443181818,
+              "profit_growth_yoy": -3.433984606275903,
+              "promoter_holding": 59.35,
+              "mom_1y": -30.201016334312992,
+              "mom_6m": -15.307998207484108,
+              "mom_3m": -11.976301311891667
+            },
+            "hard": [
+              {
+                "code": "G1-06",
+                "criterion": "Operating margin > 15%",
+                "value": 9.113645034123182
+              },
+              {
+                "code": "G2-04",
+                "criterion": "Tight ROE > 20%",
+                "value": 17.861675126903553
+              },
+              {
+                "code": "G2-08",
+                "criterion": "Operating margin > 15%",
+                "value": 9.113645034123182
+              },
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 40.98785311723317
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-03",
+                "criterion": "Profit 5Y CAGR > 12%",
+                "value": 6.40071742597903
+              },
+              {
+                "code": "G1-04",
+                "criterion": "Revenue YoY growth > 10%",
+                "value": 4.718572443181818
+              },
+              {
+                "code": "G1-05",
+                "criterion": "Profit YoY growth > 10%",
+                "value": -3.433984606275903
+              },
+              {
+                "code": "G2-02",
+                "criterion": "Quarterly profit growth > 10%",
+                "value": -16.666666666666664
+              },
+              {
+                "code": "G2-12",
+                "criterion": "P/E < 30x",
+                "value": 40.0
+              },
+              {
+                "code": "G2-16",
+                "criterion": "Profit 5Y CAGR > 15%",
+                "value": 6.40071742597903
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": -3.433984606275903
+              }
+            ],
+            "missing": 2,
+            "q_score": 67.5,
+            "mom_score": 39.0,
+            "composite": 56.1
           },
           {
             "ticker": "ASTRAL.NS",
@@ -57304,7 +57329,7 @@
             "failed": 12,
             "market_cap_cr": 11557.363712,
             "metrics": {
-              "pe": 32.64334,
+              "pe": 32.633743,
               "pb": 2.158595,
               "peg": 93.13,
               "current_roe": 8.148539246744106,
@@ -57932,7 +57957,7 @@
             "failed": 23,
             "market_cap_cr": 146594.8700672,
             "metrics": {
-              "pe": 60.315186,
+              "pe": 60.2289,
               "pb": 5.6066804,
               "peg": null,
               "current_roe": 6.119482903694638,
@@ -58081,7 +58106,7 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 60.315186
+                "value": 60.2289
               },
               {
                 "code": "G2-02",
@@ -58091,7 +58116,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 60.315186
+                "value": 60.2289
               }
             ],
             "missing": 4,
@@ -58447,7 +58472,7 @@
               "sales_growth_yoy": 16.444484749554125,
               "profit_growth_yoy": 26.22169249106079,
               "promoter_holding": 56.66,
-              "mom_1y": 10.044981638989636,
+              "mom_1y": 10.044989962520834,
               "mom_6m": -7.676287210223853,
               "mom_3m": 4.5489338719186145
             },
@@ -58774,7 +58799,7 @@
             "failed": 23,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 5.520807,
+              "pe": 5.3739767,
               "pb": 0.82385117,
               "peg": null,
               "current_roe": 19.896773840869542,
@@ -59532,7 +59557,7 @@
               "sales_growth_yoy": 16.444484749554125,
               "profit_growth_yoy": 26.22169249106079,
               "promoter_holding": 56.66,
-              "mom_1y": 10.044981638989636,
+              "mom_1y": 10.044989962520834,
               "mom_6m": -7.676287210223853,
               "mom_3m": 4.5489338719186145
             },
@@ -59859,7 +59884,7 @@
             "failed": 10,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 5.520807,
+              "pe": 5.3739767,
               "pb": 0.82385117,
               "peg": null,
               "current_roe": 19.896773840869542,
@@ -60505,7 +60530,7 @@
               "sales_growth_yoy": 16.444484749554125,
               "profit_growth_yoy": 26.22169249106079,
               "promoter_holding": 56.66,
-              "mom_1y": 10.044981638989636,
+              "mom_1y": 10.044989962520834,
               "mom_6m": -7.676287210223853,
               "mom_3m": 4.5489338719186145
             },
@@ -60904,7 +60929,7 @@
             "failed": 10,
             "market_cap_cr": null,
             "metrics": {
-              "pe": 5.520807,
+              "pe": 5.3739767,
               "pb": 0.82385117,
               "peg": null,
               "current_roe": 19.896773840869542,
@@ -61328,7 +61353,7 @@
             "failed": 16,
             "market_cap_cr": 23656.89856,
             "metrics": {
-              "pe": 15.455715,
+              "pe": 15.467662,
               "pb": 1.8671501,
               "peg": null,
               "current_roe": 11.39761132642569,
@@ -62137,7 +62162,7 @@
             "failed": 5,
             "market_cap_cr": 23656.89856,
             "metrics": {
-              "pe": 15.455715,
+              "pe": 15.467662,
               "pb": 1.8671501,
               "peg": null,
               "current_roe": 11.39761132642569,
@@ -63033,7 +63058,7 @@
             "failed": 5,
             "market_cap_cr": 23656.89856,
             "metrics": {
-              "pe": 15.455715,
+              "pe": 15.467662,
               "pb": 1.8671501,
               "peg": null,
               "current_roe": 11.39761132642569,
@@ -64072,7 +64097,7 @@
             "failed": 26,
             "market_cap_cr": 111884.8155648,
             "metrics": {
-              "pe": 29.749361,
+              "pe": 28.985928,
               "pb": 2.834236,
               "peg": null,
               "current_roe": 12.967467315293401,
@@ -64224,7 +64249,7 @@
             "failed": 27,
             "market_cap_cr": 305541.9654144,
             "metrics": {
-              "pe": 9.618438,
+              "pe": 9.633141,
               "pb": 1.5044595,
               "peg": null,
               "current_roe": 13.5577036657873,
@@ -64243,7 +64268,7 @@
               "sales_growth_yoy": 1.9606692104490755,
               "profit_growth_yoy": 2.86066942568794,
               "promoter_holding": 51.1,
-              "mom_1y": -4.939620548301493,
+              "mom_1y": -4.939611796433052,
               "mom_6m": -13.649492540503882,
               "mom_3m": -10.595406778375393
             },
@@ -65422,7 +65447,7 @@
             "failed": 16,
             "market_cap_cr": 111884.8155648,
             "metrics": {
-              "pe": 29.749361,
+              "pe": 28.985928,
               "pb": 2.834236,
               "peg": null,
               "current_roe": 12.967467315293401,
@@ -65574,7 +65599,7 @@
             "failed": 15,
             "market_cap_cr": 305541.9654144,
             "metrics": {
-              "pe": 9.618438,
+              "pe": 9.633141,
               "pb": 1.5044595,
               "peg": null,
               "current_roe": 13.5577036657873,
@@ -65593,7 +65618,7 @@
               "sales_growth_yoy": 1.9606692104490755,
               "profit_growth_yoy": 2.86066942568794,
               "promoter_holding": 51.1,
-              "mom_1y": -4.939620548301493,
+              "mom_1y": -4.939611796433052,
               "mom_6m": -13.649492540503882,
               "mom_3m": -10.595406778375393
             },
@@ -66614,7 +66639,7 @@
             "failed": 15,
             "market_cap_cr": 305541.9654144,
             "metrics": {
-              "pe": 9.618438,
+              "pe": 9.633141,
               "pb": 1.5044595,
               "peg": null,
               "current_roe": 13.5577036657873,
@@ -66633,7 +66658,7 @@
               "sales_growth_yoy": 1.9606692104490755,
               "profit_growth_yoy": 2.86066942568794,
               "promoter_holding": 51.1,
-              "mom_1y": -4.939620548301493,
+              "mom_1y": -4.939611796433052,
               "mom_6m": -13.649492540503882,
               "mom_3m": -10.595406778375393
             },
@@ -66898,7 +66923,7 @@
             "failed": 16,
             "market_cap_cr": 111884.8155648,
             "metrics": {
-              "pe": 29.749361,
+              "pe": 28.985928,
               "pb": 2.834236,
               "peg": null,
               "current_roe": 12.967467315293401,
@@ -68416,7 +68441,7 @@
             "failed": 29,
             "market_cap_cr": 41074.8977152,
             "metrics": {
-              "pe": 45.60185,
+              "pe": 45.707657,
               "pb": 4.1819687,
               "peg": null,
               "current_roe": 8.867847688861739,
@@ -68545,12 +68570,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-15",
@@ -69300,7 +69325,7 @@
             "failed": 16,
             "market_cap_cr": 41074.8977152,
             "metrics": {
-              "pe": 45.60185,
+              "pe": 45.707657,
               "pb": 4.1819687,
               "peg": null,
               "current_roe": 8.867847688861739,
@@ -69429,12 +69454,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-15",
@@ -70169,7 +70194,7 @@
             "failed": 16,
             "market_cap_cr": 41074.8977152,
             "metrics": {
-              "pe": 45.60185,
+              "pe": 45.707657,
               "pb": 4.1819687,
               "peg": null,
               "current_roe": 8.867847688861739,
@@ -70298,12 +70323,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 45.60185
+                "value": 45.707657
               },
               {
                 "code": "G2-15",
@@ -70645,7 +70670,7 @@
             "failed": 18,
             "market_cap_cr": 20349.8422272,
             "metrics": {
-              "pe": 26.652376,
+              "pe": 25.96137,
               "pb": 3.4864538,
               "peg": null,
               "current_roe": 9.43978070926846,
@@ -70874,7 +70899,7 @@
             "failed": 19,
             "market_cap_cr": 73692.4598272,
             "metrics": {
-              "pe": 34.08555,
+              "pe": 34.12766,
               "pb": 5.2480483,
               "peg": null,
               "current_roe": 13.067939040022788,
@@ -70958,7 +70983,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 34.08555
+                "value": 34.12766
               },
               {
                 "code": "G2-14",
@@ -71372,7 +71397,7 @@
             "failed": 29,
             "market_cap_cr": 43684.2856448,
             "metrics": {
-              "pe": 21.180328,
+              "pe": 21.189013,
               "pb": 1.2573965,
               "peg": null,
               "current_roe": 6.398432095918838,
@@ -72181,7 +72206,7 @@
             "failed": 9,
             "market_cap_cr": 20349.8422272,
             "metrics": {
-              "pe": 26.652376,
+              "pe": 25.96137,
               "pb": 3.4864538,
               "peg": null,
               "current_roe": 9.43978070926846,
@@ -72410,7 +72435,7 @@
             "failed": 8,
             "market_cap_cr": 73692.4598272,
             "metrics": {
-              "pe": 34.08555,
+              "pe": 34.12766,
               "pb": 5.2480483,
               "peg": null,
               "current_roe": 13.067939040022788,
@@ -72494,7 +72519,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 34.08555
+                "value": 34.12766
               },
               {
                 "code": "G2-14",
@@ -72908,7 +72933,7 @@
             "failed": 17,
             "market_cap_cr": 43684.2856448,
             "metrics": {
-              "pe": 21.180328,
+              "pe": 21.189013,
               "pb": 1.2573965,
               "peg": null,
               "current_roe": 6.398432095918838,
@@ -73682,7 +73707,7 @@
             "failed": 8,
             "market_cap_cr": 73692.4598272,
             "metrics": {
-              "pe": 34.08555,
+              "pe": 34.12766,
               "pb": 5.2480483,
               "peg": null,
               "current_roe": 13.067939040022788,
@@ -73784,7 +73809,7 @@
             "failed": 9,
             "market_cap_cr": 20349.8422272,
             "metrics": {
-              "pe": 26.652376,
+              "pe": 25.96137,
               "pb": 3.4864538,
               "peg": null,
               "current_roe": 9.43978070926846,
@@ -74693,7 +74718,7 @@
             "failed": 17,
             "market_cap_cr": 43684.2856448,
             "metrics": {
-              "pe": 21.180328,
+              "pe": 21.189013,
               "pb": 1.2573965,
               "peg": null,
               "current_roe": 6.398432095918838,
