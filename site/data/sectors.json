@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-31T14:26:37.720031+00:00",
+  "as_of": "2026-11-01T14:53:25.936530+00:00",
   "source": "Screener.in (consolidated) + Yahoo Finance valuation (snapshot)",
   "sectors": {
     "Pharmaceuticals": {
@@ -711,7 +711,7 @@
             "failed": 22,
             "market_cap_cr": 96744.046592,
             "metrics": {
-              "pe": 26.512142,
+              "pe": 26.271875,
               "pb": 2.5772889,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -2152,7 +2152,7 @@
             "failed": 11,
             "market_cap_cr": 96744.046592,
             "metrics": {
-              "pe": 26.512142,
+              "pe": 26.271875,
               "pb": 2.5772889,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -3518,7 +3518,7 @@
             "failed": 11,
             "market_cap_cr": 96744.046592,
             "metrics": {
-              "pe": 26.512142,
+              "pe": 26.271875,
               "pb": 2.5772889,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -4196,7 +4196,7 @@
             "failed": 11,
             "market_cap_cr": 87058.4680448,
             "metrics": {
-              "pe": 24.477152,
+              "pe": 24.620047,
               "pb": 11.320109,
               "peg": null,
               "current_roe": 46.416959292495775,
@@ -4292,7 +4292,7 @@
               "sales_growth_yoy": 24.245564835700787,
               "profit_growth_yoy": 20.34383954154728,
               "promoter_holding": 0.0,
-              "mom_1y": 17.354442128859393,
+              "mom_1y": 17.354433908027268,
               "mom_6m": 70.24618495232436,
               "mom_3m": 17.337230229936317
             },
@@ -4562,6 +4562,113 @@
             "missing": 2,
             "q_score": 53.3,
             "mom_score": 56.0,
+            "composite": 54.4
+          },
+          {
+            "ticker": "TCS.NS",
+            "company": "Tata Consultancy Services Limited",
+            "category": "ELIMINATED",
+            "g1": 16,
+            "g2": 16,
+            "passed": 32,
+            "failed": 15,
+            "market_cap_cr": 905462.5726464,
+            "metrics": {
+              "pe": 17.542408,
+              "pb": 7.609833,
+              "peg": 3.4,
+              "current_roe": 43.58327870505774,
+              "current_roce": 57.27785678242121,
+              "current_op_margin": 26.4489069649212,
+              "avg_roce_5y": 61.655571356484245,
+              "avg_roe_5y": 47.784662422803216,
+              "current_de_ratio": 9.923856588170036,
+              "avg_de_5y": 6.659819855082935,
+              "net_debt_to_ebitda": 0.14722641297707068,
+              "fcf_5y_total": 365664.0,
+              "fcf_3y_total": 134695.0,
+              "cfo_to_ebitda": 44.93336794248231,
+              "sales_cagr_5y": 8.11463438312483,
+              "profit_cagr_5y": 6.166168202753286,
+              "sales_growth_yoy": 6.077050119653511,
+              "profit_growth_yoy": 4.86108302665103,
+              "promoter_holding": 71.77,
+              "mom_1y": -15.052398573401716,
+              "mom_6m": 3.608479791057695,
+              "mom_3m": 3.458504466398904
+            },
+            "hard": [
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 44.93336794248231
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-02",
+                "criterion": "Revenue 5Y CAGR > 10%",
+                "value": 8.11463438312483
+              },
+              {
+                "code": "G1-03",
+                "criterion": "Profit 5Y CAGR > 12%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G1-04",
+                "criterion": "Revenue YoY growth > 10%",
+                "value": 6.077050119653511
+              },
+              {
+                "code": "G1-05",
+                "criterion": "Profit YoY growth > 10%",
+                "value": 4.86108302665103
+              },
+              {
+                "code": "G1-21",
+                "criterion": "PEG < 2.0x",
+                "value": 3.4
+              },
+              {
+                "code": "G1-22",
+                "criterion": "P/B < 6.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-13",
+                "criterion": "PEG < 1.8x",
+                "value": 3.4
+              },
+              {
+                "code": "G2-14",
+                "criterion": "P/B < 5.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-15",
+                "criterion": "Revenue 5Y CAGR > 12%",
+                "value": 8.11463438312483
+              },
+              {
+                "code": "G2-16",
+                "criterion": "Profit 5Y CAGR > 15%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": 4.86108302665103
+              }
+            ],
+            "missing": 2,
+            "q_score": 59.3,
+            "mom_score": 47.1,
             "composite": 54.4
           },
           {
@@ -4891,113 +4998,6 @@
             "composite": 49.4
           },
           {
-            "ticker": "TCS.NS",
-            "company": "Tata Consultancy Services Limited",
-            "category": "ELIMINATED",
-            "g1": 15,
-            "g2": 16,
-            "passed": 31,
-            "failed": 16,
-            "market_cap_cr": null,
-            "metrics": {
-              "pe": 17.542408,
-              "pb": 7.609833,
-              "peg": 3.4,
-              "current_roe": 43.58327870505774,
-              "current_roce": 57.27785678242121,
-              "current_op_margin": 26.4489069649212,
-              "avg_roce_5y": 61.655571356484245,
-              "avg_roe_5y": 47.784662422803216,
-              "current_de_ratio": 9.923856588170036,
-              "avg_de_5y": 6.659819855082935,
-              "net_debt_to_ebitda": 0.14722641297707068,
-              "fcf_5y_total": 365664.0,
-              "fcf_3y_total": 134695.0,
-              "cfo_to_ebitda": 44.93336794248231,
-              "sales_cagr_5y": 8.11463438312483,
-              "profit_cagr_5y": 6.166168202753286,
-              "sales_growth_yoy": 6.077050119653511,
-              "profit_growth_yoy": 4.86108302665103,
-              "promoter_holding": 71.77,
-              "mom_1y": -15.052398573401716,
-              "mom_6m": 3.608479791057695,
-              "mom_3m": 3.458504466398904
-            },
-            "hard": [
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 44.93336794248231
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-02",
-                "criterion": "Revenue 5Y CAGR > 10%",
-                "value": 8.11463438312483
-              },
-              {
-                "code": "G1-03",
-                "criterion": "Profit 5Y CAGR > 12%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G1-04",
-                "criterion": "Revenue YoY growth > 10%",
-                "value": 6.077050119653511
-              },
-              {
-                "code": "G1-05",
-                "criterion": "Profit YoY growth > 10%",
-                "value": 4.86108302665103
-              },
-              {
-                "code": "G1-21",
-                "criterion": "PEG < 2.0x",
-                "value": 3.4
-              },
-              {
-                "code": "G1-22",
-                "criterion": "P/B < 6.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-13",
-                "criterion": "PEG < 1.8x",
-                "value": 3.4
-              },
-              {
-                "code": "G2-14",
-                "criterion": "P/B < 5.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-15",
-                "criterion": "Revenue 5Y CAGR > 12%",
-                "value": 8.11463438312483
-              },
-              {
-                "code": "G2-16",
-                "criterion": "Profit 5Y CAGR > 15%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": 4.86108302665103
-              }
-            ],
-            "missing": 3,
-            "q_score": 56.0,
-            "mom_score": 47.1,
-            "composite": 52.4
-          },
-          {
             "ticker": "WIPRO.NS",
             "company": "Wipro Limited",
             "category": "ELIMINATED",
@@ -5243,7 +5243,7 @@
             "failed": 2,
             "market_cap_cr": 87058.4680448,
             "metrics": {
-              "pe": 24.477152,
+              "pe": 24.620047,
               "pb": 11.320109,
               "peg": null,
               "current_roe": 46.416959292495775,
@@ -5339,7 +5339,7 @@
               "sales_growth_yoy": 24.245564835700787,
               "profit_growth_yoy": 20.34383954154728,
               "promoter_holding": 0.0,
-              "mom_1y": 17.354442128859393,
+              "mom_1y": 17.354433908027268,
               "mom_6m": 70.24618495232436,
               "mom_3m": 17.337230229936317
             },
@@ -5610,6 +5610,113 @@
             "q_score": 72.2,
             "mom_score": 56.0,
             "composite": 65.7
+          },
+          {
+            "ticker": "TCS.NS",
+            "company": "Tata Consultancy Services Limited",
+            "category": "MARGINAL",
+            "g1": 16,
+            "g2": 16,
+            "passed": 32,
+            "failed": 2,
+            "market_cap_cr": 905462.5726464,
+            "metrics": {
+              "pe": 17.542408,
+              "pb": 7.609833,
+              "peg": 3.4,
+              "current_roe": 43.58327870505774,
+              "current_roce": 57.27785678242121,
+              "current_op_margin": 26.4489069649212,
+              "avg_roce_5y": 61.655571356484245,
+              "avg_roe_5y": 47.784662422803216,
+              "current_de_ratio": 9.923856588170036,
+              "avg_de_5y": 6.659819855082935,
+              "net_debt_to_ebitda": 0.14722641297707068,
+              "fcf_5y_total": 365664.0,
+              "fcf_3y_total": 134695.0,
+              "cfo_to_ebitda": 44.93336794248231,
+              "sales_cagr_5y": 8.11463438312483,
+              "profit_cagr_5y": 6.166168202753286,
+              "sales_growth_yoy": 6.077050119653511,
+              "profit_growth_yoy": 4.86108302665103,
+              "promoter_holding": 71.77,
+              "mom_1y": -15.052398573401716,
+              "mom_6m": 3.608479791057695,
+              "mom_3m": 3.458504466398904
+            },
+            "hard": [
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 44.93336794248231
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-02",
+                "criterion": "Revenue 5Y CAGR > 10%",
+                "value": 8.11463438312483
+              },
+              {
+                "code": "G1-03",
+                "criterion": "Profit 5Y CAGR > 12%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G1-04",
+                "criterion": "Revenue YoY growth > 10%",
+                "value": 6.077050119653511
+              },
+              {
+                "code": "G1-05",
+                "criterion": "Profit YoY growth > 10%",
+                "value": 4.86108302665103
+              },
+              {
+                "code": "G1-21",
+                "criterion": "PEG < 2.0x",
+                "value": 3.4
+              },
+              {
+                "code": "G1-22",
+                "criterion": "P/B < 6.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-13",
+                "criterion": "PEG < 1.8x",
+                "value": 3.4
+              },
+              {
+                "code": "G2-14",
+                "criterion": "P/B < 5.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-15",
+                "criterion": "Revenue 5Y CAGR > 12%",
+                "value": 8.11463438312483
+              },
+              {
+                "code": "G2-16",
+                "criterion": "Profit 5Y CAGR > 15%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": 4.86108302665103
+              }
+            ],
+            "missing": 2,
+            "q_score": 82.9,
+            "mom_score": 47.1,
+            "composite": 68.6
           },
           {
             "ticker": "INFY.NS",
@@ -5938,113 +6045,6 @@
             "composite": 60.4
           },
           {
-            "ticker": "TCS.NS",
-            "company": "Tata Consultancy Services Limited",
-            "category": "MARGINAL",
-            "g1": 15,
-            "g2": 16,
-            "passed": 31,
-            "failed": 2,
-            "market_cap_cr": null,
-            "metrics": {
-              "pe": 17.542408,
-              "pb": 7.609833,
-              "peg": 3.4,
-              "current_roe": 43.58327870505774,
-              "current_roce": 57.27785678242121,
-              "current_op_margin": 26.4489069649212,
-              "avg_roce_5y": 61.655571356484245,
-              "avg_roe_5y": 47.784662422803216,
-              "current_de_ratio": 9.923856588170036,
-              "avg_de_5y": 6.659819855082935,
-              "net_debt_to_ebitda": 0.14722641297707068,
-              "fcf_5y_total": 365664.0,
-              "fcf_3y_total": 134695.0,
-              "cfo_to_ebitda": 44.93336794248231,
-              "sales_cagr_5y": 8.11463438312483,
-              "profit_cagr_5y": 6.166168202753286,
-              "sales_growth_yoy": 6.077050119653511,
-              "profit_growth_yoy": 4.86108302665103,
-              "promoter_holding": 71.77,
-              "mom_1y": -15.052398573401716,
-              "mom_6m": 3.608479791057695,
-              "mom_3m": 3.458504466398904
-            },
-            "hard": [
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 44.93336794248231
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-02",
-                "criterion": "Revenue 5Y CAGR > 10%",
-                "value": 8.11463438312483
-              },
-              {
-                "code": "G1-03",
-                "criterion": "Profit 5Y CAGR > 12%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G1-04",
-                "criterion": "Revenue YoY growth > 10%",
-                "value": 6.077050119653511
-              },
-              {
-                "code": "G1-05",
-                "criterion": "Profit YoY growth > 10%",
-                "value": 4.86108302665103
-              },
-              {
-                "code": "G1-21",
-                "criterion": "PEG < 2.0x",
-                "value": 3.4
-              },
-              {
-                "code": "G1-22",
-                "criterion": "P/B < 6.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-13",
-                "criterion": "PEG < 1.8x",
-                "value": 3.4
-              },
-              {
-                "code": "G2-14",
-                "criterion": "P/B < 5.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-15",
-                "criterion": "Revenue 5Y CAGR > 12%",
-                "value": 8.11463438312483
-              },
-              {
-                "code": "G2-16",
-                "criterion": "Profit 5Y CAGR > 15%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": 4.86108302665103
-              }
-            ],
-            "missing": 3,
-            "q_score": 80.1,
-            "mom_score": 47.1,
-            "composite": 66.9
-          },
-          {
             "ticker": "WIPRO.NS",
             "company": "Wipro Limited",
             "category": "ELIMINATED",
@@ -6290,7 +6290,7 @@
             "failed": 2,
             "market_cap_cr": 87058.4680448,
             "metrics": {
-              "pe": 24.477152,
+              "pe": 24.620047,
               "pb": 11.320109,
               "peg": null,
               "current_roe": 46.416959292495775,
@@ -6555,7 +6555,7 @@
               "sales_growth_yoy": 24.245564835700787,
               "profit_growth_yoy": 20.34383954154728,
               "promoter_holding": 0.0,
-              "mom_1y": 17.354442128859393,
+              "mom_1y": 17.354433908027268,
               "mom_6m": 70.24618495232436,
               "mom_3m": 17.337230229936317
             },
@@ -6612,6 +6612,103 @@
             "q_score": 49.9,
             "mom_score": 66.6,
             "composite": 56.6
+          },
+          {
+            "ticker": "TCS.NS",
+            "company": "Tata Consultancy Services Limited",
+            "category": "MARGINAL",
+            "g1": 17,
+            "g2": 17,
+            "passed": 34,
+            "failed": 2,
+            "market_cap_cr": 905462.5726464,
+            "metrics": {
+              "pe": 17.542408,
+              "pb": 7.609833,
+              "peg": 3.4,
+              "current_roe": 43.58327870505774,
+              "current_roce": 57.27785678242121,
+              "current_op_margin": 26.4489069649212,
+              "avg_roce_5y": 61.655571356484245,
+              "avg_roe_5y": 47.784662422803216,
+              "current_de_ratio": 9.923856588170036,
+              "avg_de_5y": 6.659819855082935,
+              "net_debt_to_ebitda": 0.14722641297707068,
+              "fcf_5y_total": 365664.0,
+              "fcf_3y_total": 134695.0,
+              "cfo_to_ebitda": 44.93336794248231,
+              "sales_cagr_5y": 8.11463438312483,
+              "profit_cagr_5y": 6.166168202753286,
+              "sales_growth_yoy": 6.077050119653511,
+              "profit_growth_yoy": 4.86108302665103,
+              "promoter_holding": 71.77,
+              "mom_1y": -15.052398573401716,
+              "mom_6m": 3.608479791057695,
+              "mom_3m": 3.458504466398904
+            },
+            "hard": [
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 44.93336794248231
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-03",
+                "criterion": "Profit 5Y CAGR > 12%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G1-04",
+                "criterion": "Revenue YoY growth > 10%",
+                "value": 6.077050119653511
+              },
+              {
+                "code": "G1-05",
+                "criterion": "Profit YoY growth > 10%",
+                "value": 4.86108302665103
+              },
+              {
+                "code": "G1-21",
+                "criterion": "PEG < 2.0x",
+                "value": 3.4
+              },
+              {
+                "code": "G1-22",
+                "criterion": "P/B < 6.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-13",
+                "criterion": "PEG < 1.8x",
+                "value": 3.4
+              },
+              {
+                "code": "G2-14",
+                "criterion": "P/B < 5.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-16",
+                "criterion": "Profit 5Y CAGR > 15%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": 4.86108302665103
+              }
+            ],
+            "missing": 2,
+            "q_score": 83.5,
+            "mom_score": 47.1,
+            "composite": 68.9
           },
           {
             "ticker": "MPHASIS.NS",
@@ -6714,103 +6811,6 @@
             "q_score": 67.5,
             "mom_score": 51.2,
             "composite": 61.0
-          },
-          {
-            "ticker": "TCS.NS",
-            "company": "Tata Consultancy Services Limited",
-            "category": "MARGINAL",
-            "g1": 16,
-            "g2": 17,
-            "passed": 33,
-            "failed": 2,
-            "market_cap_cr": null,
-            "metrics": {
-              "pe": 17.542408,
-              "pb": 7.609833,
-              "peg": 3.4,
-              "current_roe": 43.58327870505774,
-              "current_roce": 57.27785678242121,
-              "current_op_margin": 26.4489069649212,
-              "avg_roce_5y": 61.655571356484245,
-              "avg_roe_5y": 47.784662422803216,
-              "current_de_ratio": 9.923856588170036,
-              "avg_de_5y": 6.659819855082935,
-              "net_debt_to_ebitda": 0.14722641297707068,
-              "fcf_5y_total": 365664.0,
-              "fcf_3y_total": 134695.0,
-              "cfo_to_ebitda": 44.93336794248231,
-              "sales_cagr_5y": 8.11463438312483,
-              "profit_cagr_5y": 6.166168202753286,
-              "sales_growth_yoy": 6.077050119653511,
-              "profit_growth_yoy": 4.86108302665103,
-              "promoter_holding": 71.77,
-              "mom_1y": -15.052398573401716,
-              "mom_6m": 3.608479791057695,
-              "mom_3m": 3.458504466398904
-            },
-            "hard": [
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 44.93336794248231
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-03",
-                "criterion": "Profit 5Y CAGR > 12%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G1-04",
-                "criterion": "Revenue YoY growth > 10%",
-                "value": 6.077050119653511
-              },
-              {
-                "code": "G1-05",
-                "criterion": "Profit YoY growth > 10%",
-                "value": 4.86108302665103
-              },
-              {
-                "code": "G1-21",
-                "criterion": "PEG < 2.0x",
-                "value": 3.4
-              },
-              {
-                "code": "G1-22",
-                "criterion": "P/B < 6.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-13",
-                "criterion": "PEG < 1.8x",
-                "value": 3.4
-              },
-              {
-                "code": "G2-14",
-                "criterion": "P/B < 5.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-16",
-                "criterion": "Profit 5Y CAGR > 15%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": 4.86108302665103
-              }
-            ],
-            "missing": 3,
-            "q_score": 80.8,
-            "mom_score": 47.1,
-            "composite": 67.4
           },
           {
             "ticker": "WIPRO.NS",
@@ -7538,7 +7538,7 @@
             "failed": 17,
             "market_cap_cr": 64855.867392,
             "metrics": {
-              "pe": 33.851852,
+              "pe": 33.145966,
               "pb": 5.6785173,
               "peg": 3.16,
               "current_roe": 16.36745774586216,
@@ -7612,7 +7612,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 33.851852
+                "value": 33.145966
               },
               {
                 "code": "G2-13",
@@ -7889,8 +7889,8 @@
             "failed": 20,
             "market_cap_cr": 83719.1991296,
             "metrics": {
-              "pe": 42.317642,
-              "pb": 6.6339564,
+              "pe": 43.719936,
+              "pb": 6.617641,
               "peg": 1.5,
               "current_roe": 15.668093200190206,
               "current_roce": 18.92442683272007,
@@ -7908,7 +7908,7 @@
               "sales_growth_yoy": 8.953748847015417,
               "profit_growth_yoy": 6.233207952713595,
               "promoter_holding": 53.05,
-              "mom_1y": -26.35883355828813,
+              "mom_1y": -26.358841651073504,
               "mom_6m": -24.167899309934782,
               "mom_3m": -23.279598588841843
             },
@@ -7973,22 +7973,22 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 42.317642
+                "value": 43.719936
               },
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 6.6339564
+                "value": 6.617641
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 42.317642
+                "value": 43.719936
               },
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 6.6339564
+                "value": 6.617641
               },
               {
                 "code": "G2-15",
@@ -8532,7 +8532,7 @@
             "failed": 4,
             "market_cap_cr": 64855.867392,
             "metrics": {
-              "pe": 33.851852,
+              "pe": 33.145966,
               "pb": 5.6785173,
               "peg": 3.16,
               "current_roe": 16.36745774586216,
@@ -8606,7 +8606,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 33.851852
+                "value": 33.145966
               },
               {
                 "code": "G2-13",
@@ -8883,8 +8883,8 @@
             "failed": 7,
             "market_cap_cr": 83719.1991296,
             "metrics": {
-              "pe": 42.317642,
-              "pb": 6.6339564,
+              "pe": 43.719936,
+              "pb": 6.617641,
               "peg": 1.5,
               "current_roe": 15.668093200190206,
               "current_roce": 18.92442683272007,
@@ -8902,7 +8902,7 @@
               "sales_growth_yoy": 8.953748847015417,
               "profit_growth_yoy": 6.233207952713595,
               "promoter_holding": 53.05,
-              "mom_1y": -26.35883355828813,
+              "mom_1y": -26.358841651073504,
               "mom_6m": -24.167899309934782,
               "mom_3m": -23.279598588841843
             },
@@ -8967,22 +8967,22 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 42.317642
+                "value": 43.719936
               },
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 6.6339564
+                "value": 6.617641
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 42.317642
+                "value": 43.719936
               },
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 6.6339564
+                "value": 6.617641
               },
               {
                 "code": "G2-15",
@@ -9496,7 +9496,7 @@
             "failed": 4,
             "market_cap_cr": 64855.867392,
             "metrics": {
-              "pe": 33.851852,
+              "pe": 33.145966,
               "pb": 5.6785173,
               "peg": 3.16,
               "current_roe": 16.36745774586216,
@@ -9807,8 +9807,8 @@
             "failed": 7,
             "market_cap_cr": 83719.1991296,
             "metrics": {
-              "pe": 42.317642,
-              "pb": 6.6339564,
+              "pe": 43.719936,
+              "pb": 6.617641,
               "peg": 1.5,
               "current_roe": 15.668093200190206,
               "current_roce": 18.92442683272007,
@@ -9826,7 +9826,7 @@
               "sales_growth_yoy": 8.953748847015417,
               "profit_growth_yoy": 6.233207952713595,
               "promoter_holding": 53.05,
-              "mom_1y": -26.35883355828813,
+              "mom_1y": -26.358841651073504,
               "mom_6m": -24.167899309934782,
               "mom_3m": -23.279598588841843
             },
@@ -9886,7 +9886,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 42.317642
+                "value": 43.719936
               },
               {
                 "code": "G2-15",
@@ -10119,7 +10119,7 @@
             "g2": 17,
             "passed": 35,
             "failed": 12,
-            "market_cap_cr": 284421.9670528,
+            "market_cap_cr": 284187.951104,
             "metrics": {
               "pe": 22.077646,
               "pb": 7.797092,
@@ -10213,8 +10213,8 @@
             "failed": 12,
             "market_cap_cr": 103423.6133376,
             "metrics": {
-              "pe": 17.24345,
-              "pb": 4.41815,
+              "pe": 18.99074,
+              "pb": 4.7839274,
               "peg": null,
               "current_roe": 25.750779614678116,
               "current_roce": 29.48686966328339,
@@ -10386,11 +10386,11 @@
             "ticker": "TVSMOTOR.NS",
             "company": "TVS Motor Company Limited",
             "category": "ELIMINATED",
-            "g1": 11,
+            "g1": 12,
             "g2": 10,
-            "passed": 21,
-            "failed": 26,
-            "market_cap_cr": null,
+            "passed": 22,
+            "failed": 25,
+            "market_cap_cr": 199366.9214208,
             "metrics": {
               "pe": 52.081936,
               "pb": 17.565634,
@@ -10524,7 +10524,7 @@
                 "value": 17.565634
               }
             ],
-            "missing": 5,
+            "missing": 4,
             "q_score": 0.0,
             "mom_score": 56.9,
             "composite": 22.8
@@ -10700,11 +10700,11 @@
             "ticker": "ASHOKLEY.NS",
             "company": "Ashok Leyland Limited",
             "category": "ELIMINATED",
-            "g1": 9,
+            "g1": 10,
             "g2": 7,
-            "passed": 16,
-            "failed": 31,
-            "market_cap_cr": null,
+            "passed": 17,
+            "failed": 30,
+            "market_cap_cr": 85065.1643904,
             "metrics": {
               "pe": 24.46284,
               "pb": 5.9729443,
@@ -10853,7 +10853,7 @@
                 "value": 0.26874496103198064
               }
             ],
-            "missing": 7,
+            "missing": 6,
             "q_score": 0.0,
             "mom_score": 49.4,
             "composite": 19.8
@@ -10868,7 +10868,7 @@
             "g2": 17,
             "passed": 35,
             "failed": 8,
-            "market_cap_cr": 284421.9670528,
+            "market_cap_cr": 284187.951104,
             "metrics": {
               "pe": 22.077646,
               "pb": 7.797092,
@@ -10962,8 +10962,8 @@
             "failed": 6,
             "market_cap_cr": 103423.6133376,
             "metrics": {
-              "pe": 17.24345,
-              "pb": 4.41815,
+              "pe": 18.99074,
+              "pb": 4.7839274,
               "peg": null,
               "current_roe": 25.750779614678116,
               "current_roce": 29.48686966328339,
@@ -11135,11 +11135,11 @@
             "ticker": "TVSMOTOR.NS",
             "company": "TVS Motor Company Limited",
             "category": "ELIMINATED",
-            "g1": 11,
+            "g1": 12,
             "g2": 10,
-            "passed": 21,
+            "passed": 22,
             "failed": 17,
-            "market_cap_cr": null,
+            "market_cap_cr": 199366.9214208,
             "metrics": {
               "pe": 52.081936,
               "pb": 17.565634,
@@ -11273,10 +11273,10 @@
                 "value": 17.565634
               }
             ],
-            "missing": 5,
-            "q_score": 0.0,
+            "missing": 4,
+            "q_score": 0.2,
             "mom_score": 56.9,
-            "composite": 22.8
+            "composite": 22.9
           },
           {
             "ticker": "BHARATFORG.NS",
@@ -11449,11 +11449,11 @@
             "ticker": "ASHOKLEY.NS",
             "company": "Ashok Leyland Limited",
             "category": "ELIMINATED",
-            "g1": 9,
+            "g1": 10,
             "g2": 7,
-            "passed": 16,
+            "passed": 17,
             "failed": 19,
-            "market_cap_cr": null,
+            "market_cap_cr": 85065.1643904,
             "metrics": {
               "pe": 24.46284,
               "pb": 5.9729443,
@@ -11602,7 +11602,7 @@
                 "value": 0.26874496103198064
               }
             ],
-            "missing": 7,
+            "missing": 6,
             "q_score": 0.0,
             "mom_score": 49.4,
             "composite": 19.8
@@ -11617,7 +11617,7 @@
             "g2": 17,
             "passed": 35,
             "failed": 8,
-            "market_cap_cr": 284421.9670528,
+            "market_cap_cr": 284187.951104,
             "metrics": {
               "pe": 22.077646,
               "pb": 7.797092,
@@ -11711,8 +11711,8 @@
             "failed": 6,
             "market_cap_cr": 103423.6133376,
             "metrics": {
-              "pe": 17.24345,
-              "pb": 4.41815,
+              "pe": 18.99074,
+              "pb": 4.7839274,
               "peg": null,
               "current_roe": 25.750779614678116,
               "current_roce": 29.48686966328339,
@@ -11884,11 +11884,11 @@
             "ticker": "TVSMOTOR.NS",
             "company": "TVS Motor Company Limited",
             "category": "ELIMINATED",
-            "g1": 11,
+            "g1": 12,
             "g2": 10,
-            "passed": 21,
+            "passed": 22,
             "failed": 17,
-            "market_cap_cr": null,
+            "market_cap_cr": 199366.9214208,
             "metrics": {
               "pe": 52.081936,
               "pb": 17.565634,
@@ -12022,10 +12022,10 @@
                 "value": 17.565634
               }
             ],
-            "missing": 5,
-            "q_score": 0.0,
+            "missing": 4,
+            "q_score": 0.2,
             "mom_score": 56.9,
-            "composite": 22.8
+            "composite": 22.9
           },
           {
             "ticker": "BHARATFORG.NS",
@@ -12193,11 +12193,11 @@
             "ticker": "ASHOKLEY.NS",
             "company": "Ashok Leyland Limited",
             "category": "ELIMINATED",
-            "g1": 9,
+            "g1": 10,
             "g2": 8,
-            "passed": 17,
+            "passed": 18,
             "failed": 19,
-            "market_cap_cr": null,
+            "market_cap_cr": 85065.1643904,
             "metrics": {
               "pe": 24.46284,
               "pb": 5.9729443,
@@ -12341,7 +12341,7 @@
                 "value": 0.26874496103198064
               }
             ],
-            "missing": 7,
+            "missing": 6,
             "q_score": 0.0,
             "mom_score": 49.4,
             "composite": 19.8
@@ -12365,7 +12365,7 @@
             "market_cap_cr": 20723.5596288,
             "metrics": {
               "pe": 19.509502,
-              "pb": 3.5504813,
+              "pb": 3.1997676,
               "peg": null,
               "current_roe": 16.401544401544403,
               "current_roce": 21.29416049532597,
@@ -12564,7 +12564,7 @@
             "market_cap_cr": 44555.8423552,
             "metrics": {
               "pe": 48.94001,
-              "pb": 11.192072,
+              "pb": 9.978984,
               "peg": null,
               "current_roe": 20.416853428955626,
               "current_roce": 24.395796847635726,
@@ -12647,7 +12647,7 @@
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 11.192072
+                "value": 9.978984
               },
               {
                 "code": "G2-12",
@@ -12657,7 +12657,7 @@
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 11.192072
+                "value": 9.978984
               }
             ],
             "missing": 4,
@@ -13311,7 +13311,7 @@
             "market_cap_cr": 15806.455808,
             "metrics": {
               "pe": 26.651375,
-              "pb": 2.6531618,
+              "pb": 2.5132802,
               "peg": null,
               "current_roe": 9.466794380587483,
               "current_roce": 12.698689956331876,
@@ -13637,7 +13637,7 @@
             "market_cap_cr": 20723.5596288,
             "metrics": {
               "pe": 19.509502,
-              "pb": 3.5504813,
+              "pb": 3.1997676,
               "peg": null,
               "current_roe": 16.401544401544403,
               "current_roce": 21.29416049532597,
@@ -13836,7 +13836,7 @@
             "market_cap_cr": 44555.8423552,
             "metrics": {
               "pe": 48.94001,
-              "pb": 11.192072,
+              "pb": 9.978984,
               "peg": null,
               "current_roe": 20.416853428955626,
               "current_roce": 24.395796847635726,
@@ -13919,7 +13919,7 @@
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 11.192072
+                "value": 9.978984
               },
               {
                 "code": "G2-12",
@@ -13929,7 +13929,7 @@
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 11.192072
+                "value": 9.978984
               }
             ],
             "missing": 4,
@@ -14583,7 +14583,7 @@
             "market_cap_cr": 15806.455808,
             "metrics": {
               "pe": 26.651375,
-              "pb": 2.6531618,
+              "pb": 2.5132802,
               "peg": null,
               "current_roe": 9.466794380587483,
               "current_roce": 12.698689956331876,
@@ -14909,7 +14909,7 @@
             "market_cap_cr": 20723.5596288,
             "metrics": {
               "pe": 19.509502,
-              "pb": 3.5504813,
+              "pb": 3.1997676,
               "peg": null,
               "current_roe": 16.401544401544403,
               "current_roce": 21.29416049532597,
@@ -15200,7 +15200,7 @@
             "market_cap_cr": 44555.8423552,
             "metrics": {
               "pe": 48.94001,
-              "pb": 11.192072,
+              "pb": 9.978984,
               "peg": null,
               "current_roe": 20.416853428955626,
               "current_roce": 24.395796847635726,
@@ -15283,7 +15283,7 @@
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 11.192072
+                "value": 9.978984
               },
               {
                 "code": "G2-12",
@@ -15293,7 +15293,7 @@
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 11.192072
+                "value": 9.978984
               }
             ],
             "missing": 4,
@@ -15668,7 +15668,7 @@
             "market_cap_cr": 15806.455808,
             "metrics": {
               "pe": 26.651375,
-              "pb": 2.6531618,
+              "pb": 2.5132802,
               "peg": null,
               "current_roe": 9.466794380587483,
               "current_roce": 12.698689956331876,
@@ -16156,7 +16156,7 @@
             "failed": 20,
             "market_cap_cr": 324794.3712768,
             "metrics": {
-              "pe": 36.505157,
+              "pe": 36.934856,
               "pb": 4.41524,
               "peg": 1.22,
               "current_roe": 12.006033592433548,
@@ -16255,12 +16255,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 36.505157
+                "value": 36.934856
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 36.505157
+                "value": 36.934856
               },
               {
                 "code": "G2-16",
@@ -16622,7 +16622,7 @@
               "profit_growth_yoy": -17.631806395851342,
               "promoter_holding": 55.84,
               "mom_1y": -37.37081996255933,
-              "mom_6m": -31.585561105854687,
+              "mom_6m": -31.58555679764715,
               "mom_3m": -25.873447010291184
             },
             "hard": [
@@ -16983,7 +16983,7 @@
             "failed": 11,
             "market_cap_cr": 324794.3712768,
             "metrics": {
-              "pe": 36.505157,
+              "pe": 36.934856,
               "pb": 4.41524,
               "peg": 1.22,
               "current_roe": 12.006033592433548,
@@ -17082,12 +17082,12 @@
               {
                 "code": "G1-20",
                 "criterion": "P/E < 35x",
-                "value": 36.505157
+                "value": 36.934856
               },
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 36.505157
+                "value": 36.934856
               },
               {
                 "code": "G2-16",
@@ -17449,7 +17449,7 @@
               "profit_growth_yoy": -17.631806395851342,
               "promoter_holding": 55.84,
               "mom_1y": -37.37081996255933,
-              "mom_6m": -31.585561105854687,
+              "mom_6m": -31.58555679764715,
               "mom_3m": -25.873447010291184
             },
             "hard": [
@@ -17810,7 +17810,7 @@
             "failed": 11,
             "market_cap_cr": 324794.3712768,
             "metrics": {
-              "pe": 36.505157,
+              "pe": 36.934856,
               "pb": 4.41524,
               "peg": 1.22,
               "current_roe": 12.006033592433548,
@@ -18226,7 +18226,7 @@
               "profit_growth_yoy": -17.631806395851342,
               "promoter_holding": 55.84,
               "mom_1y": -37.37081996255933,
-              "mom_6m": -31.585561105854687,
+              "mom_6m": -31.58555679764715,
               "mom_3m": -25.873447010291184
             },
             "hard": [
@@ -18776,7 +18776,7 @@
               "sales_growth_yoy": 12.051669034090908,
               "profit_growth_yoy": -1.5985790408525755,
               "promoter_holding": 59.35,
-              "mom_1y": -31.704782380086893,
+              "mom_1y": -31.704787996232064,
               "mom_6m": -18.654418899722604,
               "mom_3m": -19.648091699508687
             },
@@ -19869,7 +19869,7 @@
               "sales_growth_yoy": 12.051669034090908,
               "profit_growth_yoy": -1.5985790408525755,
               "promoter_holding": 59.35,
-              "mom_1y": -31.704782380086893,
+              "mom_1y": -31.704787996232064,
               "mom_6m": -18.654418899722604,
               "mom_3m": -19.648091699508687
             },
@@ -20860,7 +20860,7 @@
               "sales_growth_yoy": 12.051669034090908,
               "profit_growth_yoy": -1.5985790408525755,
               "promoter_holding": 59.35,
-              "mom_1y": -31.704782380086893,
+              "mom_1y": -31.704787996232064,
               "mom_6m": -18.654418899722604,
               "mom_3m": -19.648091699508687
             },
@@ -21859,8 +21859,8 @@
               "sales_growth_yoy": 8.378635879616656,
               "profit_growth_yoy": 16.45678799378989,
               "promoter_holding": 51.28,
-              "mom_1y": 42.692583108166325,
-              "mom_6m": -26.85891559298025,
+              "mom_1y": 42.692573230981836,
+              "mom_6m": -26.858920783168994,
               "mom_3m": -9.291110599700868
             },
             "hard": [
@@ -22909,8 +22909,8 @@
               "sales_growth_yoy": 8.378635879616656,
               "profit_growth_yoy": 16.45678799378989,
               "promoter_holding": 51.28,
-              "mom_1y": 42.692583108166325,
-              "mom_6m": -26.85891559298025,
+              "mom_1y": 42.692573230981836,
+              "mom_6m": -26.858920783168994,
               "mom_3m": -9.291110599700868
             },
             "hard": [
@@ -23959,8 +23959,8 @@
               "sales_growth_yoy": 8.378635879616656,
               "profit_growth_yoy": 16.45678799378989,
               "promoter_holding": 51.28,
-              "mom_1y": 42.692583108166325,
-              "mom_6m": -26.85891559298025,
+              "mom_1y": 42.692573230981836,
+              "mom_6m": -26.858920783168994,
               "mom_3m": -9.291110599700868
             },
             "hard": [
@@ -24888,13 +24888,13 @@
             "ticker": "IOC.NS",
             "company": "Indian Oil Corporation Limited",
             "category": "ELIMINATED",
-            "g1": 17,
+            "g1": 18,
             "g2": 15,
-            "passed": 32,
-            "failed": 15,
-            "market_cap_cr": null,
+            "passed": 33,
+            "failed": 14,
+            "market_cap_cr": 183787.913216,
             "metrics": {
-              "pe": 5.325286,
+              "pe": 5.2564616,
               "pb": 0.8163867,
               "peg": null,
               "current_roe": 21.45264042390829,
@@ -24971,10 +24971,10 @@
                 "value": 14.568308262930147
               }
             ],
-            "missing": 5,
-            "q_score": 43.5,
+            "missing": 4,
+            "q_score": 46.7,
             "mom_score": 45.9,
-            "composite": 44.5
+            "composite": 46.4
           },
           {
             "ticker": "PETRONET.NS",
@@ -25005,7 +25005,7 @@
               "sales_growth_yoy": -14.53500402345097,
               "profit_growth_yoy": 7.538972655251724,
               "promoter_holding": 50.0,
-              "mom_1y": 7.6433855334955725,
+              "mom_1y": 7.6433733189829045,
               "mom_6m": 4.540818569917704,
               "mom_3m": 3.800647664212531
             },
@@ -25306,11 +25306,11 @@
             "ticker": "RELIANCE.NS",
             "company": "Reliance Industries Limited",
             "category": "ELIMINATED",
-            "g1": 12,
+            "g1": 13,
             "g2": 12,
-            "passed": 24,
-            "failed": 23,
-            "market_cap_cr": null,
+            "passed": 25,
+            "failed": 22,
+            "market_cap_cr": 1576397.70112,
             "metrics": {
               "pe": 19.19743,
               "pb": 1.6691121,
@@ -25439,10 +25439,10 @@
                 "value": -0.1347202205651983
               }
             ],
-            "missing": 3,
-            "q_score": 3.0,
+            "missing": 2,
+            "q_score": 6.0,
             "mom_score": 41.5,
-            "composite": 18.4
+            "composite": 20.2
           },
           {
             "ticker": "ONGC.NS",
@@ -25592,13 +25592,13 @@
             "ticker": "IOC.NS",
             "company": "Indian Oil Corporation Limited",
             "category": "ELIMINATED",
-            "g1": 17,
+            "g1": 18,
             "g2": 15,
-            "passed": 32,
+            "passed": 33,
             "failed": 6,
-            "market_cap_cr": null,
+            "market_cap_cr": 183787.913216,
             "metrics": {
-              "pe": 5.325286,
+              "pe": 5.2564616,
               "pb": 0.8163867,
               "peg": null,
               "current_roe": 21.45264042390829,
@@ -25675,10 +25675,10 @@
                 "value": 14.568308262930147
               }
             ],
-            "missing": 5,
-            "q_score": 56.4,
+            "missing": 4,
+            "q_score": 58.7,
             "mom_score": 45.9,
-            "composite": 52.2
+            "composite": 53.6
           },
           {
             "ticker": "PETRONET.NS",
@@ -25709,7 +25709,7 @@
               "sales_growth_yoy": -14.53500402345097,
               "profit_growth_yoy": 7.538972655251724,
               "promoter_holding": 50.0,
-              "mom_1y": 7.6433855334955725,
+              "mom_1y": 7.6433733189829045,
               "mom_6m": 4.540818569917704,
               "mom_3m": 3.800647664212531
             },
@@ -26010,11 +26010,11 @@
             "ticker": "RELIANCE.NS",
             "company": "Reliance Industries Limited",
             "category": "ELIMINATED",
-            "g1": 12,
+            "g1": 13,
             "g2": 12,
-            "passed": 24,
+            "passed": 25,
             "failed": 15,
-            "market_cap_cr": null,
+            "market_cap_cr": 1576397.70112,
             "metrics": {
               "pe": 19.19743,
               "pb": 1.6691121,
@@ -26143,10 +26143,10 @@
                 "value": -0.1347202205651983
               }
             ],
-            "missing": 3,
-            "q_score": 12.1,
+            "missing": 2,
+            "q_score": 14.5,
             "mom_score": 41.5,
-            "composite": 23.9
+            "composite": 25.3
           },
           {
             "ticker": "ONGC.NS",
@@ -26296,13 +26296,13 @@
             "ticker": "IOC.NS",
             "company": "Indian Oil Corporation Limited",
             "category": "ELIMINATED",
-            "g1": 18,
+            "g1": 19,
             "g2": 18,
-            "passed": 36,
+            "passed": 37,
             "failed": 6,
-            "market_cap_cr": null,
+            "market_cap_cr": 183787.913216,
             "metrics": {
-              "pe": 5.325286,
+              "pe": 5.2564616,
               "pb": 0.8163867,
               "peg": null,
               "current_roe": 21.45264042390829,
@@ -26358,10 +26358,10 @@
               }
             ],
             "soft": [],
-            "missing": 5,
-            "q_score": 58.6,
+            "missing": 4,
+            "q_score": 60.7,
             "mom_score": 45.9,
-            "composite": 53.5
+            "composite": 54.8
           },
           {
             "ticker": "PETRONET.NS",
@@ -26392,7 +26392,7 @@
               "sales_growth_yoy": -14.53500402345097,
               "profit_growth_yoy": 7.538972655251724,
               "promoter_holding": 50.0,
-              "mom_1y": 7.6433855334955725,
+              "mom_1y": 7.6433733189829045,
               "mom_6m": 4.540818569917704,
               "mom_3m": 3.800647664212531
             },
@@ -26673,11 +26673,11 @@
             "ticker": "RELIANCE.NS",
             "company": "Reliance Industries Limited",
             "category": "ELIMINATED",
-            "g1": 12,
+            "g1": 13,
             "g2": 13,
-            "passed": 25,
+            "passed": 26,
             "failed": 15,
-            "market_cap_cr": null,
+            "market_cap_cr": 1576397.70112,
             "metrics": {
               "pe": 19.19743,
               "pb": 1.6691121,
@@ -26801,10 +26801,10 @@
                 "value": -0.1347202205651983
               }
             ],
-            "missing": 3,
-            "q_score": 13.1,
+            "missing": 2,
+            "q_score": 15.5,
             "mom_score": 41.5,
-            "composite": 24.5
+            "composite": 25.9
           },
           {
             "ticker": "ONGC.NS",
@@ -27254,7 +27254,7 @@
               "sales_growth_yoy": 0.6419446643699314,
               "profit_growth_yoy": -0.20090406830738325,
               "promoter_holding": 51.34,
-              "mom_1y": -5.488387239530413,
+              "mom_1y": -5.488376952865659,
               "mom_6m": -16.892432055759798,
               "mom_3m": -6.813066809409529
             },
@@ -28148,7 +28148,7 @@
               "sales_growth_yoy": 0.6419446643699314,
               "profit_growth_yoy": -0.20090406830738325,
               "promoter_holding": 51.34,
-              "mom_1y": -5.488387239530413,
+              "mom_1y": -5.488376952865659,
               "mom_6m": -16.892432055759798,
               "mom_3m": -6.813066809409529
             },
@@ -29016,7 +29016,7 @@
               "sales_growth_yoy": 0.6419446643699314,
               "profit_growth_yoy": -0.20090406830738325,
               "promoter_holding": 51.34,
-              "mom_1y": -5.488387239530413,
+              "mom_1y": -5.488376952865659,
               "mom_6m": -16.892432055759798,
               "mom_3m": -6.813066809409529
             },
@@ -32911,7 +32911,7 @@
             "market_cap_cr": null,
             "metrics": {
               "pe": 4.7321,
-              "pb": 0.65559185,
+              "pb": 0.6188221,
               "roe_current": 14.0,
               "roe_avg_5y": 13.4,
               "profit_cagr_5y": 20.867901043697778,
@@ -32964,7 +32964,7 @@
               "gross_npa": null,
               "revenue_cagr_5y": 11.134144145324655,
               "deposits_cagr_5y": null,
-              "mom_1y": 3.3213791237386214,
+              "mom_1y": 3.3213678509188327,
               "mom_6m": -1.7133004996663703,
               "mom_3m": -21.31655763927871
             },
@@ -33203,7 +33203,7 @@
             "market_cap_cr": null,
             "metrics": {
               "pe": 4.7321,
-              "pb": 0.65559185,
+              "pb": 0.6188221,
               "roe_current": 14.0,
               "roe_avg_5y": 13.4,
               "profit_cagr_5y": 20.867901043697778,
@@ -33304,7 +33304,7 @@
               "gross_npa": null,
               "revenue_cagr_5y": 11.134144145324655,
               "deposits_cagr_5y": null,
-              "mom_1y": 3.3213791237386214,
+              "mom_1y": 3.3213678509188327,
               "mom_6m": -1.7133004996663703,
               "mom_3m": -21.31655763927871
             },
@@ -33495,7 +33495,7 @@
             "market_cap_cr": null,
             "metrics": {
               "pe": 4.7321,
-              "pb": 0.65559185,
+              "pb": 0.6188221,
               "roe_current": 14.0,
               "roe_avg_5y": 13.4,
               "profit_cagr_5y": 20.867901043697778,
@@ -33596,7 +33596,7 @@
               "gross_npa": null,
               "revenue_cagr_5y": 11.134144145324655,
               "deposits_cagr_5y": null,
-              "mom_1y": 3.3213791237386214,
+              "mom_1y": 3.3213678509188327,
               "mom_6m": -1.7133004996663703,
               "mom_3m": -21.31655763927871
             },
@@ -33988,7 +33988,7 @@
             "g2": 14,
             "passed": 31,
             "failed": 16,
-            "market_cap_cr": 102963.8782976,
+            "market_cap_cr": 102951.6361728,
             "metrics": {
               "pe": 45.958702,
               "pb": 5.854516,
@@ -34657,7 +34657,7 @@
             "failed": 22,
             "market_cap_cr": 96744.046592,
             "metrics": {
-              "pe": 26.512142,
+              "pe": 26.271875,
               "pb": 2.5772889,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -36034,7 +36034,7 @@
             "g2": 14,
             "passed": 31,
             "failed": 6,
-            "market_cap_cr": 102963.8782976,
+            "market_cap_cr": 102951.6361728,
             "metrics": {
               "pe": 45.958702,
               "pb": 5.854516,
@@ -36703,7 +36703,7 @@
             "failed": 11,
             "market_cap_cr": 96744.046592,
             "metrics": {
-              "pe": 26.512142,
+              "pe": 26.271875,
               "pb": 2.5772889,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -37876,7 +37876,7 @@
             "g2": 15,
             "passed": 34,
             "failed": 6,
-            "market_cap_cr": 102963.8782976,
+            "market_cap_cr": 102951.6361728,
             "metrics": {
               "pe": 45.958702,
               "pb": 5.854516,
@@ -38771,7 +38771,7 @@
             "failed": 11,
             "market_cap_cr": 96744.046592,
             "metrics": {
-              "pe": 26.512142,
+              "pe": 26.271875,
               "pb": 2.5772889,
               "peg": null,
               "current_roe": 9.244939431527275,
@@ -39965,8 +39965,8 @@
               "sales_growth_yoy": 3.4115493426526875,
               "profit_growth_yoy": 4.9461507778220986,
               "promoter_holding": 67.71,
-              "mom_1y": -1.1595904258788203,
-              "mom_6m": -2.8199246083438045,
+              "mom_1y": -1.1595831828964953,
+              "mom_6m": -2.8199176066548093,
               "mom_3m": -9.141939717650205
             },
             "hard": [
@@ -41688,8 +41688,8 @@
               "sales_growth_yoy": 3.4115493426526875,
               "profit_growth_yoy": 4.9461507778220986,
               "promoter_holding": 67.71,
-              "mom_1y": -1.1595904258788203,
-              "mom_6m": -2.8199246083438045,
+              "mom_1y": -1.1595831828964953,
+              "mom_6m": -2.8199176066548093,
               "mom_3m": -9.141939717650205
             },
             "hard": [
@@ -43391,8 +43391,8 @@
               "sales_growth_yoy": 3.4115493426526875,
               "profit_growth_yoy": 4.9461507778220986,
               "promoter_holding": 67.71,
-              "mom_1y": -1.1595904258788203,
-              "mom_6m": -2.8199246083438045,
+              "mom_1y": -1.1595831828964953,
+              "mom_6m": -2.8199176066548093,
               "mom_3m": -9.141939717650205
             },
             "hard": [
@@ -44724,7 +44724,7 @@
             "g2": 17,
             "passed": 35,
             "failed": 12,
-            "market_cap_cr": 284421.9670528,
+            "market_cap_cr": 284187.951104,
             "metrics": {
               "pe": 22.077646,
               "pb": 7.797092,
@@ -44818,8 +44818,8 @@
             "failed": 12,
             "market_cap_cr": 103423.6133376,
             "metrics": {
-              "pe": 17.24345,
-              "pb": 4.41815,
+              "pe": 18.99074,
+              "pb": 4.7839274,
               "peg": null,
               "current_roe": 25.750779614678116,
               "current_roce": 29.48686966328339,
@@ -44991,11 +44991,11 @@
             "ticker": "BOSCHLTD.NS",
             "company": "Bosch Limited",
             "category": "ELIMINATED",
-            "g1": 15,
+            "g1": 16,
             "g2": 13,
-            "passed": 28,
-            "failed": 19,
-            "market_cap_cr": null,
+            "passed": 29,
+            "failed": 18,
+            "market_cap_cr": 139221.598208,
             "metrics": {
               "pe": 58.90869,
               "pb": 9.377441,
@@ -45094,10 +45094,10 @@
                 "value": -14.785430941218896
               }
             ],
-            "missing": 5,
-            "q_score": 38.8,
+            "missing": 4,
+            "q_score": 41.9,
             "mom_score": 61.6,
-            "composite": 47.9
+            "composite": 49.7
           },
           {
             "ticker": "APOLLOTYRE.NS",
@@ -45508,7 +45508,7 @@
             "g2": 10,
             "passed": 24,
             "failed": 23,
-            "market_cap_cr": 62510.825472,
+            "market_cap_cr": 62509.7048064,
             "metrics": {
               "pe": 52.01826,
               "pb": 9.152245,
@@ -45641,11 +45641,11 @@
             "ticker": "TVSMOTOR.NS",
             "company": "TVS Motor Company Limited",
             "category": "ELIMINATED",
-            "g1": 11,
+            "g1": 12,
             "g2": 10,
-            "passed": 21,
-            "failed": 26,
-            "market_cap_cr": null,
+            "passed": 22,
+            "failed": 25,
+            "market_cap_cr": 199366.9214208,
             "metrics": {
               "pe": 52.081936,
               "pb": 17.565634,
@@ -45779,7 +45779,7 @@
                 "value": 17.565634
               }
             ],
-            "missing": 5,
+            "missing": 4,
             "q_score": 0.0,
             "mom_score": 56.9,
             "composite": 22.8
@@ -45970,7 +45970,7 @@
               "sales_growth_yoy": 4.348084701403759,
               "profit_growth_yoy": -34.25160697887971,
               "promoter_holding": 43.12,
-              "mom_1y": 38.90872639528433,
+              "mom_1y": 38.908712700959484,
               "mom_6m": -9.570267775268803,
               "mom_3m": -20.5432605535531
             },
@@ -46112,11 +46112,11 @@
             "ticker": "ASHOKLEY.NS",
             "company": "Ashok Leyland Limited",
             "category": "ELIMINATED",
-            "g1": 9,
+            "g1": 10,
             "g2": 7,
-            "passed": 16,
-            "failed": 31,
-            "market_cap_cr": null,
+            "passed": 17,
+            "failed": 30,
+            "market_cap_cr": 85065.1643904,
             "metrics": {
               "pe": 24.46284,
               "pb": 5.9729443,
@@ -46265,7 +46265,7 @@
                 "value": 0.26874496103198064
               }
             ],
-            "missing": 7,
+            "missing": 6,
             "q_score": 0.0,
             "mom_score": 49.4,
             "composite": 19.8
@@ -46280,7 +46280,7 @@
             "g2": 17,
             "passed": 35,
             "failed": 8,
-            "market_cap_cr": 284421.9670528,
+            "market_cap_cr": 284187.951104,
             "metrics": {
               "pe": 22.077646,
               "pb": 7.797092,
@@ -46374,8 +46374,8 @@
             "failed": 6,
             "market_cap_cr": 103423.6133376,
             "metrics": {
-              "pe": 17.24345,
-              "pb": 4.41815,
+              "pe": 18.99074,
+              "pb": 4.7839274,
               "peg": null,
               "current_roe": 25.750779614678116,
               "current_roce": 29.48686966328339,
@@ -46547,11 +46547,11 @@
             "ticker": "BOSCHLTD.NS",
             "company": "Bosch Limited",
             "category": "ELIMINATED",
-            "g1": 15,
+            "g1": 16,
             "g2": 13,
-            "passed": 28,
+            "passed": 29,
             "failed": 5,
-            "market_cap_cr": null,
+            "market_cap_cr": 139221.598208,
             "metrics": {
               "pe": 58.90869,
               "pb": 9.377441,
@@ -46650,10 +46650,10 @@
                 "value": -14.785430941218896
               }
             ],
-            "missing": 5,
-            "q_score": 58.7,
+            "missing": 4,
+            "q_score": 61.3,
             "mom_score": 61.6,
-            "composite": 59.8
+            "composite": 61.4
           },
           {
             "ticker": "APOLLOTYRE.NS",
@@ -47064,7 +47064,7 @@
             "g2": 10,
             "passed": 24,
             "failed": 11,
-            "market_cap_cr": 62510.825472,
+            "market_cap_cr": 62509.7048064,
             "metrics": {
               "pe": 52.01826,
               "pb": 9.152245,
@@ -47197,11 +47197,11 @@
             "ticker": "TVSMOTOR.NS",
             "company": "TVS Motor Company Limited",
             "category": "ELIMINATED",
-            "g1": 11,
+            "g1": 12,
             "g2": 10,
-            "passed": 21,
+            "passed": 22,
             "failed": 17,
-            "market_cap_cr": null,
+            "market_cap_cr": 199366.9214208,
             "metrics": {
               "pe": 52.081936,
               "pb": 17.565634,
@@ -47335,10 +47335,10 @@
                 "value": 17.565634
               }
             ],
-            "missing": 5,
-            "q_score": 0.0,
+            "missing": 4,
+            "q_score": 0.2,
             "mom_score": 56.9,
-            "composite": 22.8
+            "composite": 22.9
           },
           {
             "ticker": "EXIDEIND.NS",
@@ -47526,7 +47526,7 @@
               "sales_growth_yoy": 4.348084701403759,
               "profit_growth_yoy": -34.25160697887971,
               "promoter_holding": 43.12,
-              "mom_1y": 38.90872639528433,
+              "mom_1y": 38.908712700959484,
               "mom_6m": -9.570267775268803,
               "mom_3m": -20.5432605535531
             },
@@ -47668,11 +47668,11 @@
             "ticker": "ASHOKLEY.NS",
             "company": "Ashok Leyland Limited",
             "category": "ELIMINATED",
-            "g1": 9,
+            "g1": 10,
             "g2": 7,
-            "passed": 16,
+            "passed": 17,
             "failed": 19,
-            "market_cap_cr": null,
+            "market_cap_cr": 85065.1643904,
             "metrics": {
               "pe": 24.46284,
               "pb": 5.9729443,
@@ -47821,7 +47821,7 @@
                 "value": 0.26874496103198064
               }
             ],
-            "missing": 7,
+            "missing": 6,
             "q_score": 0.0,
             "mom_score": 49.4,
             "composite": 19.8
@@ -47836,7 +47836,7 @@
             "g2": 17,
             "passed": 35,
             "failed": 8,
-            "market_cap_cr": 284421.9670528,
+            "market_cap_cr": 284187.951104,
             "metrics": {
               "pe": 22.077646,
               "pb": 7.797092,
@@ -47930,8 +47930,8 @@
             "failed": 6,
             "market_cap_cr": 103423.6133376,
             "metrics": {
-              "pe": 17.24345,
-              "pb": 4.41815,
+              "pe": 18.99074,
+              "pb": 4.7839274,
               "peg": null,
               "current_roe": 25.750779614678116,
               "current_roce": 29.48686966328339,
@@ -48103,11 +48103,11 @@
             "ticker": "BOSCHLTD.NS",
             "company": "Bosch Limited",
             "category": "ELIMINATED",
-            "g1": 15,
+            "g1": 16,
             "g2": 14,
-            "passed": 29,
+            "passed": 30,
             "failed": 5,
-            "market_cap_cr": null,
+            "market_cap_cr": 139221.598208,
             "metrics": {
               "pe": 58.90869,
               "pb": 9.377441,
@@ -48201,10 +48201,10 @@
                 "value": -14.785430941218896
               }
             ],
-            "missing": 5,
-            "q_score": 59.4,
+            "missing": 4,
+            "q_score": 61.9,
             "mom_score": 61.6,
-            "composite": 60.2
+            "composite": 61.8
           },
           {
             "ticker": "MOTHERSON.NS",
@@ -48732,7 +48732,7 @@
             "g2": 10,
             "passed": 24,
             "failed": 11,
-            "market_cap_cr": 62510.825472,
+            "market_cap_cr": 62509.7048064,
             "metrics": {
               "pe": 52.01826,
               "pb": 9.152245,
@@ -48865,11 +48865,11 @@
             "ticker": "TVSMOTOR.NS",
             "company": "TVS Motor Company Limited",
             "category": "ELIMINATED",
-            "g1": 11,
+            "g1": 12,
             "g2": 10,
-            "passed": 21,
+            "passed": 22,
             "failed": 17,
-            "market_cap_cr": null,
+            "market_cap_cr": 199366.9214208,
             "metrics": {
               "pe": 52.081936,
               "pb": 17.565634,
@@ -49003,10 +49003,10 @@
                 "value": 17.565634
               }
             ],
-            "missing": 5,
-            "q_score": 0.0,
+            "missing": 4,
+            "q_score": 0.2,
             "mom_score": 56.9,
-            "composite": 22.8
+            "composite": 22.9
           },
           {
             "ticker": "BHARATFORG.NS",
@@ -49037,7 +49037,7 @@
               "sales_growth_yoy": 4.348084701403759,
               "profit_growth_yoy": -34.25160697887971,
               "promoter_holding": 43.12,
-              "mom_1y": 38.90872639528433,
+              "mom_1y": 38.908712700959484,
               "mom_6m": -9.570267775268803,
               "mom_3m": -20.5432605535531
             },
@@ -49174,11 +49174,11 @@
             "ticker": "ASHOKLEY.NS",
             "company": "Ashok Leyland Limited",
             "category": "ELIMINATED",
-            "g1": 9,
+            "g1": 10,
             "g2": 8,
-            "passed": 17,
+            "passed": 18,
             "failed": 19,
-            "market_cap_cr": null,
+            "market_cap_cr": 85065.1643904,
             "metrics": {
               "pe": 24.46284,
               "pb": 5.9729443,
@@ -49322,7 +49322,7 @@
                 "value": 0.26874496103198064
               }
             ],
-            "missing": 7,
+            "missing": 6,
             "q_score": 0.0,
             "mom_score": 49.4,
             "composite": 19.8
@@ -49345,7 +49345,7 @@
             "failed": 11,
             "market_cap_cr": 87058.4680448,
             "metrics": {
-              "pe": 24.477152,
+              "pe": 24.620047,
               "pb": 11.320109,
               "peg": null,
               "current_roe": 46.416959292495775,
@@ -49714,6 +49714,113 @@
             "composite": 54.4
           },
           {
+            "ticker": "TCS.NS",
+            "company": "Tata Consultancy Services Limited",
+            "category": "ELIMINATED",
+            "g1": 16,
+            "g2": 16,
+            "passed": 32,
+            "failed": 15,
+            "market_cap_cr": 905462.5726464,
+            "metrics": {
+              "pe": 17.542408,
+              "pb": 7.609833,
+              "peg": 3.4,
+              "current_roe": 43.58327870505774,
+              "current_roce": 57.27785678242121,
+              "current_op_margin": 26.4489069649212,
+              "avg_roce_5y": 61.655571356484245,
+              "avg_roe_5y": 47.784662422803216,
+              "current_de_ratio": 9.923856588170036,
+              "avg_de_5y": 6.659819855082935,
+              "net_debt_to_ebitda": 0.14722641297707068,
+              "fcf_5y_total": 365664.0,
+              "fcf_3y_total": 134695.0,
+              "cfo_to_ebitda": 44.93336794248231,
+              "sales_cagr_5y": 8.11463438312483,
+              "profit_cagr_5y": 6.166168202753286,
+              "sales_growth_yoy": 6.077050119653511,
+              "profit_growth_yoy": 4.86108302665103,
+              "promoter_holding": 71.77,
+              "mom_1y": -15.052391533754882,
+              "mom_6m": 3.608479791057695,
+              "mom_3m": 3.458504466398904
+            },
+            "hard": [
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 44.93336794248231
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-02",
+                "criterion": "Revenue 5Y CAGR > 10%",
+                "value": 8.11463438312483
+              },
+              {
+                "code": "G1-03",
+                "criterion": "Profit 5Y CAGR > 12%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G1-04",
+                "criterion": "Revenue YoY growth > 10%",
+                "value": 6.077050119653511
+              },
+              {
+                "code": "G1-05",
+                "criterion": "Profit YoY growth > 10%",
+                "value": 4.86108302665103
+              },
+              {
+                "code": "G1-21",
+                "criterion": "PEG < 2.0x",
+                "value": 3.4
+              },
+              {
+                "code": "G1-22",
+                "criterion": "P/B < 6.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-13",
+                "criterion": "PEG < 1.8x",
+                "value": 3.4
+              },
+              {
+                "code": "G2-14",
+                "criterion": "P/B < 5.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-15",
+                "criterion": "Revenue 5Y CAGR > 12%",
+                "value": 8.11463438312483
+              },
+              {
+                "code": "G2-16",
+                "criterion": "Profit 5Y CAGR > 15%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": 4.86108302665103
+              }
+            ],
+            "missing": 2,
+            "q_score": 59.3,
+            "mom_score": 47.1,
+            "composite": 54.4
+          },
+          {
             "ticker": "ZENSARTECH.NS",
             "company": "Zensar Technologies Limited",
             "category": "ELIMINATED",
@@ -49723,7 +49830,7 @@
             "failed": 15,
             "market_cap_cr": 12161.4974976,
             "metrics": {
-              "pe": 15.731492,
+              "pe": 15.871368,
               "pb": 2.581494,
               "peg": null,
               "current_roe": 16.10186896693366,
@@ -50137,113 +50244,6 @@
             "composite": 49.4
           },
           {
-            "ticker": "TCS.NS",
-            "company": "Tata Consultancy Services Limited",
-            "category": "ELIMINATED",
-            "g1": 15,
-            "g2": 16,
-            "passed": 31,
-            "failed": 16,
-            "market_cap_cr": null,
-            "metrics": {
-              "pe": 17.542408,
-              "pb": 7.609833,
-              "peg": 3.4,
-              "current_roe": 43.58327870505774,
-              "current_roce": 57.27785678242121,
-              "current_op_margin": 26.4489069649212,
-              "avg_roce_5y": 61.655571356484245,
-              "avg_roe_5y": 47.784662422803216,
-              "current_de_ratio": 9.923856588170036,
-              "avg_de_5y": 6.659819855082935,
-              "net_debt_to_ebitda": 0.14722641297707068,
-              "fcf_5y_total": 365664.0,
-              "fcf_3y_total": 134695.0,
-              "cfo_to_ebitda": 44.93336794248231,
-              "sales_cagr_5y": 8.11463438312483,
-              "profit_cagr_5y": 6.166168202753286,
-              "sales_growth_yoy": 6.077050119653511,
-              "profit_growth_yoy": 4.86108302665103,
-              "promoter_holding": 71.77,
-              "mom_1y": -15.052398573401716,
-              "mom_6m": 3.608479791057695,
-              "mom_3m": 3.458504466398904
-            },
-            "hard": [
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 44.93336794248231
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-02",
-                "criterion": "Revenue 5Y CAGR > 10%",
-                "value": 8.11463438312483
-              },
-              {
-                "code": "G1-03",
-                "criterion": "Profit 5Y CAGR > 12%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G1-04",
-                "criterion": "Revenue YoY growth > 10%",
-                "value": 6.077050119653511
-              },
-              {
-                "code": "G1-05",
-                "criterion": "Profit YoY growth > 10%",
-                "value": 4.86108302665103
-              },
-              {
-                "code": "G1-21",
-                "criterion": "PEG < 2.0x",
-                "value": 3.4
-              },
-              {
-                "code": "G1-22",
-                "criterion": "P/B < 6.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-13",
-                "criterion": "PEG < 1.8x",
-                "value": 3.4
-              },
-              {
-                "code": "G2-14",
-                "criterion": "P/B < 5.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-15",
-                "criterion": "Revenue 5Y CAGR > 12%",
-                "value": 8.11463438312483
-              },
-              {
-                "code": "G2-16",
-                "criterion": "Profit 5Y CAGR > 15%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": 4.86108302665103
-              }
-            ],
-            "missing": 3,
-            "q_score": 56.0,
-            "mom_score": 47.1,
-            "composite": 52.4
-          },
-          {
             "ticker": "WIPRO.NS",
             "company": "Wipro Limited",
             "category": "ELIMINATED",
@@ -50581,7 +50581,7 @@
             "failed": 2,
             "market_cap_cr": 87058.4680448,
             "metrics": {
-              "pe": 24.477152,
+              "pe": 24.620047,
               "pb": 11.320109,
               "peg": null,
               "current_roe": 46.416959292495775,
@@ -50950,6 +50950,113 @@
             "composite": 65.7
           },
           {
+            "ticker": "TCS.NS",
+            "company": "Tata Consultancy Services Limited",
+            "category": "MARGINAL",
+            "g1": 16,
+            "g2": 16,
+            "passed": 32,
+            "failed": 2,
+            "market_cap_cr": 905462.5726464,
+            "metrics": {
+              "pe": 17.542408,
+              "pb": 7.609833,
+              "peg": 3.4,
+              "current_roe": 43.58327870505774,
+              "current_roce": 57.27785678242121,
+              "current_op_margin": 26.4489069649212,
+              "avg_roce_5y": 61.655571356484245,
+              "avg_roe_5y": 47.784662422803216,
+              "current_de_ratio": 9.923856588170036,
+              "avg_de_5y": 6.659819855082935,
+              "net_debt_to_ebitda": 0.14722641297707068,
+              "fcf_5y_total": 365664.0,
+              "fcf_3y_total": 134695.0,
+              "cfo_to_ebitda": 44.93336794248231,
+              "sales_cagr_5y": 8.11463438312483,
+              "profit_cagr_5y": 6.166168202753286,
+              "sales_growth_yoy": 6.077050119653511,
+              "profit_growth_yoy": 4.86108302665103,
+              "promoter_holding": 71.77,
+              "mom_1y": -15.052391533754882,
+              "mom_6m": 3.608479791057695,
+              "mom_3m": 3.458504466398904
+            },
+            "hard": [
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 44.93336794248231
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-02",
+                "criterion": "Revenue 5Y CAGR > 10%",
+                "value": 8.11463438312483
+              },
+              {
+                "code": "G1-03",
+                "criterion": "Profit 5Y CAGR > 12%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G1-04",
+                "criterion": "Revenue YoY growth > 10%",
+                "value": 6.077050119653511
+              },
+              {
+                "code": "G1-05",
+                "criterion": "Profit YoY growth > 10%",
+                "value": 4.86108302665103
+              },
+              {
+                "code": "G1-21",
+                "criterion": "PEG < 2.0x",
+                "value": 3.4
+              },
+              {
+                "code": "G1-22",
+                "criterion": "P/B < 6.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-13",
+                "criterion": "PEG < 1.8x",
+                "value": 3.4
+              },
+              {
+                "code": "G2-14",
+                "criterion": "P/B < 5.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-15",
+                "criterion": "Revenue 5Y CAGR > 12%",
+                "value": 8.11463438312483
+              },
+              {
+                "code": "G2-16",
+                "criterion": "Profit 5Y CAGR > 15%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": 4.86108302665103
+              }
+            ],
+            "missing": 2,
+            "q_score": 82.9,
+            "mom_score": 47.1,
+            "composite": 68.6
+          },
+          {
             "ticker": "ZENSARTECH.NS",
             "company": "Zensar Technologies Limited",
             "category": "ELIMINATED",
@@ -50959,7 +51066,7 @@
             "failed": 4,
             "market_cap_cr": 12161.4974976,
             "metrics": {
-              "pe": 15.731492,
+              "pe": 15.871368,
               "pb": 2.581494,
               "peg": null,
               "current_roe": 16.10186896693366,
@@ -51373,113 +51480,6 @@
             "composite": 60.4
           },
           {
-            "ticker": "TCS.NS",
-            "company": "Tata Consultancy Services Limited",
-            "category": "MARGINAL",
-            "g1": 15,
-            "g2": 16,
-            "passed": 31,
-            "failed": 2,
-            "market_cap_cr": null,
-            "metrics": {
-              "pe": 17.542408,
-              "pb": 7.609833,
-              "peg": 3.4,
-              "current_roe": 43.58327870505774,
-              "current_roce": 57.27785678242121,
-              "current_op_margin": 26.4489069649212,
-              "avg_roce_5y": 61.655571356484245,
-              "avg_roe_5y": 47.784662422803216,
-              "current_de_ratio": 9.923856588170036,
-              "avg_de_5y": 6.659819855082935,
-              "net_debt_to_ebitda": 0.14722641297707068,
-              "fcf_5y_total": 365664.0,
-              "fcf_3y_total": 134695.0,
-              "cfo_to_ebitda": 44.93336794248231,
-              "sales_cagr_5y": 8.11463438312483,
-              "profit_cagr_5y": 6.166168202753286,
-              "sales_growth_yoy": 6.077050119653511,
-              "profit_growth_yoy": 4.86108302665103,
-              "promoter_holding": 71.77,
-              "mom_1y": -15.052398573401716,
-              "mom_6m": 3.608479791057695,
-              "mom_3m": 3.458504466398904
-            },
-            "hard": [
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 44.93336794248231
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-02",
-                "criterion": "Revenue 5Y CAGR > 10%",
-                "value": 8.11463438312483
-              },
-              {
-                "code": "G1-03",
-                "criterion": "Profit 5Y CAGR > 12%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G1-04",
-                "criterion": "Revenue YoY growth > 10%",
-                "value": 6.077050119653511
-              },
-              {
-                "code": "G1-05",
-                "criterion": "Profit YoY growth > 10%",
-                "value": 4.86108302665103
-              },
-              {
-                "code": "G1-21",
-                "criterion": "PEG < 2.0x",
-                "value": 3.4
-              },
-              {
-                "code": "G1-22",
-                "criterion": "P/B < 6.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-13",
-                "criterion": "PEG < 1.8x",
-                "value": 3.4
-              },
-              {
-                "code": "G2-14",
-                "criterion": "P/B < 5.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-15",
-                "criterion": "Revenue 5Y CAGR > 12%",
-                "value": 8.11463438312483
-              },
-              {
-                "code": "G2-16",
-                "criterion": "Profit 5Y CAGR > 15%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": 4.86108302665103
-              }
-            ],
-            "missing": 3,
-            "q_score": 80.1,
-            "mom_score": 47.1,
-            "composite": 66.9
-          },
-          {
             "ticker": "WIPRO.NS",
             "company": "Wipro Limited",
             "category": "ELIMINATED",
@@ -51817,7 +51817,7 @@
             "failed": 2,
             "market_cap_cr": 87058.4680448,
             "metrics": {
-              "pe": 24.477152,
+              "pe": 24.620047,
               "pb": 11.320109,
               "peg": null,
               "current_roe": 46.416959292495775,
@@ -52141,6 +52141,103 @@
             "composite": 56.6
           },
           {
+            "ticker": "TCS.NS",
+            "company": "Tata Consultancy Services Limited",
+            "category": "MARGINAL",
+            "g1": 17,
+            "g2": 17,
+            "passed": 34,
+            "failed": 2,
+            "market_cap_cr": 905462.5726464,
+            "metrics": {
+              "pe": 17.542408,
+              "pb": 7.609833,
+              "peg": 3.4,
+              "current_roe": 43.58327870505774,
+              "current_roce": 57.27785678242121,
+              "current_op_margin": 26.4489069649212,
+              "avg_roce_5y": 61.655571356484245,
+              "avg_roe_5y": 47.784662422803216,
+              "current_de_ratio": 9.923856588170036,
+              "avg_de_5y": 6.659819855082935,
+              "net_debt_to_ebitda": 0.14722641297707068,
+              "fcf_5y_total": 365664.0,
+              "fcf_3y_total": 134695.0,
+              "cfo_to_ebitda": 44.93336794248231,
+              "sales_cagr_5y": 8.11463438312483,
+              "profit_cagr_5y": 6.166168202753286,
+              "sales_growth_yoy": 6.077050119653511,
+              "profit_growth_yoy": 4.86108302665103,
+              "promoter_holding": 71.77,
+              "mom_1y": -15.052391533754882,
+              "mom_6m": 3.608479791057695,
+              "mom_3m": 3.458504466398904
+            },
+            "hard": [
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 44.93336794248231
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [
+              {
+                "code": "G1-03",
+                "criterion": "Profit 5Y CAGR > 12%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G1-04",
+                "criterion": "Revenue YoY growth > 10%",
+                "value": 6.077050119653511
+              },
+              {
+                "code": "G1-05",
+                "criterion": "Profit YoY growth > 10%",
+                "value": 4.86108302665103
+              },
+              {
+                "code": "G1-21",
+                "criterion": "PEG < 2.0x",
+                "value": 3.4
+              },
+              {
+                "code": "G1-22",
+                "criterion": "P/B < 6.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-13",
+                "criterion": "PEG < 1.8x",
+                "value": 3.4
+              },
+              {
+                "code": "G2-14",
+                "criterion": "P/B < 5.0x",
+                "value": 7.609833
+              },
+              {
+                "code": "G2-16",
+                "criterion": "Profit 5Y CAGR > 15%",
+                "value": 6.166168202753286
+              },
+              {
+                "code": "G2-21",
+                "criterion": "Profit YoY growth > 15%",
+                "value": 4.86108302665103
+              }
+            ],
+            "missing": 2,
+            "q_score": 83.5,
+            "mom_score": 47.1,
+            "composite": 68.9
+          },
+          {
             "ticker": "MPHASIS.NS",
             "company": "Mphasis Limited",
             "category": "ELIMINATED",
@@ -52241,103 +52338,6 @@
             "q_score": 67.5,
             "mom_score": 51.2,
             "composite": 61.0
-          },
-          {
-            "ticker": "TCS.NS",
-            "company": "Tata Consultancy Services Limited",
-            "category": "MARGINAL",
-            "g1": 16,
-            "g2": 17,
-            "passed": 33,
-            "failed": 2,
-            "market_cap_cr": null,
-            "metrics": {
-              "pe": 17.542408,
-              "pb": 7.609833,
-              "peg": 3.4,
-              "current_roe": 43.58327870505774,
-              "current_roce": 57.27785678242121,
-              "current_op_margin": 26.4489069649212,
-              "avg_roce_5y": 61.655571356484245,
-              "avg_roe_5y": 47.784662422803216,
-              "current_de_ratio": 9.923856588170036,
-              "avg_de_5y": 6.659819855082935,
-              "net_debt_to_ebitda": 0.14722641297707068,
-              "fcf_5y_total": 365664.0,
-              "fcf_3y_total": 134695.0,
-              "cfo_to_ebitda": 44.93336794248231,
-              "sales_cagr_5y": 8.11463438312483,
-              "profit_cagr_5y": 6.166168202753286,
-              "sales_growth_yoy": 6.077050119653511,
-              "profit_growth_yoy": 4.86108302665103,
-              "promoter_holding": 71.77,
-              "mom_1y": -15.052398573401716,
-              "mom_6m": 3.608479791057695,
-              "mom_3m": 3.458504466398904
-            },
-            "hard": [
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 44.93336794248231
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [
-              {
-                "code": "G1-03",
-                "criterion": "Profit 5Y CAGR > 12%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G1-04",
-                "criterion": "Revenue YoY growth > 10%",
-                "value": 6.077050119653511
-              },
-              {
-                "code": "G1-05",
-                "criterion": "Profit YoY growth > 10%",
-                "value": 4.86108302665103
-              },
-              {
-                "code": "G1-21",
-                "criterion": "PEG < 2.0x",
-                "value": 3.4
-              },
-              {
-                "code": "G1-22",
-                "criterion": "P/B < 6.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-13",
-                "criterion": "PEG < 1.8x",
-                "value": 3.4
-              },
-              {
-                "code": "G2-14",
-                "criterion": "P/B < 5.0x",
-                "value": 7.609833
-              },
-              {
-                "code": "G2-16",
-                "criterion": "Profit 5Y CAGR > 15%",
-                "value": 6.166168202753286
-              },
-              {
-                "code": "G2-21",
-                "criterion": "Profit YoY growth > 15%",
-                "value": 4.86108302665103
-              }
-            ],
-            "missing": 3,
-            "q_score": 80.8,
-            "mom_score": 47.1,
-            "composite": 67.4
           },
           {
             "ticker": "WIPRO.NS",
@@ -52451,7 +52451,7 @@
             "failed": 4,
             "market_cap_cr": 12161.4974976,
             "metrics": {
-              "pe": 15.731492,
+              "pe": 15.871368,
               "pb": 2.581494,
               "peg": null,
               "current_roe": 16.10186896693366,
@@ -53214,7 +53214,7 @@
               "sales_growth_yoy": 12.051669034090908,
               "profit_growth_yoy": -1.5985790408525755,
               "promoter_holding": 59.35,
-              "mom_1y": -31.704782380086893,
+              "mom_1y": -31.704787996232064,
               "mom_6m": -18.654418899722604,
               "mom_3m": -19.648091699508687
             },
@@ -53429,7 +53429,7 @@
             "failed": 26,
             "market_cap_cr": 11831.8825472,
             "metrics": {
-              "pe": 33.048923,
+              "pe": 33.39906,
               "pb": 2.3417768,
               "peg": 93.13,
               "current_roe": 7.924676343664181,
@@ -53558,7 +53558,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 33.048923
+                "value": 33.39906
               },
               {
                 "code": "G2-13",
@@ -54546,7 +54546,7 @@
               "sales_growth_yoy": 12.051669034090908,
               "profit_growth_yoy": -1.5985790408525755,
               "promoter_holding": 59.35,
-              "mom_1y": -31.704782380086893,
+              "mom_1y": -31.704787996232064,
               "mom_6m": -18.654418899722604,
               "mom_3m": -19.648091699508687
             },
@@ -54761,7 +54761,7 @@
             "failed": 16,
             "market_cap_cr": 11831.8825472,
             "metrics": {
-              "pe": 33.048923,
+              "pe": 33.39906,
               "pb": 2.3417768,
               "peg": 93.13,
               "current_roe": 7.924676343664181,
@@ -54890,7 +54890,7 @@
               {
                 "code": "G2-12",
                 "criterion": "P/E < 30x",
-                "value": 33.048923
+                "value": 33.39906
               },
               {
                 "code": "G2-13",
@@ -55766,7 +55766,7 @@
               "sales_growth_yoy": 12.051669034090908,
               "profit_growth_yoy": -1.5985790408525755,
               "promoter_holding": 59.35,
-              "mom_1y": -31.704782380086893,
+              "mom_1y": -31.704787996232064,
               "mom_6m": -18.654418899722604,
               "mom_3m": -19.648091699508687
             },
@@ -56033,7 +56033,7 @@
             "failed": 16,
             "market_cap_cr": 11831.8825472,
             "metrics": {
-              "pe": 33.048923,
+              "pe": 33.39906,
               "pb": 2.3417768,
               "peg": 93.13,
               "current_roe": 7.924676343664181,
@@ -56837,7 +56837,7 @@
             "market_cap_cr": 30346.248192,
             "metrics": {
               "pe": 6.8737593,
-              "pb": 2.1296353,
+              "pb": 2.1375225,
               "peg": null,
               "current_roe": 25.905276131228362,
               "current_roce": 33.63065741658408,
@@ -56912,13 +56912,13 @@
             "ticker": "IOC.NS",
             "company": "Indian Oil Corporation Limited",
             "category": "ELIMINATED",
-            "g1": 17,
+            "g1": 18,
             "g2": 15,
-            "passed": 32,
-            "failed": 15,
-            "market_cap_cr": null,
+            "passed": 33,
+            "failed": 14,
+            "market_cap_cr": 183787.913216,
             "metrics": {
-              "pe": 5.325286,
+              "pe": 5.2564616,
               "pb": 0.8163867,
               "peg": null,
               "current_roe": 21.45264042390829,
@@ -56995,10 +56995,10 @@
                 "value": 14.568308262930147
               }
             ],
-            "missing": 5,
-            "q_score": 43.5,
+            "missing": 4,
+            "q_score": 46.7,
             "mom_score": 45.9,
-            "composite": 44.5
+            "composite": 46.4
           },
           {
             "ticker": "PETRONET.NS",
@@ -57539,11 +57539,11 @@
             "ticker": "RELIANCE.NS",
             "company": "Reliance Industries Limited",
             "category": "ELIMINATED",
-            "g1": 12,
+            "g1": 13,
             "g2": 12,
-            "passed": 24,
-            "failed": 23,
-            "market_cap_cr": null,
+            "passed": 25,
+            "failed": 22,
+            "market_cap_cr": 1576397.70112,
             "metrics": {
               "pe": 19.19743,
               "pb": 1.6691121,
@@ -57672,10 +57672,10 @@
                 "value": -0.1347202205651983
               }
             ],
-            "missing": 3,
-            "q_score": 3.0,
+            "missing": 2,
+            "q_score": 6.0,
             "mom_score": 41.5,
-            "composite": 18.4
+            "composite": 20.2
           },
           {
             "ticker": "ONGC.NS",
@@ -57832,7 +57832,7 @@
             "market_cap_cr": 30346.248192,
             "metrics": {
               "pe": 6.8737593,
-              "pb": 2.1296353,
+              "pb": 2.1375225,
               "peg": null,
               "current_roe": 25.905276131228362,
               "current_roce": 33.63065741658408,
@@ -57907,13 +57907,13 @@
             "ticker": "IOC.NS",
             "company": "Indian Oil Corporation Limited",
             "category": "ELIMINATED",
-            "g1": 17,
+            "g1": 18,
             "g2": 15,
-            "passed": 32,
+            "passed": 33,
             "failed": 6,
-            "market_cap_cr": null,
+            "market_cap_cr": 183787.913216,
             "metrics": {
-              "pe": 5.325286,
+              "pe": 5.2564616,
               "pb": 0.8163867,
               "peg": null,
               "current_roe": 21.45264042390829,
@@ -57990,10 +57990,10 @@
                 "value": 14.568308262930147
               }
             ],
-            "missing": 5,
-            "q_score": 56.4,
+            "missing": 4,
+            "q_score": 58.7,
             "mom_score": 45.9,
-            "composite": 52.2
+            "composite": 53.6
           },
           {
             "ticker": "PETRONET.NS",
@@ -58534,11 +58534,11 @@
             "ticker": "RELIANCE.NS",
             "company": "Reliance Industries Limited",
             "category": "ELIMINATED",
-            "g1": 12,
+            "g1": 13,
             "g2": 12,
-            "passed": 24,
+            "passed": 25,
             "failed": 15,
-            "market_cap_cr": null,
+            "market_cap_cr": 1576397.70112,
             "metrics": {
               "pe": 19.19743,
               "pb": 1.6691121,
@@ -58667,10 +58667,10 @@
                 "value": -0.1347202205651983
               }
             ],
-            "missing": 3,
-            "q_score": 12.1,
+            "missing": 2,
+            "q_score": 14.5,
             "mom_score": 41.5,
-            "composite": 23.9
+            "composite": 25.3
           },
           {
             "ticker": "ONGC.NS",
@@ -58817,6 +58817,77 @@
         ],
         "sector_adjusted": [
           {
+            "ticker": "IOC.NS",
+            "company": "Indian Oil Corporation Limited",
+            "category": "ELIMINATED",
+            "g1": 19,
+            "g2": 18,
+            "passed": 37,
+            "failed": 6,
+            "market_cap_cr": 183787.913216,
+            "metrics": {
+              "pe": 5.2564616,
+              "pb": 0.8163867,
+              "peg": null,
+              "current_roe": 21.45264042390829,
+              "current_roce": 22.884480384118667,
+              "current_op_margin": 9.146185403840779,
+              "avg_roce_5y": 15.576896076823735,
+              "avg_roe_5y": 16.13035478331764,
+              "current_de_ratio": 60.00222929117115,
+              "avg_de_5y": 79.48195623585612,
+              "net_debt_to_ebitda": 1.342400322268154,
+              "fcf_5y_total": 108355.0,
+              "fcf_3y_total": 83417.0,
+              "cfo_to_ebitda": 33.870592246207295,
+              "sales_cagr_5y": 9.642803846436255,
+              "profit_cagr_5y": 14.231434571670176,
+              "sales_growth_yoy": 19.04680558122932,
+              "profit_growth_yoy": 14.568308262930147,
+              "promoter_holding": 51.5,
+              "mom_1y": -8.712867387601742,
+              "mom_6m": -8.93267015141107,
+              "mom_3m": -6.166945963467252
+            },
+            "hard": [
+              {
+                "code": "G1-06",
+                "criterion": "Operating margin > 15%",
+                "value": 9.146185403840779
+              },
+              {
+                "code": "G1-13",
+                "criterion": "Debt/equity < 0.50x",
+                "value": 60.00222929117115
+              },
+              {
+                "code": "G2-05",
+                "criterion": "Tight debt/equity < 0.30x",
+                "value": 60.00222929117115
+              },
+              {
+                "code": "G2-08",
+                "criterion": "Operating margin > 15%",
+                "value": 9.146185403840779
+              },
+              {
+                "code": "G2-11",
+                "criterion": "CFO/EBITDA > 60%",
+                "value": 33.870592246207295
+              },
+              {
+                "code": "G2-23",
+                "criterion": "Debt is not rising over 5Y",
+                "value": false
+              }
+            ],
+            "soft": [],
+            "missing": 4,
+            "q_score": 60.7,
+            "mom_score": 45.9,
+            "composite": 54.8
+          },
+          {
             "ticker": "MRPL.NS",
             "company": "Mangalore Refinery and Petrochemicals Limited",
             "category": "ELIMINATED",
@@ -58827,7 +58898,7 @@
             "market_cap_cr": 30346.248192,
             "metrics": {
               "pe": 6.8737593,
-              "pb": 2.1296353,
+              "pb": 2.1375225,
               "peg": null,
               "current_roe": 25.905276131228362,
               "current_roce": 33.63065741658408,
@@ -58887,77 +58958,6 @@
             "q_score": 65.4,
             "mom_score": 56.6,
             "composite": 61.9
-          },
-          {
-            "ticker": "IOC.NS",
-            "company": "Indian Oil Corporation Limited",
-            "category": "ELIMINATED",
-            "g1": 18,
-            "g2": 18,
-            "passed": 36,
-            "failed": 6,
-            "market_cap_cr": null,
-            "metrics": {
-              "pe": 5.325286,
-              "pb": 0.8163867,
-              "peg": null,
-              "current_roe": 21.45264042390829,
-              "current_roce": 22.884480384118667,
-              "current_op_margin": 9.146185403840779,
-              "avg_roce_5y": 15.576896076823735,
-              "avg_roe_5y": 16.13035478331764,
-              "current_de_ratio": 60.00222929117115,
-              "avg_de_5y": 79.48195623585612,
-              "net_debt_to_ebitda": 1.342400322268154,
-              "fcf_5y_total": 108355.0,
-              "fcf_3y_total": 83417.0,
-              "cfo_to_ebitda": 33.870592246207295,
-              "sales_cagr_5y": 9.642803846436255,
-              "profit_cagr_5y": 14.231434571670176,
-              "sales_growth_yoy": 19.04680558122932,
-              "profit_growth_yoy": 14.568308262930147,
-              "promoter_holding": 51.5,
-              "mom_1y": -8.712867387601742,
-              "mom_6m": -8.93267015141107,
-              "mom_3m": -6.166945963467252
-            },
-            "hard": [
-              {
-                "code": "G1-06",
-                "criterion": "Operating margin > 15%",
-                "value": 9.146185403840779
-              },
-              {
-                "code": "G1-13",
-                "criterion": "Debt/equity < 0.50x",
-                "value": 60.00222929117115
-              },
-              {
-                "code": "G2-05",
-                "criterion": "Tight debt/equity < 0.30x",
-                "value": 60.00222929117115
-              },
-              {
-                "code": "G2-08",
-                "criterion": "Operating margin > 15%",
-                "value": 9.146185403840779
-              },
-              {
-                "code": "G2-11",
-                "criterion": "CFO/EBITDA > 60%",
-                "value": 33.870592246207295
-              },
-              {
-                "code": "G2-23",
-                "criterion": "Debt is not rising over 5Y",
-                "value": false
-              }
-            ],
-            "soft": [],
-            "missing": 5,
-            "q_score": 58.6,
-            "mom_score": 45.9,
-            "composite": 53.5
           },
           {
             "ticker": "PETRONET.NS",
@@ -59468,11 +59468,11 @@
             "ticker": "RELIANCE.NS",
             "company": "Reliance Industries Limited",
             "category": "ELIMINATED",
-            "g1": 12,
+            "g1": 13,
             "g2": 13,
-            "passed": 25,
+            "passed": 26,
             "failed": 15,
-            "market_cap_cr": null,
+            "market_cap_cr": 1576397.70112,
             "metrics": {
               "pe": 19.19743,
               "pb": 1.6691121,
@@ -59596,10 +59596,10 @@
                 "value": -0.1347202205651983
               }
             ],
-            "missing": 3,
-            "q_score": 13.1,
+            "missing": 2,
+            "q_score": 15.5,
             "mom_score": 41.5,
-            "composite": 24.5
+            "composite": 25.9
           },
           {
             "ticker": "ONGC.NS",
@@ -59990,7 +59990,7 @@
             "failed": 20,
             "market_cap_cr": 23942.6093056,
             "metrics": {
-              "pe": 15.36934,
+              "pe": 15.550294,
               "pb": 1.8897003,
               "peg": null,
               "current_roe": 11.443858215055362,
@@ -60799,7 +60799,7 @@
             "failed": 7,
             "market_cap_cr": 23942.6093056,
             "metrics": {
-              "pe": 15.36934,
+              "pe": 15.550294,
               "pb": 1.8897003,
               "peg": null,
               "current_roe": 11.443858215055362,
@@ -61573,7 +61573,7 @@
             "failed": 7,
             "market_cap_cr": 23942.6093056,
             "metrics": {
-              "pe": 15.36934,
+              "pe": 15.550294,
               "pb": 1.8897003,
               "peg": null,
               "current_roe": 11.443858215055362,
@@ -62634,7 +62634,7 @@
               "sales_growth_yoy": 37.301236749116605,
               "profit_growth_yoy": 54.04984423676012,
               "promoter_holding": 81.85,
-              "mom_1y": -38.93276362306133,
+              "mom_1y": -38.932758294048966,
               "mom_6m": -33.40648094848794,
               "mom_3m": -21.58600358592223
             },
@@ -63918,7 +63918,7 @@
               "sales_growth_yoy": 37.301236749116605,
               "profit_growth_yoy": 54.04984423676012,
               "promoter_holding": 81.85,
-              "mom_1y": -38.93276362306133,
+              "mom_1y": -38.932758294048966,
               "mom_6m": -33.40648094848794,
               "mom_3m": -21.58600358592223
             },
@@ -65622,7 +65622,7 @@
               "sales_growth_yoy": 37.301236749116605,
               "profit_growth_yoy": 54.04984423676012,
               "promoter_holding": 81.85,
-              "mom_1y": -38.93276362306133,
+              "mom_1y": -38.932758294048966,
               "mom_6m": -33.40648094848794,
               "mom_3m": -21.58600358592223
             },
@@ -66213,8 +66213,8 @@
               "sales_growth_yoy": 0.06608657341116864,
               "profit_growth_yoy": 0.08025682182985554,
               "promoter_holding": 54.8,
-              "mom_1y": -21.300041308515418,
-              "mom_6m": -19.172271724426658,
+              "mom_1y": -21.300050443042196,
+              "mom_6m": -19.172262089289703,
               "mom_3m": -20.79606136550932
             },
             "hard": [
@@ -66337,7 +66337,7 @@
             "market_cap_cr": 188600.4969472,
             "metrics": {
               "pe": null,
-              "pb": 37.759045,
+              "pb": 27.043842,
               "peg": null,
               "current_roe": -82.16573258606886,
               "current_roce": 12.299158170727743,
@@ -66450,7 +66450,7 @@
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 37.759045
+                "value": 27.043842
               },
               {
                 "code": "G2-02",
@@ -66460,7 +66460,7 @@
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 37.759045
+                "value": 27.043842
               }
             ],
             "missing": 8,
@@ -66497,7 +66497,7 @@
               "sales_growth_yoy": 0.49686192468619245,
               "profit_growth_yoy": 12.23529411764706,
               "promoter_holding": 31.18,
-              "mom_1y": -26.911044802362795,
+              "mom_1y": -26.91103832490014,
               "mom_6m": -27.263132995207883,
               "mom_3m": -22.12756366318709
             },
@@ -67092,8 +67092,8 @@
               "sales_growth_yoy": 0.06608657341116864,
               "profit_growth_yoy": 0.08025682182985554,
               "promoter_holding": 54.8,
-              "mom_1y": -21.300041308515418,
-              "mom_6m": -19.172271724426658,
+              "mom_1y": -21.300050443042196,
+              "mom_6m": -19.172262089289703,
               "mom_3m": -20.79606136550932
             },
             "hard": [
@@ -67216,7 +67216,7 @@
             "market_cap_cr": 188600.4969472,
             "metrics": {
               "pe": null,
-              "pb": 37.759045,
+              "pb": 27.043842,
               "peg": null,
               "current_roe": -82.16573258606886,
               "current_roce": 12.299158170727743,
@@ -67329,7 +67329,7 @@
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 37.759045
+                "value": 27.043842
               },
               {
                 "code": "G2-02",
@@ -67339,7 +67339,7 @@
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 37.759045
+                "value": 27.043842
               }
             ],
             "missing": 8,
@@ -67376,7 +67376,7 @@
               "sales_growth_yoy": 0.49686192468619245,
               "profit_growth_yoy": 12.23529411764706,
               "promoter_holding": 31.18,
-              "mom_1y": -26.911044802362795,
+              "mom_1y": -26.91103832490014,
               "mom_6m": -27.263132995207883,
               "mom_3m": -22.12756366318709
             },
@@ -67951,8 +67951,8 @@
               "sales_growth_yoy": 0.06608657341116864,
               "profit_growth_yoy": 0.08025682182985554,
               "promoter_holding": 54.8,
-              "mom_1y": -21.300041308515418,
-              "mom_6m": -19.172271724426658,
+              "mom_1y": -21.300050443042196,
+              "mom_6m": -19.172262089289703,
               "mom_3m": -20.79606136550932
             },
             "hard": [
@@ -68093,7 +68093,7 @@
               "sales_growth_yoy": 0.49686192468619245,
               "profit_growth_yoy": 12.23529411764706,
               "promoter_holding": 31.18,
-              "mom_1y": -26.911044802362795,
+              "mom_1y": -26.91103832490014,
               "mom_6m": -27.263132995207883,
               "mom_3m": -22.12756366318709
             },
@@ -68232,7 +68232,7 @@
             "market_cap_cr": 188600.4969472,
             "metrics": {
               "pe": null,
-              "pb": 37.759045,
+              "pb": 27.043842,
               "peg": null,
               "current_roe": -82.16573258606886,
               "current_roce": 12.299158170727743,
@@ -68345,7 +68345,7 @@
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 37.759045
+                "value": 27.043842
               },
               {
                 "code": "G2-02",
@@ -68355,7 +68355,7 @@
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 37.759045
+                "value": 27.043842
               }
             ],
             "missing": 8,
@@ -68544,7 +68544,7 @@
             "market_cap_cr": 20723.5596288,
             "metrics": {
               "pe": 19.509502,
-              "pb": 3.5504813,
+              "pb": 3.1997676,
               "peg": null,
               "current_roe": 16.401544401544403,
               "current_roce": 21.29416049532597,
@@ -68942,7 +68942,7 @@
             "market_cap_cr": 44555.8423552,
             "metrics": {
               "pe": 48.94001,
-              "pb": 11.192072,
+              "pb": 9.978984,
               "peg": null,
               "current_roe": 20.416853428955626,
               "current_roce": 24.395796847635726,
@@ -69025,7 +69025,7 @@
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 11.192072
+                "value": 9.978984
               },
               {
                 "code": "G2-12",
@@ -69035,7 +69035,7 @@
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 11.192072
+                "value": 9.978984
               }
             ],
             "missing": 4,
@@ -69418,7 +69418,7 @@
               "sales_growth_yoy": -2.949061662198391,
               "profit_growth_yoy": -11.809235427706282,
               "promoter_holding": 46.09,
-              "mom_1y": -40.38741940024405,
+              "mom_1y": -40.387423531637644,
               "mom_6m": -31.819170832784096,
               "mom_3m": -24.115592800615083
             },
@@ -69689,7 +69689,7 @@
             "market_cap_cr": 15806.455808,
             "metrics": {
               "pe": 26.651375,
-              "pb": 2.6531618,
+              "pb": 2.5132802,
               "peg": null,
               "current_roe": 9.466794380587483,
               "current_roce": 12.698689956331876,
@@ -70015,7 +70015,7 @@
             "market_cap_cr": 20723.5596288,
             "metrics": {
               "pe": 19.509502,
-              "pb": 3.5504813,
+              "pb": 3.1997676,
               "peg": null,
               "current_roe": 16.401544401544403,
               "current_roce": 21.29416049532597,
@@ -70413,7 +70413,7 @@
             "market_cap_cr": 44555.8423552,
             "metrics": {
               "pe": 48.94001,
-              "pb": 11.192072,
+              "pb": 9.978984,
               "peg": null,
               "current_roe": 20.416853428955626,
               "current_roce": 24.395796847635726,
@@ -70496,7 +70496,7 @@
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 11.192072
+                "value": 9.978984
               },
               {
                 "code": "G2-12",
@@ -70506,7 +70506,7 @@
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 11.192072
+                "value": 9.978984
               }
             ],
             "missing": 4,
@@ -70889,7 +70889,7 @@
               "sales_growth_yoy": -2.949061662198391,
               "profit_growth_yoy": -11.809235427706282,
               "promoter_holding": 46.09,
-              "mom_1y": -40.38741940024405,
+              "mom_1y": -40.387423531637644,
               "mom_6m": -31.819170832784096,
               "mom_3m": -24.115592800615083
             },
@@ -71160,7 +71160,7 @@
             "market_cap_cr": 15806.455808,
             "metrics": {
               "pe": 26.651375,
-              "pb": 2.6531618,
+              "pb": 2.5132802,
               "peg": null,
               "current_roe": 9.466794380587483,
               "current_roce": 12.698689956331876,
@@ -71655,7 +71655,7 @@
             "market_cap_cr": 20723.5596288,
             "metrics": {
               "pe": 19.509502,
-              "pb": 3.5504813,
+              "pb": 3.1997676,
               "peg": null,
               "current_roe": 16.401544401544403,
               "current_roce": 21.29416049532597,
@@ -71946,7 +71946,7 @@
             "market_cap_cr": 44555.8423552,
             "metrics": {
               "pe": 48.94001,
-              "pb": 11.192072,
+              "pb": 9.978984,
               "peg": null,
               "current_roe": 20.416853428955626,
               "current_roce": 24.395796847635726,
@@ -72029,7 +72029,7 @@
               {
                 "code": "G1-22",
                 "criterion": "P/B < 6.0x",
-                "value": 11.192072
+                "value": 9.978984
               },
               {
                 "code": "G2-12",
@@ -72039,7 +72039,7 @@
               {
                 "code": "G2-14",
                 "criterion": "P/B < 5.0x",
-                "value": 11.192072
+                "value": 9.978984
               }
             ],
             "missing": 4,
@@ -72310,7 +72310,7 @@
               "sales_growth_yoy": -2.949061662198391,
               "profit_growth_yoy": -11.809235427706282,
               "promoter_holding": 46.09,
-              "mom_1y": -40.38741940024405,
+              "mom_1y": -40.387423531637644,
               "mom_6m": -31.819170832784096,
               "mom_3m": -24.115592800615083
             },
@@ -72414,7 +72414,7 @@
             "market_cap_cr": 15806.455808,
             "metrics": {
               "pe": 26.651375,
-              "pb": 2.6531618,
+              "pb": 2.5132802,
               "peg": null,
               "current_roe": 9.466794380587483,
               "current_roce": 12.698689956331876,
